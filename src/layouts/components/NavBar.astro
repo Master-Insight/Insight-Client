@@ -1,0 +1,80 @@
+---
+import NavMenu from "./NavMenu.astro";
+
+const { logoUrl, navLinks } = Astro.props;
+
+// Mobile Menu
+let isVisible = false;
+function toggleMenu() {
+  isVisible = !isVisible;
+}
+---
+
+<nav class="bg-white shadow-md w-full">
+  <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+    <div class="relative flex items-center justify-between h-16">
+      <!-- Mobile menu button -->
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <button
+          type="button"
+          onClick={toggleMenu}
+          class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
+          aria-controls="mobile-menu"
+          aria-expanded={isVisible ? "true" : "false"}
+        >
+          <span class="sr-only">Abrir menú</span>
+          <!-- Icon when menu is closed -->
+          {
+            !isVisible ? (
+              <svg
+                class="block h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+            ) : (
+              <svg
+                class="hidden h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            )
+          }
+        </button>
+      </div>
+
+      <!-- Logo + Menu -->
+      <div
+        class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start"
+      >
+        <a href="/" class="flex-shrink-0">
+          <img src={logoUrl[0]} alt="Logo" class="w-auto h-12" />
+        </a>
+        <!-- Desktop Menu -->
+        <NavMenu layout="desktop" navLinks={navLinks} />
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <NavMenu layout="mobile" navLinks={navLinks} displayMobile={isVisible} />
+</nav>
