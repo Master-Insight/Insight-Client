@@ -1,0 +1,17 @@
+---
+import { Icon } from "astro-icon/components";
+
+const { href, name, icon, showLabel = false } = Astro.props;
+---
+
+<li>
+  <a
+    href={href}
+    rel="noreferrer"
+    target="_blank"
+    class="text-primary transition hover:text-primary-lighter size-6;"
+  >
+    <Icon name={icon} class="size-6" />
+    {showLabel && name}
+  </a>
+</li>

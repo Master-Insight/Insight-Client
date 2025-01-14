@@ -4,7 +4,7 @@ const company = {
   // Información de la empresa
   info: {
     name: "Insight",
-    description: "App Proyectos.",
+    description: "Agencia de desarrollos tecnologicos",
     address: "dirección",
     whatsapp: "+54-93541-613185",
   },
@@ -43,7 +43,7 @@ const company = {
   ],
   images: {
     logo: [
-      "/logos/Insight_hor_blanco.png"
+      "/logos/Insight_hor.png"
     ],
   }
 }
