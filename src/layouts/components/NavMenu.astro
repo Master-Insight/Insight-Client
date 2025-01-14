@@ -1,0 +1,41 @@
+---
+const { layout = "desktop", navLinks, displayMobile = false } = Astro.props;
+---
+
+{
+  navLinks && (
+    <>
+      {layout === "desktop" && (
+        <div class="hidden sm:block sm:ml-6 h-12">
+          <div class="flex space-x-4 h-12 items-center">
+            {navLinks.map((item, index) => (
+              <a
+                key={index}
+                href={item.path}
+                class="text-gray-700 hover:bg-gray-100 hover:text-primary-dark px-3 py-2 rounded-md text-sm font-medium"
+              >
+                {item.name}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {layout === "mobile" && (
+        <div
+          class={`sm:hidden px-2 pt-2 pb-3 space-y-1 ${displayMobile ? "block" : "hidden"}`}
+        >
+          {navLinks.map((item, index) => (
+            <a
+              key={index}
+              href={item.path}
+              class="text-gray-700 hover:bg-gray-100 hover:text-primary-dark block px-3 py-2 rounded-md text-base font-medium"
+            >
+              {item.name}
+            </a>
+          ))}
+        </div>
+      )}
+    </>
+  )
+}
