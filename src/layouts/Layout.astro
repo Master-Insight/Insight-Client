@@ -3,6 +3,7 @@ const { title } = Astro.props;
 import company from "../../config/company";
 import config from "../../config/layout";
 import Footer from "./components/Footer.astro";
+import FrameAbs from "./components/FrameAbs.astro";
 import NavBar from "./components/NavBar.astro";
 
 const logoUrl = company.images.logo;
@@ -37,7 +38,9 @@ const navLinks = config.navbar.default;
   </head>
   <body>
     <NavBar logoUrl={logoUrl} navLinks={navLinks} />
-    <slot />
+    <FrameAbs>
+      <slot />
+    </FrameAbs>
     <Footer />
   </body>
 </html>
