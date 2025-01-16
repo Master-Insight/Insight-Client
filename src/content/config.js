@@ -22,3 +22,15 @@ const servicesCollection = defineCollection({
 export const collections = {
   services: servicesCollection,
 };
+
+// TUTORIAL = https://benborgers.com/google-sheets-json
+// PLANILLA = https://docs.google.com/spreadsheets/d/1FJ5z6zcc-YF312ZLAnKn-xNUpnqtgFFFRjGJR8KKLp0/edit?usp=sharing
+// BASE = https://opensheet.elk.sh/spreadsheet_id/tab_name
+// URL ADAPTADA = https://opensheet.elk.sh/1FJ5z6zcc-YF312ZLAnKn-xNUpnqtgFFFRjGJR8KKLp0/Adjudicados
+
+// const response = await fetch(
+//   "https://opensheet.elk.sh/1FJ5z6zcc-YF312ZLAnKn-xNUpnqtgFFFRjGJR8KKLp0/Adjudicados",
+// );
+
+// const adjudicados = await response.json();
+// console.log(adjudicados);
