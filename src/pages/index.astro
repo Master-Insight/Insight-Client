@@ -1,5 +1,21 @@
 ---
+import List from "../ui/sections/List.Colums.astro";
+import CardComponent from "../components/services/Card.Vertical.astro";
 import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+// Obtener servicios activos de la colección
+const services = await getCollection("services", (entry) => entry.data.active);
+
+// Mapear servicios para pasarlos al componente
+const activeServices = services.map((service) => ({
+  title: service.data.title,
+  description: service.data.description,
+  price: service.data.price,
+  maintenance: service.data.maintenance,
+  image: service.data.image,
+  tags: service.data.tags,
+}));
 ---
 
 <Layout title="Astro Insight!">
@@ -60,61 +76,38 @@ import Layout from "../layouts/Layout.astro";
   <!-- Sección Servicios -->
   <section id="services" class="bg-gray-100 py-16">
     <h2 class="text-4xl font-bold text-center mb-8">Nuestros Servicios</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
-      <div
-        class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transform hover:scale-105 transition-all"
-      >
-        <h3 class="text-xl font-bold mb-2">Desarrollo Web</h3>
-        <p class="text-gray-600">
-          Construimos sitios web modernos y funcionales.
-        </p>
-      </div>
-      <div
-        class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transform hover:scale-105 transition-all"
-      >
-        <h3 class="text-xl font-bold mb-2">Aplicaciones Móviles</h3>
-        <p class="text-gray-600">Aplicaciones intuitivas para iOS y Android.</p>
-      </div>
-      <div
-        class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transform hover:scale-105 transition-all"
-      >
-        <h3 class="text-xl font-bold mb-2">Consultoría IT</h3>
-        <p class="text-gray-600">
-          Te ayudamos a optimizar tus recursos tecnológicos.
-        </p>
-      </div>
-    </div>
-  </section>
+    <List cards={activeServices} CardComponent={CardComponent} />
 
-  <!-- Sección Portafolio -->
-  <section id="portfolio" class="py-16">
-    <h2 class="text-4xl font-bold text-center mb-8">Nuestro Portafolio</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 px-4">
-      <div class="relative group">
-        <img
-          src="/img/project1.jpg"
-          alt="Proyecto 1"
-          class="rounded-lg shadow-lg w-full object-cover transform group-hover:scale-105 transition-all"
-        />
-        <div
-          class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
-        >
-          <p class="text-white font-bold">Ver Proyecto</p>
+    <!-- Sección Portafolio -->
+    <section id="portfolio" class="py-16">
+      <h2 class="text-4xl font-bold text-center mb-8">Nuestro Portafolio</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 px-4">
+        <div class="relative group">
+          <img
+            src="/img/project1.jpg"
+            alt="Proyecto 1"
+            class="rounded-lg shadow-lg w-full object-cover transform group-hover:scale-105 transition-all"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+          >
+            <p class="text-white font-bold">Ver Proyecto</p>
+          </div>
         </div>
-      </div>
-      <div class="relative group">
-        <img
-          src="/img/project2.jpg"
-          alt="Proyecto 2"
-          class="rounded-lg shadow-lg w-full object-cover transform group-hover:scale-105 transition-all"
-        />
-        <div
-          class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
-        >
-          <p class="text-white font-bold">Ver Proyecto</p>
+        <div class="relative group">
+          <img
+            src="/img/project2.jpg"
+            alt="Proyecto 2"
+            class="rounded-lg shadow-lg w-full object-cover transform group-hover:scale-105 transition-all"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+          >
+            <p class="text-white font-bold">Ver Proyecto</p>
+          </div>
         </div>
+        <!-- Añade más proyectos según sea necesario -->
       </div>
-      <!-- Añade más proyectos según sea necesario -->
-    </div>
+    </section>
   </section>
 </Layout>
