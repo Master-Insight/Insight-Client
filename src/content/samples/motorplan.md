@@ -8,4 +8,5 @@ media:
   - "https://example.com/images/motorplan1.jpg"
   - "https://example.com/images/motorplan2.jpg"
 deploy: "https://motorplan-web.vercel.app/"
+images: ["/samples/motorplan.png"]
 ---
