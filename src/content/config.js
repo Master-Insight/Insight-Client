@@ -1,6 +1,19 @@
 import { defineCollection, z } from 'astro:content';
 
 // Esta colección luego se debe pedir a la BBDD
+
+const samplesCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(), // Título del sample
+    description: z.string(), // Descripción del sample
+    users: z.array(z.string()), // IDs de usuarios relacionados
+    media: z.array(z.string().url()), // URLs de medios relacionados
+    deploy: z.string().url().optional(), // URL de despliegue (opcional)
+  }),
+});
+
+
 const servicesCollection = defineCollection({
   type: 'content',
   schema: z.object({
@@ -31,6 +44,7 @@ const usersCollection = defineCollection({
 });
 
 export const collections = {
+  samples: samplesCollection,
   services: servicesCollection,
   users: usersCollection,
 };
