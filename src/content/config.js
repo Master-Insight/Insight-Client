@@ -19,8 +19,20 @@ const servicesCollection = defineCollection({
   }),
 });
 
+const usersCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    fullName: z.string(), // Nombre completo
+    linkedin: z.string().optional(), // ID de LinkedIn
+    photo: z.string().url().optional(), // Foto de perfil
+    language: z.array(z.string()), // Lenguaje de programación
+    roleIT: z.array(z.string()), // Rol en TI
+  }),
+});
+
 export const collections = {
   services: servicesCollection,
+  users: usersCollection,
 };
 
 // TUTORIAL = https://benborgers.com/google-sheets-json
