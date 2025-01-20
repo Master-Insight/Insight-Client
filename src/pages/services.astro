@@ -5,6 +5,7 @@ import { getCollection } from "astro:content";
 
 // Carga los servicios desde Astro Content
 const services = await getCollection("services");
+// console.log(await services);
 ---
 
 <Layout title="Servicios">
@@ -24,7 +25,11 @@ const services = await getCollection("services");
           <p>No hay servicios disponibles.</p>
         ) : (
           services.map((service) => (
-            <CardService key={service.id} item={service.data} />
+            <CardService
+              key={service.id}
+              item={service.data}
+              slug={service.slug}
+            />
           ))
         )
       }
