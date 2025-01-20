@@ -1,0 +1,90 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const SERVICES = await getCollection("services");
+
+  return SERVICES.map((services) => ({
+    params: { slug: services.slug },
+    props: { services },
+  }));
+}
+
+const { services } = Astro.props;
+const { data, slug } = services;
+const { title, description, image, characteristics, tags, price, maintenance } =
+  data;
+---
+
+<Layout title={title}>
+  <div class="p-4">
+    <a href="/services" class="text-primary hover:text-primary-dark">
+      &larr; Volver
+    </a>
+
+    <div class="flex flex-col md:flex-row items-start gap-6 mt-6">
+      <!-- Imagen del servicio -->
+      <div class="w-full md:w-1/2">
+        <img
+          src={image}
+          alt={`Imagen de ${title}`}
+          class="w-full h-auto rounded-lg shadow-lg object-cover"
+        />
+      </div>
+
+      <!-- Información del servicio -->
+      <div class="w-full md:w-1/2 flex flex-col gap-4">
+        <!-- Título del servicio -->
+        <h1 class="text-4xl font-bold text-primary mb-4">{title}</h1>
+
+        <!-- Descripción -->
+        <p class="text-lg text-gray-700 leading-relaxed">{description}</p>
+
+        <!-- Características -->
+        <div>
+          <h2 class="text-2xl font-semibold text-secondary mt-6">
+            Características:
+          </h2>
+          <ul class="text-gray-600 list-disc pl-5 mt-2">
+            {
+              characteristics &&
+                characteristics
+                  .split(", ")
+                  .map((feature, index) => <li key={index}>{feature}</li>)
+            }
+          </ul>
+        </div>
+
+        <!-- Precio y Mantenimiento -->
+        <div>
+          <p class="text-lg font-semibold text-primary mt-4">
+            Precio: <span class="text-black">${price}</span>
+          </p>
+          {
+            maintenance && (
+              <p class="text-lg font-semibold text-tertiary">
+                Costo de mantenimiento:{" "}
+                <span class="text-black">${maintenance}</span>
+              </p>
+            )
+          }
+        </div>
+
+        <!-- Etiquetas -->
+        <div class="flex flex-wrap gap-2 mt-4">
+          {
+            tags.map((tag, index) => (
+              <span
+                key={index}
+                class="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full"
+              >
+                {tag}
+              </span>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
