@@ -1,0 +1,38 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CardService from "../../components/services/CardService.astro";
+import { getCollection } from "astro:content";
+
+// Carga los servicios desde Astro Content
+const services = await getCollection("samples");
+// console.log(await services);
+---
+
+<Layout title="Servicios">
+  <div class="flex flex-col sm:flex-row sm:justify-between gap-4">
+    <div class="flex">
+      <a href="/" class="text-primary hover:text-primary-dark">
+        &larr; Volver
+      </a>
+      <h2 class="text-3xl font-semibold ml-2">Nuestros Trabajos</h2>
+    </div>
+  </div>
+
+  <section class="w-full flex mt-4 flex-col md:flex-row">
+    <div class="w-full justify-center lg:w-4/5 p-4 gap-2 flex flex-col">
+      {
+        services.length === 0 ? (
+          <p>No hay ejemplos disponibles.</p>
+        ) : (
+          services.map((service) => (
+            <CardService
+              key={service.id}
+              item={service.data}
+              slug={service.slug}
+            />
+          ))
+        )
+      }
+    </div>
+  </section>
+</Layout>
