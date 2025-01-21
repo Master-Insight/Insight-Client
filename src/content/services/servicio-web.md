@@ -3,7 +3,7 @@ title: "Servicio Web"
 description: "Servicios especificos que no necesitas visualización, como por ejemplo una conexión de datos."
 price: 1000
 maintenance: 100
-image: "https://example.com/mobile-app.jpg"
+image: "/img/ben-kolde-bs2Ba7t69mM-unsplash.jpg"
 characteristics: "Aplicación nativa con soporte Android/iOS."
 tags: ["móvil", "app", "nativa"]
 serviceType: "app_mobile"
