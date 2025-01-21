@@ -59,13 +59,15 @@ const { title, description, image, characteristics, tags, price, maintenance } =
         <!-- Precio y Mantenimiento -->
         <div>
           <p class="text-lg font-semibold text-primary mt-4">
-            Precio: <span class="text-black">${price}</span>
+            Precio: <span class="text-black">$ {price} USD</span>
           </p>
           {
             maintenance && (
               <p class="text-lg font-semibold text-tertiary">
                 Costo de mantenimiento:{" "}
-                <span class="text-black">${maintenance}</span>
+                {maintenance && (
+                  <span class="text-black">$ {maintenance} USD x mes</span>
+                )}
               </p>
             )
           }
