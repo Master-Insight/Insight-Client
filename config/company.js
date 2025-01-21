@@ -1,3 +1,10 @@
+import Facebook from "../src/components/icons/Facebook.ico.astro";
+import Twitter from "../src/components/icons/Twitter.ico.astro";
+import Instagram from "../src/components/icons/Instagram.ico.astro";
+import YouTube from "../src/components/icons/Youtube.ico.astro";
+import LinkedIn from "../src/components/icons/LinkedIn.ico.astro";
+import Email from "../src/components/icons/Email.alternate.ico.astro";
+
 // los iconos son de https://icon-sets.iconify.design/
 
 const company = {
@@ -13,32 +20,32 @@ const company = {
     {
       name: "Email",
       href: "mailto:base.for.insight@gmail.com",
-      icon: "mdi:alternate-email", // Reemplázalo por el nombre del ícono según tu sistema.
+      icon: Email,
     },
     {
       name: "Facebook",
       href: "https://www.facebook.com/",
-      icon: "mdi:facebook", // Reemplázalo por el nombre del ícono según tu sistema.
+      icon: Facebook,
     },
     {
       name: "X (Twitter)",
       href: "https://twitter.com/",
-      icon: "mdi:twitter", // Reemplázalo por el nombre del ícono según tu sistema.
+      icon: Twitter,
     },
     {
       name: "Instagram",
       href: "https://www.instagram.com/",
-      icon: "mdi:instagram", // Reemplázalo por el nombre del ícono según tu sistema.
+      icon: Instagram,
     },
     {
       name: "YouTube",
       href: "https://www.youtube.com/",
-      icon: "mdi:youtube", // Reemplázalo por el nombre del ícono según tu sistema.
+      icon: YouTube,
     },
     {
       name: "LinkedIn",
       href: "https://www.linkedin.com/company/insight-desarrolladores/",
-      icon: "mdi:linkedin", // Reemplázalo por el nombre del ícono según tu sistema.
+      icon: LinkedIn,
     },
   ],
   images: {

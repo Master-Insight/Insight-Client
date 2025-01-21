@@ -1,7 +1,5 @@
 ---
-import { Icon } from "astro-icon/components";
-
-const { href, name, icon, showLabel = false } = Astro.props;
+const { href, name, icon: IconComponent, showLabel = false } = Astro.props;
 ---
 
 <li>
@@ -9,9 +7,9 @@ const { href, name, icon, showLabel = false } = Astro.props;
     href={href}
     rel="noreferrer"
     target="_blank"
-    class="text-primary transition hover:text-primary-lighter size-6;"
+    class="text-primary transition hover:text-primary-lighter flex items-center space-x-2"
   >
-    <Icon name={icon} class="size-6" />
-    {showLabel && name}
+    <IconComponent class="size-6" />
+    {showLabel && <span>{name}</span>}
   </a>
 </li>
