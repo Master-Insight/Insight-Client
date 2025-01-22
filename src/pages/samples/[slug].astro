@@ -1,10 +1,10 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
+import Carousel from "../../ui/images/Carousel.astro";
 
 export async function getStaticPaths() {
   const SAMPLES = await getCollection("samples");
-  // console.log(SAMPLES);
 
   return SAMPLES.map((sample) => ({
     params: { slug: sample.slug },
@@ -15,11 +15,13 @@ export async function getStaticPaths() {
 const { sample } = Astro.props;
 const { data, slug } = sample;
 const { title, description, media, deploy, images, users } = data;
+console.log(images);
+console.log(images?.length);
 ---
 
 <Layout title={title}>
   <div class="p-4">
-    <a href="/portfolio" class="text-primary hover:text-primary-dark">
+    <a href="/samples" class="text-primary hover:text-primary-dark">
       &larr; Volver
     </a>
 
@@ -28,11 +30,15 @@ const { title, description, media, deploy, images, users } = data;
       <div class="w-full md:w-1/2">
         {
           images && images.length > 0 ? (
-            <img
-              src={images[0]}
-              alt={`Imagen de ${title}`}
-              class="w-full h-auto rounded-lg shadow-lg object-cover"
-            />
+            images.length === 1 ? (
+              <img
+                src={images[0]}
+                alt={`Imagen de ${title}`}
+                class="w-full h-auto rounded-lg shadow-lg object-cover"
+              />
+            ) : (
+              <Carousel images={images} title={title} />
+            )
           ) : (
             <p class="text-gray-500">No hay imágenes disponibles</p>
           )
@@ -75,7 +81,8 @@ const { title, description, media, deploy, images, users } = data;
                       href={url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="underline hover:text-blue-800">
+                      class="underline hover:text-blue-800"
+                    >
                       {url}
                     </a>
                   </li>
@@ -93,7 +100,8 @@ const { title, description, media, deploy, images, users } = data;
                 href={deploy}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-lg text-primary underline hover:text-primary-dark">
+                class="text-lg text-primary underline hover:text-primary-dark"
+              >
                 Ver Despliegue
               </a>
             </div>
