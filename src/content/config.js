@@ -8,7 +8,7 @@ const samplesCollection = defineCollection({
     title: z.string(), // Título del sample
     description: z.string(), // Descripción del sample
     users: z.array(z.string()), // IDs de usuarios relacionados
-    media: z.array(z.string().url()), // URLs de medios relacionados
+    media: z.array(z.string().url()).optional(), // URLs de medios relacionados
     deploy: z.string().url().optional(), // URL de despliegue (opcional)
     images: z.array(z.string()).optional(),
   }),
