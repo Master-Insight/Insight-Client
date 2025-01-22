@@ -4,9 +4,9 @@ description: "MotorPlan es una aplicación web dinámica diseñada para resaltar
 users:
   - "gustavo-sirtori"
   - "henryck-guaramato"
-media:
-  - "https://example.com/images/motorplan1.jpg"
-  - "https://example.com/images/motorplan2.jpg"
+# media:
+#   - "https://example.com/images/motorplan1.jpg"
+#   - "https://example.com/images/motorplan2.jpg"
 deploy: "https://motorplan-web.vercel.app/"
-images: ["/samples/motorplan.png"]
+images: ["/samples/motorplan.png", "/samples/motorplan1.png"]
 ---
