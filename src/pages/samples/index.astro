@@ -4,8 +4,8 @@ import CardService from "../../components/services/CardService.astro";
 import { getCollection } from "astro:content";
 
 // Carga los servicios desde Astro Content
-const services = await getCollection("samples");
-// console.log(await services);
+const samples = await getCollection("samples");
+// console.log(await samples);
 ---
 
 <Layout title="Servicios">
@@ -21,14 +21,15 @@ const services = await getCollection("samples");
   <section class="w-full flex mt-4 flex-col md:flex-row">
     <div class="w-full justify-center lg:w-4/5 p-4 gap-2 flex flex-col">
       {
-        services.length === 0 ? (
+        samples.length === 0 ? (
           <p>No hay ejemplos disponibles.</p>
         ) : (
-          services.map((service) => (
+          samples.map((samples) => (
             <CardService
-              key={service.id}
-              item={service.data}
-              slug={service.slug}
+              key={samples.id}
+              item={samples.data}
+              slug={samples.slug}
+              page="samples"
             />
           ))
         )

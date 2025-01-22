@@ -1,6 +1,6 @@
 ---
-const { item, slug } = Astro.props;
-const { title, characteristics, tags, description, image } = item;
+const { item, slug, page } = Astro.props;
+const { title, characteristics, tags, description, image, images } = item;
 // console.log(Astro.props);
 ---
 
@@ -9,7 +9,7 @@ const { title, characteristics, tags, description, image } = item;
 >
   <!-- Imagen del servicio -->
   <img
-    src={image}
+    src={image || images[0]}
     alt={`Imagen de ${title}`}
     class="h-32 w-32 sm:h-60 sm:w-60 object-cover rounded"
   />
@@ -40,8 +40,7 @@ const { title, characteristics, tags, description, image } = item;
             tags.map((tag, index) => (
               <span
                 key={index}
-                class="px-2 py-1 bg-blue-100 text-blue-600 text-xs rounded-full"
-              >
+                class="px-2 py-1 bg-blue-100 text-blue-600 text-xs rounded-full">
                 {tag}
               </span>
             ))
@@ -52,7 +51,7 @@ const { title, characteristics, tags, description, image } = item;
     <!-- Botón para más detalles -->
     <div class="mt-4 sm:mt-0">
       <a
-        href={`/services/${slug}`}
+        href={`/${page}/${slug}`}
         class="px-4 py-2 bg-primary text-white font-semibold rounded hover:bg-primary-dark transition-colors"
       >
         Ver Detalles
