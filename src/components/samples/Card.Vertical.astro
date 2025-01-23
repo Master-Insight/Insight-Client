@@ -2,53 +2,55 @@
 const { title, description, users, media, deploy, images, slug } = Astro.props;
 ---
 
-<a href={`/samples/${slug}`}>
-  <div
-    class="bg-white rounded-lg shadow-md p-6 flex flex-col gap-4 hover:shadow-lg transform hover:scale-105 transition-all"
-  >
-    {
-      images && images.length > 0 && (
-        <img
-          src={images[0]}
-          alt={title}
-          class="rounded-lg h-40 w-full object-cover"
-        />
-      )
-    }
-    <h3 class="text-xl font-bold">{title}</h3>
-    <p class="text-gray-600 text-sm line-clamp-3">{description}</p>
-    <div class="text-gray-800 text-sm">
+<div>
+  <a href={`/samples/${slug}`}>
+    <div
+      class="bg-white rounded-lg shadow-md p-6 flex flex-col gap-4 hover:shadow-lg transform hover:scale-105 transition-all"
+    >
       {
-        users && (
-          <p>
-            <strong>Usuarios relacionados:</strong> {users.join(", ")}
-          </p>
+        images && images.length > 0 && (
+          <img
+            src={images[0]}
+            alt={title}
+            class="rounded-lg h-40 w-full object-cover"
+          />
         )
       }
-      {
-        deploy && (
-          <p>
-            <strong>Despliegue:</strong>{" "}
-            <a href={deploy} target="_blank" class="text-primary underline">
-              {deploy}
-            </a>
-          </p>
-        )
-      }
+      <h3 class="text-xl font-bold">{title}</h3>
+      <p class="text-gray-600 text-sm line-clamp-3">{description}</p>
+      <div class="text-gray-800 text-sm">
+        {
+          users && (
+            <p>
+              <strong>Usuarios relacionados:</strong> {users.join(", ")}
+            </p>
+          )
+        }
+        {
+          deploy && (
+            <p>
+              <strong>Despliegue:</strong>{" "}
+              <a href={deploy} target="_blank" class="text-primary underline">
+                {deploy}
+              </a>
+            </p>
+          )
+        }
+      </div>
+      <div class="flex flex-wrap justify-center gap-2 mt-2">
+        {
+          media &&
+            media.map((url) => (
+              <a
+                href={url}
+                target="_blank"
+                class="bg-secondary text-white text-xs font-bold py-1 px-2 rounded-full hover:bg-secondary-dark"
+              >
+                Ver Medio
+              </a>
+            ))
+        }
+      </div>
     </div>
-    <div class="flex flex-wrap justify-center gap-2 mt-2">
-      {
-        media &&
-          media.map((url) => (
-            <a
-              href={url}
-              target="_blank"
-              class="bg-secondary text-white text-xs font-bold py-1 px-2 rounded-full hover:bg-secondary-dark"
-            >
-              Ver Medio
-            </a>
-          ))
-      }
-    </div>
-  </div>
-</a>
+  </a>
+</div>

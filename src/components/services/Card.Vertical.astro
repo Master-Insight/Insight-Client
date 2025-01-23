@@ -3,27 +3,33 @@ const { title, description, slug, price, maintenance, image, tags } =
   Astro.props;
 ---
 
-<a href={`/services/${slug}`}>
-  <div
-    class="bg-white rounded-lg shadow-md p-6 flex flex-col gap-4 hover:shadow-lg transform hover:scale-105 transition-all"
-  >
-    <img src={image} alt={title} class="rounded-lg h-40 w-full object-cover" />
-    <h3 class="text-xl font-bold">{title}</h3>
-    <p class="text-gray-600 text-sm line-clamp-3">{description}</p>
-    <!-- <div class="text-gray-800 text-sm">
-    <p><strong>Precio:</strong> ${price}</p>
-    <p><strong>Mantenimiento:</strong> ${maintenance}/mes</p>
-  </div> -->
+<div>
+  <a href={`/services/${slug}`}>
+    <div
+      class="bg-white rounded-lg shadow-md p-6 flex flex-col gap-4 hover:shadow-lg transform hover:scale-105 transition-all"
+    >
+      <img
+        src={image}
+        alt={title}
+        class="rounded-lg h-40 w-full object-cover"
+      />
+      <h3 class="text-xl font-bold">{title}</h3>
+      <p class="text-gray-600 text-sm line-clamp-3">{description}</p>
+      <!-- <div class="text-gray-800 text-sm">
+        <p><strong>Precio:</strong> ${price}</p>
+        <p><strong>Mantenimiento:</strong> ${maintenance}/mes</p>
+      </div> -->
 
-    <!-- TAGS -->
-    <div class="flex flex-wrap justify-center gap-2 mt-2">
-      {
-        tags.map((tag) => (
-          <span class="bg-primary text-white text-xs font-bold py-1 px-2 rounded-full">
-            #{tag}
-          </span>
-        ))
-      }
+      <!-- TAGS -->
+      <div class="flex flex-wrap justify-center gap-2 mt-2">
+        {
+          tags.map((tag) => (
+            <span class="bg-primary text-white text-xs font-bold py-1 px-2 rounded-full">
+              #{tag}
+            </span>
+          ))
+        }
+      </div>
     </div>
-  </div>
-</a>
+  </a>
+</div>
