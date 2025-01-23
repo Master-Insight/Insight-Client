@@ -39,6 +39,7 @@ const usersCollection = defineCollection({
     fullName: z.string(), // Nombre completo
     linkedin: z.string().optional(), // ID de LinkedIn
     photo: z.string().url().optional(), // Foto de perfil
+    gender: z.enum(['boy', 'girl']),
     language: z.array(z.string()), // Lenguaje de programación
     roleIT: z.array(z.string()), // Rol en TI
   }),
