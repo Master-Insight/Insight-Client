@@ -26,17 +26,19 @@ const defaultPhoto = {
       filteredStaff.map((staff, index) => {
         return (
           <div class="swiper-slide text-center gap-2" key={index}>
-            <img
-              src={
-                staff.data.photo ||
-                defaultPhoto[staff.data.gender] ||
-                "/default/default-boy.jpg"
-              }
-              alt={`Foto de ${staff.data.fullName}`}
-              class="w-24 h-24 object-cover rounded-full shadow-lg"
-            />
-            <h3 class="text-lg font-bold">{staff.data.fullName}</h3>
-            <p class="text-sm text-gray-500">{staff.data.roleIT[0]}</p>
+            <a href={`/staff/${staff.slug}`}>
+              <img
+                src={
+                  staff.data.photo ||
+                  defaultPhoto[staff.data.gender] ||
+                  "/default/default-boy.jpg"
+                }
+                alt={`Foto de ${staff.data.fullName}`}
+                class="w-24 h-24 object-cover rounded-full shadow-lg"
+              />
+              <h3 class="text-lg font-bold">{staff.data.fullName}</h3>
+              <p class="text-sm text-gray-500">{staff.data.roleIT[0]}</p>
+            </a>
           </div>
         );
       })
