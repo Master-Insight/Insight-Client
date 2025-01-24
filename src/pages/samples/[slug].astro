@@ -2,7 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import Carousel from "../../ui/images/Carousel.astro";
-import UserSwiper from "../../components/UserSwiper.astro";
+import StaffSwiper from "../../components/StaffSwiper.astro";
 import Deploy from "../../components/icons/Deploy.ico.astro";
 
 export async function getStaticPaths() {
@@ -16,7 +16,7 @@ export async function getStaticPaths() {
 
 const { sample } = Astro.props;
 const { data, slug } = sample;
-const { title, description, media, deploy, images, users } = data;
+const { title, description, media, deploy, images, staff } = data;
 ---
 
 <Layout title={title}>
@@ -65,7 +65,7 @@ const { title, description, media, deploy, images, users } = data;
         <p class="text-lg text-gray-700 leading-relaxed">{description}</p>
 
         <!-- Usuarios relacionados -->
-        <UserSwiper userSlugs={users} />
+        <StaffSwiper staffSlugs={staff} />
 
         <!-- Media relacionados -->
         {
@@ -79,7 +79,8 @@ const { title, description, media, deploy, images, users } = data;
                       href={url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="underline hover:text-blue-800">
+                      class="underline hover:text-blue-800"
+                    >
                       {url}
                     </a>
                   </li>

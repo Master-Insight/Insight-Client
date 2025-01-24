@@ -5,38 +5,38 @@ import "swiper/css/pagination"; // Estilos para la paginación
 
 import { getCollection } from "astro:content";
 
-const { userSlugs = [] } = Astro.props; // Lista de slugs de usuarios a mostrar
-const users = await getCollection("users"); // Obtenemos todos los usuarios desde la colección
+const { staffSlugs = [] } = Astro.props; // Lista de slugs de usuarios a mostrar
+const staff = await getCollection("staff"); // Obtenemos todos los usuarios desde la colección
 
 // Filtrar los usuarios por los slugs proporcionados
-const filteredUsers = users.filter((user) => userSlugs.includes(user.slug));
+const filteredStaff = staff.filter((staff) => staffSlugs.includes(staff.slug));
 
 // Imagen predeterminada para usuarios sin foto
 const defaultPhoto = {
   boy: "/default/default-boy.jpg",
   girl: "/default/default-girl.jpg",
 };
-// console.log(filteredUsers);
+// console.log(filteredStaff);
 ---
 
-<div class="userSwiper w-full h-auto">
+<div class="staffSwiper w-full h-auto">
   <!-- Contenedor de diapositivas -->
   <div class="swiper-wrapper flex justify-center">
     {
-      filteredUsers.map((user, index) => {
+      filteredStaff.map((staff, index) => {
         return (
           <div class="swiper-slide text-center gap-2" key={index}>
             <img
               src={
-                user.data.photo ||
-                defaultPhoto[user.data.gender] ||
+                staff.data.photo ||
+                defaultPhoto[staff.data.gender] ||
                 "/default/default-boy.jpg"
               }
-              alt={`Foto de ${user.data.fullName}`}
+              alt={`Foto de ${staff.data.fullName}`}
               class="w-24 h-24 object-cover rounded-full shadow-lg"
             />
-            <h3 class="text-lg font-bold">{user.data.fullName}</h3>
-            <p class="text-sm text-gray-500">{user.data.roleIT[0]}</p>
+            <h3 class="text-lg font-bold">{staff.data.fullName}</h3>
+            <p class="text-sm text-gray-500">{staff.data.roleIT[0]}</p>
           </div>
         );
       })
@@ -57,7 +57,7 @@ const defaultPhoto = {
   import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
   document.addEventListener("DOMContentLoaded", () => {
-    new Swiper(".userSwiper", {
+    new Swiper(".staffSwiper", {
       modules: [Navigation, Pagination, Autoplay],
       spaceBetween: 20,
       slidesPerView: 3, // Mostrar 3 usuarios al mismo tiempo
