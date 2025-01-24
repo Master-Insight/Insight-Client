@@ -1,0 +1,100 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const STAFF = await getCollection("staff");
+
+  return STAFF.map((staff) => ({
+    params: { slug: staff.slug },
+    props: { staff },
+  }));
+}
+
+const { staff } = Astro.props;
+const { data, slug } = staff;
+const { fullName, linkedin, photo, language, roleIT, gender } = data;
+---
+
+<Layout title={fullName}>
+  <div class="p-4">
+    <a href="/" class="text-primary hover:text-primary-dark"> &larr; Volver </a>
+
+    <div class="flex flex-col md:flex-row items-start gap-6 mt-6">
+      <!-- Foto del Staff -->
+      <div class="w-full md:w-1/3">
+        <img
+          src={photo || `/default/default-${gender}.jpg`}
+          alt={`Foto de ${fullName}`}
+          class="w-full h-auto rounded-full shadow-lg object-cover"
+        />
+      </div>
+
+      <!-- Información del Staff -->
+      <div class="w-full md:w-2/3 flex flex-col gap-4">
+        <!-- Nombre -->
+        <h1 class="text-4xl font-bold text-primary mb-4">{fullName}</h1>
+
+        <!-- LinkedIn -->
+        {
+          linkedin && (
+            <p class="text-lg">
+              <strong>LinkedIn:</strong>
+              <a
+                href={`https://www.linkedin.com/in/${linkedin}`}
+                target="_blank"
+                class="text-blue-600 underline ml-2"
+              >
+                {linkedin}
+              </a>
+            </p>
+          )
+        }
+
+        <!-- Roles de IT -->
+        <div>
+          <h2 class="text-2xl font-semibold text-secondary mt-4">Roles:</h2>
+          <ul class="text-gray-600 list-disc pl-5 mt-2">
+            {roleIT.map((role, index) => <li key={index}>{role}</li>)}
+          </ul>
+        </div>
+
+        <!-- Lenguajes -->
+        <div>
+          <h2 class="text-2xl font-semibold text-secondary mt-4">Lenguajes:</h2>
+          <div class="flex flex-wrap gap-2 mt-2">
+            {
+              language.map((lang, index) => (
+                <span
+                  key={index}
+                  class="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full"
+                >
+                  {lang}
+                </span>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Descripción del Staff -->
+    <div class="mt-10">
+      <h2 class="text-2xl font-bold text-primary mb-4">Descripción</h2>
+      <article class="prose prose-lg max-w-none">
+        {Astro.slots.default}
+      </article>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  img.rounded-full {
+    border: 2px solid #ddd;
+    transition: transform 0.3s ease;
+  }
+
+  img.rounded-full:hover {
+    transform: scale(1.05);
+  }
+</style>

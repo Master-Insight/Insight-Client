@@ -7,6 +7,7 @@ import { getCollection } from "astro:content";
 
 // Obtener servicios activos de la colección
 const services = await getCollection("services", (entry) => entry.data.active);
+// console.log(services);
 
 // Mapear servicios para pasarlos al componente
 const activeServices = services.map((service) => ({
@@ -16,7 +17,9 @@ const activeServices = services.map((service) => ({
   maintenance: service.data.maintenance,
   image: service.data.image,
   tags: service.data.tags,
+  slug: service.slug,
 }));
+// console.log(activeServices);
 
 // Obtener samples de la colección
 const samples = await getCollection("samples");
@@ -29,6 +32,7 @@ const sampleData = samples.map((sample) => ({
   media: sample.data.media,
   deploy: sample.data.deploy,
   images: sample.data.images,
+  slug: sample.slug,
 }));
 ---
 
@@ -59,12 +63,13 @@ const sampleData = samples.map((sample) => ({
         >
           Descubre nuestros servicios
         </a>
-        <a
+        <!-- TODO SE ESCONDE BOTON -->
+        <!-- <a
           href="/it"
           class="bg-secondary text-white font-bold py-3 px-6 rounded shadow hover:shadow-lg transform hover:scale-105 transition-all"
         >
           Únete como Desarrollador IT
-        </a>
+        </a> -->
       </div>
     </div>
   </div>

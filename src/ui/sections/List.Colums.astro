@@ -2,7 +2,9 @@
 const { cards = [], CardComponent } = Astro.props;
 ---
 
-<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-4">
-  {cards.length > 0 && cards.map((card) => <CardComponent {...card} />)}
-  <slot />
+<div class="flex flex-wrap gap-8 px-4">
+  {
+    cards.length > 0 &&
+      cards.map((card, index) => <CardComponent key={index} {...card} />)
+  }
 </div>

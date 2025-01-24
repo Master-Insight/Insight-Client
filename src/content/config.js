@@ -7,7 +7,7 @@ const samplesCollection = defineCollection({
   schema: z.object({
     title: z.string(), // Título del sample
     description: z.string(), // Descripción del sample
-    users: z.array(z.string()), // IDs de usuarios relacionados
+    staff: z.array(z.string()), // IDs de usuarios relacionados
     media: z.array(z.string().url()).optional(), // URLs de medios relacionados
     deploy: z.string().url().optional(), // URL de despliegue (opcional)
     images: z.array(z.string()).optional(),
@@ -33,7 +33,7 @@ const servicesCollection = defineCollection({
   }),
 });
 
-const usersCollection = defineCollection({
+const staffCollection = defineCollection({
   type: 'content',
   schema: z.object({
     fullName: z.string(), // Nombre completo
@@ -48,7 +48,7 @@ const usersCollection = defineCollection({
 export const collections = {
   samples: samplesCollection,
   services: servicesCollection,
-  users: usersCollection,
+  staff: staffCollection,
 };
 
 // TUTORIAL = https://benborgers.com/google-sheets-json
