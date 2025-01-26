@@ -1,0 +1,178 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Opciones de Mantenimiento">
+  <div class="p-4 max-w-screen-lg mx-auto">
+    <a href="/services" class="text-primary hover:text-primary-dark">
+      &larr; Volver a Servicios
+    </a>
+
+    <div class="mt-6">
+      <h1 class="text-4xl font-bold text-primary mb-4">
+        Opciones de Mantenimiento
+      </h1>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        Para asegurar el óptimo funcionamiento y la actualización continua de
+        nuestros servicios, ofrecemos las siguientes opciones de mantenimiento:
+      </p>
+
+      <div class="grid grid-cols-1 gap-6 mt-6">
+        <!-- Mantenimiento Básico -->
+        <div
+          class="flex flex-col md:flex-row bg-white rounded-lg shadow-lg overflow-hidden"
+        >
+          <!-- Imagen -->
+          <div
+            class="w-full md:w-1/3 flex flex-col items-center justify-center bg-gray-100 p-4"
+          >
+            <img
+              src="/img/svg/basicmaintenance.svg"
+              alt="Imagen de Mantenimiento Básico"
+              class="w-full h-auto object-contain"
+            />
+            <p class="text-xs text-gray-500 place-self-end">
+              <a
+                href="https://iconscout.com/illustrations/configuracion"
+                class="underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Imagen
+              </a>{" "}
+              by{" "}
+              <a
+                href="https://iconscout.com/es/contributors/pixel-true-designs/:assets"
+                class="underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Pixel True
+              </a>
+            </p>
+          </div>
+
+          <!-- Contenido -->
+          <div class="p-4 flex flex-col gap-4 w-full md:w-2/3">
+            <h2 class="text-2xl font-semibold text-secondary">
+              Mantenimiento Básico
+            </h2>
+            <p class="text-gray-700 leading-relaxed">
+              Abono mensual dedicado exclusivamente al mantenimiento del
+              servicio, asegurando su correcto funcionamiento y actualizaciones
+              necesarias. <strong
+                >Incluye actualizaciones de seguridad cada mes.</strong
+              >
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              El costo es %5 del precio del servicio actual (monto minimo $ 20
+              USD ) <strong
+                >Incluye actualizaciones de seguridad cada mes.</strong
+              >
+            </p>
+          </div>
+        </div>
+
+        <!-- Mantenimiento con Horas Acumulables -->
+        <div
+          class="flex flex-col md:flex-row-reverse bg-white rounded-lg shadow-lg overflow-hidden"
+        >
+          <!-- Imagen -->
+          <div
+            class="w-full md:w-1/3 flex flex-col items-center justify-center bg-gray-100 p-4"
+          >
+            <img
+              src="/img/svg/webmanteinance.svg"
+              alt="Imagen de Mantenimiento con Horas Acumulables"
+              class="w-full h-auto object-contain"
+            />
+            <p class="text-xs text-gray-500 place-self-end">
+              <a
+                href="https://iconscout.com/illustrations/mantenimiento-sitio-web"
+                class="underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Imagen
+              </a>{" "}
+              by{" "}
+              <a
+                href="https://iconscout.com/es/contributors/delesign/assets"
+                class="underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Delesign Graphics
+              </a>
+            </p>
+          </div>
+
+          <!-- Contenido -->
+          <div class="p-4 flex flex-col gap-4 w-full md:w-2/3">
+            <h2 class="text-2xl font-semibold text-secondary">
+              Mantenimiento con Horas Acumulables
+            </h2>
+            <p class="text-gray-700 leading-relaxed">
+              Abono mensual donde cada $10 USD equivale a una hora de trabajo.
+              Las horas no utilizadas se acumulan y pueden ser empleadas para
+              desarrollos futuros. <em
+                >¡Este plan es ideal para quienes tienen proyectos a largo
+                plazo!</em
+              >
+            </p>
+          </div>
+        </div>
+
+        <!-- Sin Mantenimiento -->
+        <div
+          class="flex flex-col md:flex-row bg-white rounded-lg shadow-lg overflow-hidden"
+        >
+          <!-- Imagen -->
+          <div
+            class="w-full md:w-1/3 flex flex-col items-center justify-center bg-gray-100 p-4"
+          >
+            <img
+              src="/img/svg/errormaintenance.svg"
+              alt="Imagen de Sin Mantenimiento"
+              class="w-full h-auto object-contain"
+            />
+            <p class="text-xs text-gray-500 place-self-end">
+              <a
+                href="https://iconscout.com/illustrations/mala-conexion"
+                class="underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Imagen
+              </a>{" "}
+              by{" "}
+              <a
+                href="https://iconscout.com/es/contributors/iconscout/:assets"
+                class="underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                IconScout
+              </a>
+            </p>
+          </div>
+
+          <!-- Contenido -->
+          <div class="p-4 flex flex-col gap-4 w-full md:w-2/3">
+            <h2 class="text-2xl font-semibold text-secondary">
+              Sin Mantenimiento
+            </h2>
+            <p class="text-gray-700 leading-relaxed">
+              No es necesario pagar un abono mensual. Cada trabajo realizado
+              implicará un costo individual. Puedes contactar directamente con
+              nosotros si necesitas algún ajuste.
+              <!-- <code class="block bg-gray-200 p-2 mt-4"
+                      >Código de descuento: 10OFF</code
+                    > -->
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

@@ -5,14 +5,14 @@ import { getCollection } from "astro:content";
 export async function getStaticPaths() {
   const SERVICES = await getCollection("services");
 
-  return SERVICES.map((services) => ({
-    params: { slug: services.slug },
-    props: { services },
+  return SERVICES.map((service) => ({
+    params: { slug: service.slug },
+    props: { service },
   }));
 }
 
-const { services } = Astro.props;
-const { data, slug } = services;
+const { service } = Astro.props;
+const { data, slug } = service;
 const { title, description, image, characteristics, tags, price, maintenance } =
   data;
 ---
@@ -42,36 +42,50 @@ const { title, description, image, characteristics, tags, price, maintenance } =
         <p class="text-lg text-gray-700 leading-relaxed">{description}</p>
 
         <!-- Características -->
-        <div>
-          <h2 class="text-2xl font-semibold text-secondary mt-6">
-            Características:
-          </h2>
-          <ul class="text-gray-600 list-disc pl-5 mt-2">
-            {
-              characteristics &&
-                characteristics
-                  .split(", ")
-                  .map((feature, index) => <li key={index}>{feature}</li>)
-            }
-          </ul>
-        </div>
+        {
+          characteristics && (
+            <div>
+              <h2 class="text-2xl font-semibold text-secondary mt-6">
+                Características:
+              </h2>
+              <ul class="text-gray-600 list-disc pl-5 mt-2">
+                {characteristics.split(", ").map((feature, index) => (
+                  <li key={index}>{feature}</li>
+                ))}
+              </ul>
+            </div>
+          )
+        }
 
-        <!-- Precio y Mantenimiento -->
+        <!-- Precio -->
         <div>
           <p class="text-lg font-semibold text-primary mt-4">
             Precio: <span class="text-black">$ {price} USD</span>
           </p>
-          {
-            maintenance && (
+        </div>
+
+        <!-- Mantenimiento -->
+        {
+          maintenance && (
+            <div>
               <p class="text-lg font-semibold text-tertiary">
                 Costo de mantenimiento:{" "}
                 {maintenance && (
                   <span class="text-black">$ {maintenance} USD x mes</span>
                 )}
               </p>
-            )
-          }
-        </div>
+              <p class="italic text-sm">
+                Equivale a "Horas Acumulables", para ver mas opciones visite
+                este{" "}
+                <a
+                  href="/services/mantenimiento"
+                  class="text-primary hover:text-primary-dark">
+                  Link
+                </a>
+              </p>
+            </div>
+          )
+        }
 
         <!-- Etiquetas -->
         <div class="flex flex-wrap gap-2 mt-4">
@@ -79,8 +93,7 @@ const { title, description, image, characteristics, tags, price, maintenance } =
             tags.map((tag, index) => (
               <span
                 key={index}
-                class="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full"
-              >
+                class="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full">
                 {tag}
               </span>
             ))
