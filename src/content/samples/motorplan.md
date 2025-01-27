@@ -8,5 +8,5 @@ staff:
 #   - "https://example.com/images/motorplan1.jpg"
 #   - "https://example.com/images/motorplan2.jpg"
 deploy: "https://motorplan-web.vercel.app/"
-images: ["/samples/motorplan.png", "/samples/motorplan1.png"]
+images: ["/samples/motorplan1.png", "/samples/motorplan2.png", "/samples/motorplan3.png"]
 ---
