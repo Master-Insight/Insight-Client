@@ -5,14 +5,14 @@ const config = {
       { name: 'Servicios', path: '/services' },
       { name: 'Portfolio', path: '/samples' },
       { name: 'Conocenos', path: '/conocenos' },
-      { name: 'Login', path: '/login' },
+      // { name: 'Login', path: '/login' },
     ],
     public_It: [
       { name: 'Home', path: '/introit' },
       { name: 'Participa', path: '/participa' },
       { name: 'Conocenos', path: '/about' },
       { name: 'Reglas', path: '/reglas' },
-      { name: 'Login', path: '/login' },
+      // { name: 'Login', path: '/login' },
     ],
   },
 }
