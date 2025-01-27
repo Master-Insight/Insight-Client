@@ -5,11 +5,11 @@ import { getCollection } from "astro:content";
 export async function getStaticPaths() {
   const PRESERVICES = await getCollection("services");
 
-  const SERVICES = PRESERVICES.filter((service) => {
-    return service.data.active === true;
-  });
+  // const SERVICES = PRESERVICES.filter((service) => {
+  //   return service.data.active === true;
+  // });
 
-  return SERVICES.map((service) => ({
+  return PRESERVICES.map((service) => ({
     params: { slug: service.slug },
     props: { service },
   }));
