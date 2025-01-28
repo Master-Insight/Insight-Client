@@ -19,7 +19,8 @@ const year = new Date().getFullYear();
         <p
           class="mt-6 max-w-md text-center leading-relaxed text-gray-500 sm:max-w-xs sm:text-left"
         >
-          {info.description}
+          {info.description}. Trabajamos con emprendedores argentinos para
+          potenciar sus negocios.
         </p>
         <ul class="mt-8 flex justify-center gap-6 sm:justify-start md:gap-8">
           {
@@ -35,96 +36,68 @@ const year = new Date().getFullYear();
         </ul>
       </div>
 
-      <!-- Map -->
-      <div class="grid grid-cols-1 gap-8 sm:grid-cols-3 lg:col-span-2">
-        <!-- Navegacion 1 -->
-        <div class="text-center sm:text-left">
-          <p class="text-lg font-medium text-gray-900">Navegación</p>
-          <ul class="mt-8 space-y-4 text-sm">
-            <li>
-              <a
-                class="text-gray-700 transition hover:text-gray-700/75"
-                href="/"
-              >
-                Inicio
-              </a>
-            </li>
-          </ul>
-        </div>
-        <!-- Navegacion 2 -->
+      <!-- Navigation Links -->
+      <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2">
+        <!-- Sectores -->
         <div class="text-center sm:text-left">
           <p class="text-lg font-medium text-gray-900">Sectores</p>
           <ul class="mt-8 space-y-4 text-sm">
             <li>
-              <a
-                class="text-gray-700 transition hover:text-gray-700/75"
-                href="/services"
+              <a class="text-gray-700 hover:text-gray-700/75" href="/portfolio"
+                >Portafolio</a
               >
-                Servicios
-              </a>
+            </li>
+            <li>
+              <a class="text-gray-700 hover:text-gray-700/75" href="/services"
+                >Servicios</a
+              >
+            </li>
+            <li>
+              <a class="text-gray-700 hover:text-gray-700/75" href="/team"
+                >Integrantes</a
+              >
             </li>
             <li>
               <a
-                class="text-gray-700 transition hover:text-gray-700/75"
-                href="#"
+                class="text-gray-700 hover:text-gray-700/75"
+                href="/maintenance">Opciones de mantenimiento</a
               >
-                Proyectos
-              </a>
+            </li>
+            <li>
+              <a class="text-gray-700 hover:text-gray-700/75" href="/about"
+                >Conócenos</a
+              >
+            </li>
+            <li>
+              <a class="text-gray-700 hover:text-gray-700/75" href="/contact"
+                >Escríbenos</a
+              >
             </li>
           </ul>
         </div>
-        <!-- Info -->
+
+        <!-- Contacto -->
         <div class="text-center sm:text-left">
-          <p class="text-lg font-medium text-gray-900">Escríbenos</p>
+          <p class="text-lg font-medium text-gray-900">Contacto</p>
           <ul class="mt-8 space-y-4 text-sm">
-            <!-- Email -->
             <li>
               <a
                 class="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
-                href={`mailto:${social[0].href}`}
+                href={`mailto:${info.email}`}
               >
                 <Email />
-                <span class="flex-1 text-gray-700"
-                  >{social[0].href.split(":")[1]}</span
-                >
+                <span class="flex-1 text-gray-700">{info.email}</span>
               </a>
             </li>
-            <!-- Telefono -->
             <li>
               <a
                 class="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
-                href="#"
+                href={`https://wa.me/${info.whatsapp}`}
               >
                 <Phone />
                 <span class="flex-1 text-gray-700">{info.whatsapp}</span>
               </a>
             </li>
-            <!-- Dirección -->
-            <!-- <li
-              class="flex items-start justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="size-5 shrink-0 text-gray-900"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                ></path>
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-              </svg>
-              <address class="-mt-0.5 flex-1 not-italic text-gray-700">
-                {info.address}
-              </address>
-            </li> -->
           </ul>
         </div>
       </div>
