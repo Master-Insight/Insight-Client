@@ -3,7 +3,7 @@ title: "App Web"
 description: "Desarrollo de plataformas funcionales accesibles desde la web."
 price: 1000
 maintenance: 100
-image: "/img/ben-kolde-bs2Ba7t69mM-unsplash.jpg"
+image: "/img/svg/webapp.svg"
 characteristics: "Accesos protegidos, escalabilidad."
 tags: ["web", "app", "protegida"]
 serviceType: "app_web"

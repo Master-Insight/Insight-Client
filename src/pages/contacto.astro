@@ -1,0 +1,119 @@
+---
+import company from "../../config/company";
+import Layout from "../layouts/Layout.astro";
+
+const telefono = company.info.whatsapp;
+// activar email desde vercel
+// const email = company.info.email
+const email = "124ad11f77fb1a9411ab49d0844a2803";
+---
+
+<Layout title="Contacto">
+  <!-- Section Form -->
+  <section class="bg-primary-darker w-full">
+    <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
+        <!-- Formulario -->
+        <div class="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
+          <form
+            action={`https://formsubmit.co/${email}`}
+            method="POST"
+            class="space-y-4"
+          >
+            <input type="hidden" name="_next" value="/graciasportucontacto" />
+            <input type="hidden" name="_captcha" value="false" />
+
+            <div>
+              <label for="nombre" class="text-lg font-medium text-gray-700"
+                >Nombre*</label
+              >
+              <input
+                class="mt-2 w-full bg-gray-100 rounded-lg border-gray-200 p-3"
+                type="text"
+                id="nombre"
+                name="nombre"
+                required
+              />
+            </div>
+
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <div>
+                <label for="email" class="text-lg font-medium text-gray-700"
+                  >Email*</label
+                >
+                <input
+                  class="mt-2 w-full bg-gray-100 rounded-lg border-gray-200 p-3"
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                />
+              </div>
+              <div>
+                <label for="telefono" class="text-lg font-medium text-gray-700"
+                  >Teléfono*</label
+                >
+                <input
+                  class="mt-2 w-full bg-gray-100 rounded-lg border-gray-200 p-3"
+                  type="tel"
+                  id="telefono"
+                  name="telefono"
+                  required
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="asunto" class="text-lg font-medium text-gray-700"
+                >Asunto*</label
+              >
+              <input
+                class="mt-2 w-full bg-gray-100 rounded-lg border-gray-200 p-3"
+                type="text"
+                id="asunto"
+                name="asunto"
+                required
+              />
+            </div>
+
+            <div>
+              <label for="mensaje" class="text-lg font-medium text-gray-700"
+                >Mensaje*</label
+              >
+              <textarea
+                class="mt-2 w-full bg-gray-100 rounded-lg border-gray-200 p-3"
+                rows="6"
+                id="mensaje"
+                name="mensaje"
+                required></textarea>
+            </div>
+
+            <div class="mt-4">
+              <button
+                type="submit"
+                class="inline-block w-full rounded-lg bg-black px-5 py-3 font-medium text-white sm:w-auto"
+              >
+                Enviar
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Información de contacto -->
+        <div class="lg:col-span-2 lg:py-12 p-8">
+          <p class="max-w-xl text-3xl font-bold text-white">
+            ¡Escríbenos! Estamos para ayudarte.
+          </p>
+          <div class="mt-8 text-lg text-primary-lighter">
+            <p>También puedes llamarnos al</p>
+            <p class="font-bold">{telefono}</p>
+          </div>
+          <div class="mt-8 text-lg text-primary-lighter">
+            <p class="mt-2 not-italic">O enviarnos un WhatsApp al</p>
+            <p class="font-bold">{telefono}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
