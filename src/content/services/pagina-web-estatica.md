@@ -3,7 +3,7 @@ title: "Página Web Estática"
 description: "Desarrollo de una página web estática básica."
 price: 150
 maintenance: 30
-image: "/img/ben-kolde-bs2Ba7t69mM-unsplash.jpg"
+image: "/img/svg/webpagestatic.svg"
 characteristics: "Diseño responsivo, fácil de mantener."
 tags: ["web", "estática", "simple"]
 serviceType: "web_static"
