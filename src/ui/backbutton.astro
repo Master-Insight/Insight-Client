@@ -1,0 +1,16 @@
+---
+// BackButton.astro
+interface Props {
+  className?: string;
+  defaultText?: string;
+}
+
+const {
+  className = "text-primary hover:text-primary-dark",
+  defaultText = "← Volver",
+} = Astro.props;
+---
+
+<button onclick="history.back()" class={className}>
+  <slot>{defaultText}</slot>
+</button>
