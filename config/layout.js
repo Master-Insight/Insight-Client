@@ -5,7 +5,7 @@ const config = {
       { name: 'Servicios', path: '/services' },
       { name: 'Portfolio', path: '/samples' },
       { name: 'Conocenos', path: '/conocenos' },
-      { name: 'Escribenos', path: '/escribenos' },
+      { name: 'Escribenos', path: '/contacto' },
     ],
     public_It: [
       { name: 'Home', path: '/introit' },

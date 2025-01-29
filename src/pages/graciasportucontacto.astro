@@ -1,0 +1,28 @@
+---
+import company from "../../config/company";
+import Layout from "../layouts/Layout.astro";
+const logoUrl = company.images.logo?.[0] ?? "/default-logo.png";
+---
+
+<Layout title="Gracias por tu mensaje">
+  <section
+    class="bg-primary-darker w-full min-h-[70vh] flex justify-center items-center"
+  >
+    <div
+      class="p-8 bg-white rounded-3xl flex flex-col items-center shadow-lg border border-gray-200"
+    >
+      <p class="font-bold text-gray-900 text-lg">
+        Muchas gracias por tu contacto.
+      </p>
+      <p class="text-gray-700">
+        Pronto uno de nuestros asesores se comunicará contigo
+      </p>
+      <a href="/" class="mt-4 flex flex-col items-center">
+        <img src={logoUrl} alt="Logo" class="w-auto h-20 mb-2" />
+        <p class="italic text-blue-600 hover:underline">
+          Haz clic aquí para volver al inicio
+        </p>
+      </a>
+    </div>
+  </section>
+</Layout>

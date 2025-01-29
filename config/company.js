@@ -13,7 +13,7 @@ const company = {
     name: "Insight",
     description: "Agencia de desarrollos tecnologicos",
     address: "dirección",
-    whatsapp: "+54-93541-613185",
+    whatsapp: "+54-3541-613185",
     email: "base.for.insight@gmail.com",
   },
   // Información para usar en las redes sociales (no whatsapp, si e-mail)
