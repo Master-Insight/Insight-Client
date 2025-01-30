@@ -27,22 +27,8 @@ const { title, description, media, deploy, images, staff } = data;
 
     <div class="flex flex-col md:flex-row items-start gap-6 mt-6">
       <!-- Imagen o media del sample -->
-      <div class="w-full md:w-1/2">
-        {
-          images && images.length > 0 ? (
-            images.length === 1 ? (
-              <img
-                src={images[0]}
-                alt={`Imagen de ${title}`}
-                class="w-full h-auto rounded-lg shadow-lg object-cover"
-              />
-            ) : (
-              <Carousel images={images} title={title} />
-            )
-          ) : (
-            <p class="text-gray-500">No hay imágenes disponibles</p>
-          )
-        }
+      <div class="w-full md:w-1/2 overflow-hidden">
+        <Carousel images={images} title={title} />
       </div>
 
       <!-- Información del sample -->
@@ -65,7 +51,7 @@ const { title, description, media, deploy, images, staff } = data;
         <p class="text-lg text-gray-700 leading-relaxed">{description}</p>
 
         <!-- Usuarios relacionados -->
-        <StaffSwiper staffSlugs={staff} />
+        <!-- <StaffSwiper staffSlugs={staff} /> -->
 
         <!-- Media relacionados -->
         {

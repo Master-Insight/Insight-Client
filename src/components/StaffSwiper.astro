@@ -1,60 +1,51 @@
 ---
-import "swiper/css"; // Estilos básicos de Swiper
-import "swiper/css/navigation"; // Estilos para la navegación
-import "swiper/css/pagination"; // Estilos para la paginación
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 import { getCollection } from "astro:content";
 
-const { staffSlugs = [] } = Astro.props; // Lista de slugs de usuarios a mostrar
-const staff = await getCollection("staff"); // Obtenemos todos los usuarios desde la colección
+const { staffSlugs = [] } = Astro.props;
+const staff = await getCollection("staff");
 
 // Filtrar los usuarios por los slugs proporcionados
 const filteredStaff = staff.filter((staff) => staffSlugs.includes(staff.slug));
 
-// Imagen predeterminada para usuarios sin foto
 const defaultPhoto = {
   boy: "/default/default-boy.jpg",
   girl: "/default/default-girl.jpg",
 };
-// console.log(filteredStaff);
 ---
 
 <div class="staffSwiper w-full h-auto">
-  <!-- Contenedor de diapositivas -->
   <div class="swiper-wrapper flex justify-center">
     {
-      filteredStaff.map((staff, index) => {
-        return (
-          <div class="swiper-slide text-center gap-2" key={index}>
-            <a href={`/staff/${staff.slug}`}>
-              <img
-                src={
-                  staff.data.photo ||
-                  defaultPhoto[staff.data.gender] ||
-                  "/default/default-boy.jpg"
-                }
-                alt={`Foto de ${staff.data.fullName}`}
-                class="w-24 h-24 object-cover rounded-full shadow-lg"
-              />
-              <h3 class="text-lg font-bold">{staff.data.fullName}</h3>
-              <p class="text-sm text-gray-500">{staff.data.roleIT[0]}</p>
-            </a>
-          </div>
-        );
-      })
+      filteredStaff.map((staff, index) => (
+        <div class="swiper-slide text-center gap-2" key={index}>
+          <a href={`/staff/${staff.slug}`}>
+            <img
+              src={
+                staff.data.photo ||
+                defaultPhoto[staff.data.gender] ||
+                "/default/default-boy.jpg"
+              }
+              alt={`Foto de ${staff.data.fullName}`}
+              class="w-24 h-24 object-cover rounded-full shadow-lg"
+            />
+            <h3 class="text-lg font-bold">{staff.data.fullName}</h3>
+            <p class="text-sm text-gray-500">{staff.data.roleIT[0]}</p>
+          </a>
+        </div>
+      ))
     }
   </div>
 
-  <!-- Controles de navegación -->
   <div class="swiper-button-prev"></div>
   <div class="swiper-button-next"></div>
-
-  <!-- Paginación -->
   <div class="swiper-pagination"></div>
 </div>
 
-<script>
-  // Inicializar Swiper en el cliente
+<script type="module">
   import Swiper from "swiper";
   import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
@@ -62,22 +53,17 @@ const defaultPhoto = {
     new Swiper(".staffSwiper", {
       modules: [Navigation, Pagination, Autoplay],
       spaceBetween: 20,
-      slidesPerView: 3, // Mostrar 3 usuarios al mismo tiempo
-      loop: true, // Hacer que el slider sea circular
-      autoplay: {
-        delay: 3000, // Cambiar cada 3 segundos
-        disableOnInteraction: false, // No detenerse al interactuar
-      },
+      slidesPerView: 3,
+      loop: true,
       navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".staffSwiper .swiper-button-next",
+        prevEl: ".staffSwiper .swiper-button-prev",
       },
       pagination: {
-        el: ".swiper-pagination",
+        el: ".staffSwiper .swiper-pagination",
         clickable: true,
       },
       breakpoints: {
-        // Responsividad
         640: { slidesPerView: 1 },
         768: { slidesPerView: 2 },
         1024: { slidesPerView: 3 },
@@ -87,14 +73,14 @@ const defaultPhoto = {
 </script>
 
 <style>
-  .swiper-slide {
-    padding: 1rem; /* Espaciado interno para las tarjetas */
+  .staffSwiper .swiper-slide {
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .swiper-pagination {
-    margin-top: 10px; /* Espacio entre el slider y la paginación */
+  .staffSwiper .swiper-pagination {
+    margin-top: 10px;
   }
 </style>

@@ -1,65 +1,95 @@
 ---
-import "swiper/css"; // Importa los estilos básicos de Swiper
-import "swiper/css/navigation"; // Importa los estilos para la navegación (flechas)
-import "swiper/css/pagination"; // Importa los estilos para la paginación (puntos)
-
-const { images = [], title } = Astro.props; // `images` es un array de URLs; `title` es opcional y proporciona contexto
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+const { images = [], title } = Astro.props;
 ---
 
-<div class="swiper w-full h-auto">
-  <!-- Contenedor de diapositivas -->
-  <div class="swiper-wrapper">
-    {
-      images.map((image, index) => (
-        <div class="swiper-slide" key={index}>
-          <img
-            src={image}
-            alt={`Imagen ${index + 1} de ${title}`}
-            class="w-full h-auto object-cover rounded-lg shadow-lg"
-          />
-        </div>
-      ))
-    }
+{images.length === 1 ? (
+  // Mostrar solo la imagen si hay una
+  <img
+    src={images[0]}
+    alt={`Imagen de ${title}`}
+    class="w-full h-auto rounded-lg shadow-lg object-cover"
+  />
+) : (
+  // Mostrar el carrusel si hay varias imágenes
+  <div class="w-full h-auto relative max-w-full overflow-hidden">
+    <div class="carouselSwiper swiper">
+      <div class="swiper-wrapper">
+        {images.map((image, index) => (
+          <div class="swiper-slide" key={index}>
+            <img
+              src={image}
+              alt={`Imagen ${index + 1} de ${title}`}
+              class="w-full h-auto object-cover rounded-lg shadow-lg"
+            />
+          </div>
+        ))}
+      </div>
+
+      <!-- Flechas de navegación -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <!-- Paginación -->
+      <div class="swiper-pagination"></div>
+    </div>
   </div>
+)}
 
-  <!-- Controles de navegación -->
-  <div class="swiper-button-prev"></div>
-  <!-- Flecha anterior -->
-  <div class="swiper-button-next"></div>
-  <!-- Flecha siguiente -->
-
-  <!-- Paginación -->
-  <div class="swiper-pagination"></div>
-  <!-- Indicadores de página (puntos) -->
-</div>
-
-<script>
-  // Inicializar Swiper en el cliente
-  import Swiper from "swiper";
+<script type="module">
+  import Swiper from "swiper/swiper-bundle.min.js";
   import { Navigation, Pagination } from "swiper/modules";
 
-  // Esperar a que el DOM esté listo
+  // window.addEventListener("load", () => {
   document.addEventListener("DOMContentLoaded", () => {
-    new Swiper(".swiper", {
-      modules: [Navigation, Pagination], // Módulos adicionales de Swiper (puedes agregar más según sea necesario)
-      spaceBetween: 10, // Espacio entre diapositivas (ajústalo según el diseño deseado)
-      slidesPerView: 1, // Número de diapositivas visibles al mismo tiempo
+    new Swiper(".carouselSwiper", {
+      modules: [Navigation, Pagination],
+      spaceBetween: 10,
+      slidesPerView: 1,
+      loop: true,
       navigation: {
-        nextEl: ".swiper-button-next", // Selector para la flecha siguiente
-        prevEl: ".swiper-button-prev", // Selector para la flecha anterior
+        nextEl: ".swiper-button-prev",
+        prevEl: ".swiper-button-next",
       },
       pagination: {
-        el: ".swiper-pagination", // Selector para los puntos de paginación
-        clickable: true, // Habilitar que los puntos sean clicables
+        el: ".swiper-pagination",
+        clickable: true,
       },
     });
   });
 </script>
 
 <style>
-  .swiper-pagination {
-    position: relative;
-    bottom: 0;
-    margin-top: 10px; /* Espacio entre el carrusel y los puntos */
+  .carouselSwiper {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .carouselSwiper .swiper-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .carouselSwiper .swiper-slide {
+    width: 100% !important; /* Evita que Swiper fuerce un tamaño mayor */
+    max-width: 100%;
+  }
+
+  .carouselSwiper .swiper-button-prev,
+  .carouselSwiper .swiper-button-next {
+    width: 30px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 50%;
+    font-size: 14px;
+  }
+
+  .carouselSwiper .swiper-pagination {
+    position: absolute;
+    bottom: 10px;
   }
 </style>
