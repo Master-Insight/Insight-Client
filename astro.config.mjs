@@ -7,16 +7,16 @@ import tailwind from '@astrojs/tailwind';
 
 import vercel from '@astrojs/vercel';
 
+import react from '@astrojs/react';
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [
-    tailwind(),
-    // icon({
-    //   include: {
-    //     mdi: ["*"], // (Default) Loads entire Material Design Icon set
-    //   }
-    // }),
-  ],
+  integrations: [// icon({
+  //   include: {
+  //     mdi: ["*"], // (Default) Loads entire Material Design Icon set
+  //   }
+  // }),
+  tailwind(), react()],
 
   adapter: vercel()
 });
