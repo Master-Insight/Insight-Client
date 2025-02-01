@@ -2,6 +2,8 @@
 import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
+export const prerender = true;
+
 export async function getStaticPaths() {
   const STAFF = await getCollection("staff");
 
@@ -43,8 +45,7 @@ const { fullName, linkedin, photo, language, roleIT, gender } = data;
               <a
                 href={`https://www.linkedin.com/in/${linkedin}`}
                 target="_blank"
-                class="text-blue-600 underline ml-2"
-              >
+                class="text-blue-600 underline ml-2">
                 {linkedin}
               </a>
             </p>
@@ -67,8 +68,7 @@ const { fullName, linkedin, photo, language, roleIT, gender } = data;
               language.map((lang, index) => (
                 <span
                   key={index}
-                  class="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full"
-                >
+                  class="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full">
                   {lang}
                 </span>
               ))

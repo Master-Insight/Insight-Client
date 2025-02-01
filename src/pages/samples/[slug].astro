@@ -31,7 +31,7 @@ const { title, description, media, deploy, images, staff } = data;
     <div class="flex flex-col md:flex-row items-start gap-6 mt-6">
       <!-- Imagen o media del sample -->
       <div class="w-full md:w-1/2 overflow-hidden">
-        <Slider client:load images={images} title={title} />
+        <Slider client:only="react" images={images} title={title} />
       </div>
 
       <!-- Información del sample -->
