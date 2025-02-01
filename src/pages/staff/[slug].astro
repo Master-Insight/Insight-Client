@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
+import Backbutton from "../../ui/backbutton.astro";
 
 export const prerender = true;
 
@@ -20,7 +21,7 @@ const { fullName, linkedin, photo, language, roleIT, gender } = data;
 
 <Layout title={fullName}>
   <div class="p-4">
-    <a href="/" class="text-primary hover:text-primary-dark"> &larr; Volver </a>
+    <Backbutton />
 
     <div class="flex flex-col md:flex-row items-start gap-6 mt-6">
       <!-- Foto del Staff -->
