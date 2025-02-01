@@ -2,9 +2,11 @@
 import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 // import Carousel from "../../ui/images/Carousel.astro";
-import StaffSwiper from "../../components/StaffSwiper.astro";
+// import StaffSwiper from "../../components/StaffSwiper.astro";
 import Deploy from "../../components/icons/Deploy.ico.astro";
 import Slider from "../../ui/Slider/Slider";
+
+export const prerender = true;
 
 export async function getStaticPaths() {
   const SAMPLES = await getCollection("samples");
@@ -29,7 +31,7 @@ const { title, description, media, deploy, images, staff } = data;
     <div class="flex flex-col md:flex-row items-start gap-6 mt-6">
       <!-- Imagen o media del sample -->
       <div class="w-full md:w-1/2 overflow-hidden">
-        <Slider images={images} title={title} />
+        <Slider client:load images={images} title={title} />
       </div>
 
       <!-- Información del sample -->
@@ -66,8 +68,7 @@ const { title, description, media, deploy, images, staff } = data;
                       href={url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="underline hover:text-blue-800"
-                    >
+                      class="underline hover:text-blue-800">
                       {url}
                     </a>
                   </li>
