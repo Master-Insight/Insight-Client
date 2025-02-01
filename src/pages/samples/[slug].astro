@@ -1,9 +1,13 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
-import Carousel from "../../ui/images/Carousel.astro";
-import StaffSwiper from "../../components/StaffSwiper.astro";
+import StaffSlider from "../../components/staff/StaffSlider";
+import Slider from "../../ui/Slider/Slider";
+import Backbutton from "../../ui/backbutton.astro";
 import Deploy from "../../components/icons/Deploy.ico.astro";
+import StaffDisplay from "../../components/staff/StaffDisplay.astro";
+
+export const prerender = true;
 
 export async function getStaticPaths() {
   const SAMPLES = await getCollection("samples");
@@ -21,28 +25,12 @@ const { title, description, media, deploy, images, staff } = data;
 
 <Layout title={title}>
   <div class="p-4">
-    <a href="/samples" class="text-primary hover:text-primary-dark">
-      &larr; Volver
-    </a>
+    <Backbutton />
 
     <div class="flex flex-col md:flex-row items-start gap-6 mt-6">
       <!-- Imagen o media del sample -->
-      <div class="w-full md:w-1/2">
-        {
-          images && images.length > 0 ? (
-            images.length === 1 ? (
-              <img
-                src={images[0]}
-                alt={`Imagen de ${title}`}
-                class="w-full h-auto rounded-lg shadow-lg object-cover"
-              />
-            ) : (
-              <Carousel images={images} title={title} />
-            )
-          ) : (
-            <p class="text-gray-500">No hay imágenes disponibles</p>
-          )
-        }
+      <div class="w-full md:w-1/2 overflow-hidden">
+        <Slider client:only="react" images={images} title={title} />
       </div>
 
       <!-- Información del sample -->
@@ -65,7 +53,7 @@ const { title, description, media, deploy, images, staff } = data;
         <p class="text-lg text-gray-700 leading-relaxed">{description}</p>
 
         <!-- Usuarios relacionados -->
-        <StaffSwiper staffSlugs={staff} />
+        <StaffDisplay staffSlugs={staff} />
 
         <!-- Media relacionados -->
         {
@@ -79,8 +67,7 @@ const { title, description, media, deploy, images, staff } = data;
                       href={url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="underline hover:text-blue-800"
-                    >
+                      class="underline hover:text-blue-800">
                       {url}
                     </a>
                   </li>
