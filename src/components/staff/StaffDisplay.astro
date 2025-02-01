@@ -1,0 +1,17 @@
+---
+import { getCollection } from "astro:content";
+import StaffSlider from "./StaffSlider";
+
+const { staffSlugs = [] } = Astro.props;
+const staff = await getCollection("staff");
+
+// Filtrar los usuarios por los slugs proporcionados
+const filteredStaff = staff.filter((staff) => staffSlugs.includes(staff.slug));
+
+const defaultPhoto = {
+  boy: "/default/default-boy.jpg",
+  girl: "/default/default-girl.jpg",
+};
+---
+
+<StaffSlider staff={filteredStaff} defaultPhoto={defaultPhoto} />

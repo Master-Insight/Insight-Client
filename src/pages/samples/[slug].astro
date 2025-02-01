@@ -1,11 +1,11 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
-// import Carousel from "../../ui/images/Carousel.astro";
-// import StaffSwiper from "../../components/StaffSwiper.astro";
-import Deploy from "../../components/icons/Deploy.ico.astro";
+import StaffSlider from "../../components/staff/StaffSlider";
 import Slider from "../../ui/Slider/Slider";
 import Backbutton from "../../ui/backbutton.astro";
+import Deploy from "../../components/icons/Deploy.ico.astro";
+import StaffDisplay from "../../components/staff/StaffDisplay.astro";
 
 export const prerender = true;
 
@@ -53,7 +53,7 @@ const { title, description, media, deploy, images, staff } = data;
         <p class="text-lg text-gray-700 leading-relaxed">{description}</p>
 
         <!-- Usuarios relacionados -->
-        <!-- <StaffSwiper staffSlugs={staff} /> -->
+        <StaffDisplay staffSlugs={staff} />
 
         <!-- Media relacionados -->
         {
