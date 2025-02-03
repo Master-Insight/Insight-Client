@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import Backbutton from "../../ui/backbutton.astro";
+import MarkdownContent from "../../ui/MarkdownContent.astro";
 
 export const prerender = true;
 
@@ -25,12 +26,12 @@ const { title, description, image, characteristics, tags, price, maintenance } =
 ---
 
 <Layout title={title}>
-  <div class="p-4">
+  <div class="container p-4">
     <Backbutton />
 
     <div class="flex flex-col md:flex-row items-start gap-6 mt-6">
       <!-- Imagen del servicio -->
-      <div class="w-full md:w-1/2">
+      <div class="w-full md:w-2/5">
         <img
           src={image}
           alt={`Imagen de ${title}`}
@@ -39,7 +40,7 @@ const { title, description, image, characteristics, tags, price, maintenance } =
       </div>
 
       <!-- Información del servicio -->
-      <div class="w-full md:w-1/2 flex flex-col gap-4">
+      <div class="w-full md:w-3/5 flex flex-col">
         <!-- Título del servicio -->
         <h1 class="text-4xl font-bold text-primary mb-4">{title}</h1>
 
@@ -74,14 +75,14 @@ const { title, description, image, characteristics, tags, price, maintenance } =
           maintenance && (
             <div>
               <p class="text-lg font-semibold text-tertiary">
-                Costo de mantenimiento:{" "}
+                Mantenimiento:
                 {maintenance && (
                   <span class="text-black">$ {maintenance} USD x mes</span>
                 )}
               </p>
+              <p class="italic text-sm">Equivale a "Horas Acumulables"</p>
               <p class="italic text-sm">
-                Equivale a "Horas Acumulables", para ver mas opciones visite
-                este{" "}
+                para ver mas opciones visite este
                 <a
                   href="/services/mantenimiento"
                   class="text-primary hover:text-primary-dark">
@@ -105,6 +106,11 @@ const { title, description, image, characteristics, tags, price, maintenance } =
           }
         </div>
       </div>
+    </div>
+
+    <!-- Contenido Markdown -->
+    <div class="w-full mt-8">
+      <MarkdownContent content={service} />
     </div>
   </div>
 </Layout>
