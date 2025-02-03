@@ -54,8 +54,8 @@ Este servicio tiene las siguientes limitaciones:
 ---
 
 ## 💰 **Precio y mantenimiento**
-- **Precio inicial**: $700 (incluye diseño, desarrollo y pruebas básicas).
-- **Mantenimiento mensual**: $70 (actualizaciones menores, corrección de errores y soporte técnico básico).
+- **Precio inicial**: $700 USD (incluye diseño, desarrollo y pruebas básicas).
+- **Mantenimiento mensual**: $70 USD (actualizaciones menores, corrección de errores y soporte técnico básico).
 - **Hosting mensual (Opcional)**: $15 USD.
 
 ---
