@@ -9,33 +9,34 @@ const preservices = await getCollection("services");
 const services = preservices.filter((service) => {
   return service.data.active === true;
 });
-
-// console.log(await services);
 ---
 
-<Layout title="Servicios">
-  <div class="flex flex-col sm:flex-row sm:justify-between gap-4">
-    <div class="flex">
-      <h2 class="text-3xl font-semibold ml-2">Nuestros servicios</h2>
+<Layout title="Servicios" description="Explora nuestras opciones">
+  <div class="container mx-auto px-4 py-8">
+    <!-- Título de la página -->
+    <div class="text-center mb-8">
+      <h2 class="text-3xl font-semibold">Nuestros Servicios</h2>
+      <p class="text-gray-600 mt-2">Explora nuestras opciones</p>
     </div>
+    <section class="w-full flex mt-4 flex-col md:flex-row">
+      <div
+        class="w-full justify-center lg:w-4/5 p-4 gap-2 flex flex-col mx-auto"
+      >
+        {
+          services.length === 0 ? (
+            <p>No hay servicios disponibles.</p>
+          ) : (
+            services.map((service) => (
+              <CardService
+                key={service.id}
+                item={service.data}
+                slug={service.slug}
+                page="services"
+              />
+            ))
+          )
+        }
+      </div>
+    </section>
   </div>
-
-  <section class="w-full flex mt-4 flex-col md:flex-row">
-    <div class="w-full justify-center lg:w-4/5 p-4 gap-2 flex flex-col">
-      {
-        services.length === 0 ? (
-          <p>No hay servicios disponibles.</p>
-        ) : (
-          services.map((service) => (
-            <CardService
-              key={service.id}
-              item={service.data}
-              slug={service.slug}
-              page="services"
-            />
-          ))
-        )
-      }
-    </div>
-  </section>
 </Layout>

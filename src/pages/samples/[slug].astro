@@ -1,11 +1,11 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import { getCollection } from "astro:content";
-import StaffSlider from "../../components/staff/StaffSlider";
+import { getCollection, render } from "astro:content";
 import Slider from "../../ui/Slider/Slider";
 import Backbutton from "../../ui/backbutton.astro";
 import Deploy from "../../components/icons/Deploy.ico.astro";
 import StaffDisplay from "../../components/staff/StaffDisplay.astro";
+import MarkdownContent from "../../ui/MarkdownContent.astro";
 
 export const prerender = true;
 
@@ -77,6 +77,11 @@ const { title, description, media, deploy, images, staff } = data;
           )
         }
       </div>
+    </div>
+
+    <!-- Contenido Markdown -->
+    <div class="w-full mt-8">
+      <MarkdownContent content={sample} />
     </div>
   </div>
 </Layout>

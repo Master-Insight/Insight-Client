@@ -5,6 +5,7 @@ import { defineCollection, z } from 'astro:content';
 const samplesCollection = defineCollection({
   type: 'content',
   schema: z.object({
+    order: z.number(),
     title: z.string(), // Título del sample
     description: z.string(), // Descripción del sample
     staff: z.array(z.string()), // IDs de usuarios relacionados

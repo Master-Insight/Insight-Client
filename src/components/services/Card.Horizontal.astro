@@ -5,13 +5,13 @@ const { title, characteristics, tags, description, image, images } = item;
 ---
 
 <div
-  class="w-full p-4 bg-white rounded shadow-lg flex flex-col sm:flex-row gap-4 hover:shadow-xl transition-shadow"
+  class="w-full p-4 bg-white rounded-3xl shadow-lg flex flex-col sm:flex-row gap-4 hover:shadow-xl transition-shadow"
 >
   <!-- Imagen del servicio -->
   <img
     src={image || images[0]}
     alt={`Imagen de ${title}`}
-    class="h-32 w-32 sm:h-60 sm:w-60 object-contain rounded"
+    class="h-32 w-32 sm:h-60 sm:w-60 object-contain rounded mx-auto"
   />
 
   <!-- Información del servicio -->
@@ -52,7 +52,7 @@ const { title, characteristics, tags, description, image, images } = item;
     <div class="mt-4 sm:mt-0">
       <a
         href={`/${page}/${slug}`}
-        class="px-4 py-2 bg-primary text-white font-semibold rounded hover:bg-primary-dark transition-colors"
+        class="px-4 py-2 bg-primary text-white font-semibold rounded-xl hover:bg-primary-dark transition-colors"
       >
         Ver Detalles
       </a>
