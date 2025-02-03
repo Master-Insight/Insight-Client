@@ -27,7 +27,7 @@ const servicesCollection = defineCollection({
     characteristics: z.string(),
     tags: z.array(z.string()),
     serviceType: z.string(),
-    complexityLevel: z.enum(['low', 'medium', 'high']),
+    complexityLevel: z.enum(['baja', 'media', 'alta']),
     created: z.date(),
     updated: z.date(),
     active: z.boolean(),
