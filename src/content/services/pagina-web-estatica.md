@@ -6,8 +6,8 @@ maintenance: 30
 image: "/img/svg/webpagestatic.svg"
 characteristics: "Diseño responsivo, fácil de mantener, optimizada para SEO básico."
 tags: ["web", "estática", "simple", "landing page"]
-serviceType: "web_static"
-complexityLevel: "low"
+serviceType: "web"
+complexityLevel: "baja"
 created: 2025-01-08T04:02:33.580Z
 updated: 2025-01-08T04:02:33.580Z
 active: true

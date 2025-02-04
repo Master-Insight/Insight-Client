@@ -7,7 +7,7 @@ image: "/img/hero/ben-kolde-bs2Ba7t69mM-unsplash.jpg"
 characteristics: "Aplicación nativa con soporte Android/iOS."
 tags: ["móvil", "app", "nativa"]
 serviceType: "app_mobile"
-complexityLevel: "high"
+complexityLevel: "alta"
 created: 2025-01-08T04:05:55.008Z
 updated: 2025-01-08T04:05:55.008Z
 active: false

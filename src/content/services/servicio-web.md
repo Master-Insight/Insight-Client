@@ -5,9 +5,9 @@ price: 1000
 maintenance: 100
 image: "/img/hero/ben-kolde-bs2Ba7t69mM-unsplash.jpg"
 characteristics: "Aplicación nativa con soporte Android/iOS."
-tags: ["móvil", "app", "nativa"]
-serviceType: "app_mobile"
-complexityLevel: "high"
+tags: ["web", "móvil", "app", "nativa"]
+serviceType: "web"
+complexityLevel: "alta"
 created: 2025-01-12T00:50:01.463Z
 updated: 2025-01-12T00:50:01.463Z
 active: false

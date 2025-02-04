@@ -6,8 +6,8 @@ maintenance: 70
 image: "/img/svg/webpagesheets.svg"
 characteristics: "Integración con Google Sheets, interacciones dinámicas."
 tags: ["web", "dinámica", "sheets"]
-serviceType: "web_dynamic"
-complexityLevel: "medium"
+serviceType: "web"
+complexityLevel: "media"
 created: 2025-01-08T04:03:11.186Z
 updated: 2025-01-08T04:03:11.186Z
 active: true
