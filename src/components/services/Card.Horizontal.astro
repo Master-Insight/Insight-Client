@@ -1,17 +1,26 @@
 ---
 const { item, slug, page } = Astro.props;
-const { title, characteristics, tags, description, image, images } = item;
-// console.log(Astro.props);
+const {
+  title,
+  characteristics,
+  tags,
+  description,
+  image,
+  images,
+  price,
+  serviceType,
+} = item;
 ---
 
 <div
-  class="w-full p-4 bg-white rounded-3xl shadow-lg flex flex-col sm:flex-row gap-4 hover:shadow-xl transition-shadow"
+  class="service-card w-full p-6 bg-white rounded-3xl shadow-lg flex flex-col gap-4 hover:shadow-xl transition-shadow"
+  data-category={serviceType}
 >
   <!-- Imagen del servicio -->
   <img
     src={image || images[0]}
     alt={`Imagen de ${title}`}
-    class="h-32 w-32 sm:h-60 sm:w-60 object-contain rounded mx-auto"
+    class="h-40 w-full object-cover rounded-lg"
   />
 
   <!-- Información del servicio -->
@@ -22,6 +31,15 @@ const { title, characteristics, tags, description, image, images } = item;
 
       <!-- Descripción -->
       <p class="text-gray-700 mb-4">{description}</p>
+
+      <!-- Precio -->
+      <!-- {
+        price && (
+          <p class="text-lg font-semibold text-gray-800 mb-4">
+            Precio inicial: ${price}
+          </p>
+        )
+      } -->
 
       <!-- Características -->
       <ul class="text-sm text-gray-600 mb-4 list-disc pl-5">
@@ -49,10 +67,10 @@ const { title, characteristics, tags, description, image, images } = item;
     </div>
 
     <!-- Botón para más detalles -->
-    <div class="mt-4 sm:mt-0">
+    <div class="mt-4">
       <a
         href={`/${page}/${slug}`}
-        class="px-4 py-2 bg-primary text-white font-semibold rounded-xl hover:bg-primary-dark transition-colors"
+        class="w-full text-center px-4 py-2 bg-primary text-white font-semibold rounded-xl hover:bg-primary-dark transition-colors"
       >
         Ver Detalles
       </a>
