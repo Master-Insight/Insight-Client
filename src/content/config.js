@@ -25,7 +25,7 @@ const servicesCollection = defineCollection({
     maintenance: z.number(),
     image: z.string(),
     characteristics: z.string(),
-    tags: z.array(z.string()),
+    tags: z.array(z.string()), // tomar en cuenta categorias web, data, mobil
     serviceType: z.string(),
     complexityLevel: z.enum(['baja', 'media', 'alta']),
     created: z.date(),
