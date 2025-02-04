@@ -15,35 +15,32 @@ active: true
 
 # 🚀 **Desarrollo y Mantenimiento de Planillas**
 
-Este servicio está diseñado para clientes que necesitan soluciones personalizadas en **Excel** y **Google Sheets**. Ya sea para automatizar tareas, crear dashboards interactivos o generar reportes avanzados, ofrecemos desarrollo y mantenimiento de planillas adaptadas a tus necesidades.
+Cada negocio tiene necesidades diferentes, por eso antes de crear cualquier solución, trabajamos en conjunto para definir qué es lo que realmente necesitas. A través de una serie de preguntas clave, identificamos el problema de raíz y diseñamos la mejor herramienta para optimizar tu gestión.
 
 ---
 
-## 🌟 **Características principales**
-- **Automatización de tareas**: Creación de macros y scripts para automatizar procesos repetitivos.
-- **Fórmulas avanzadas**: Implementación de fórmulas complejas para análisis de datos.
-- **Dashboards interactivos**: Diseño de paneles de control visuales y fáciles de usar.
-- **Integración con APIs**: Conexión de planillas con APIs externas para obtener datos en tiempo real.
-- **Mantenimiento continuo**: Soporte técnico para actualizaciones y corrección de errores.
+## 🌟 **¿Cómo trabajamos?**
+1. **Análisis de necesidades**: Preguntas estratégicas para entender qué quieres lograr.
+2. **Definición de solución**: Evaluamos si Excel o una herramienta online es la mejor opción.
+3. **Desarrollo de la planilla**: Aplicamos automatización, integraciones y herramientas avanzadas.
+4. **Pruebas y ajustes**: Validamos que la solución cumpla con tu necesidad original.
+5. **Soporte y mantenimiento**: Ajustes, optimización y evolución según el uso.
 
 ---
 
-## 🛠️ **Especificaciones técnicas**
-- **Herramientas utilizadas**:
-  - Excel (VBA, Power Query, Power Pivot).
-  - Google Sheets (Google Apps Script, fórmulas avanzadas).
-- **Tipo de planillas**:
-  - Control de inventarios.
-  - Reportes financieros.
-  - Dashboards de métricas.
-  - Automatización de procesos empresariales.
+## 🛠️ **Características principales**
+- **Automatización de tareas**: Uso de fórmulas avanzadas y Power Query si es necesario.
+- **Análisis contable y financiero**: Conciliaciones bancarias, impuestos, control de fraude, cruce de ventas con tarjetas.
+- **Optimización de procesos**: Control de stock, logística, detección de errores, gestión interna.
+- **Integración con APIs y bases de datos**: Si la empresa cuenta con estos recursos.
+- **Soluciones personalizadas**: Desde reportes hasta sistemas de gestión interconectados.
 
 ---
 
 ## 📋 **Límites y exclusiones**
 - **Precio inicial**: $100 por planilla básica (hasta 2 horas de desarrollo).
-- **Mantenimiento mensual**: $20 por planilla (soporte técnico y actualizaciones menores).
-- **Costo adicional por complejidad**: Si el proyecto requiere más de 2 horas de desarrollo, se aplicará un costo adicional de $30 USD/hora.
+- **Mantenimiento mensual**: $20 por planilla (ajustes menores y soporte).
+- **Costo adicional por complejidad**: Si el proyecto requiere más de 2 horas, se aplicará un costo adicional de $30 USD/hora.
 
 ---
 
