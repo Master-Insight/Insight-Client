@@ -13,7 +13,7 @@ const {
 ---
 
 <div
-  class="service-card w-full p-6 bg-white rounded-3xl shadow-lg flex flex-col gap-4 hover:shadow-xl transition-shadow"
+  class="service-card w-full md:w-[45%] lg:w-[30%] p-6 bg-white rounded-3xl shadow-lg flex flex-col gap-4 hover:shadow-xl transition-shadow"
   data-category={serviceType}
 >
   <!-- Imagen del servicio -->
@@ -52,13 +52,14 @@ const {
       </ul>
 
       <!-- Etiquetas -->
-      <div class="flex flex-wrap gap-2 mt-2">
+      <div class="flex flex-wrap gap-2 mt-2 justify-center">
         {
           tags &&
             tags.map((tag, index) => (
               <span
                 key={index}
-                class="px-2 py-1 bg-blue-100 text-blue-600 text-xs rounded-full">
+                class="px-2 py-1 bg-blue-100 text-blue-600 text-xs rounded-full"
+              >
                 {tag}
               </span>
             ))
@@ -67,7 +68,7 @@ const {
     </div>
 
     <!-- Botón para más detalles -->
-    <div class="mt-4">
+    <div class="mx-auto mt-4">
       <a
         href={`/${page}/${slug}`}
         class="w-full text-center px-4 py-2 bg-primary text-white font-semibold rounded-xl hover:bg-primary-dark transition-colors"
