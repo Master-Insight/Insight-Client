@@ -3,7 +3,7 @@ title: "Análisis de Datos con Looker Studio"
 description: "Transformamos datos en información útil con dashboards interactivos, reportes automatizados y visualizaciones avanzadas."
 price: 250
 maintenance: 40
-image: "/img/ben-kolde-bs2Ba7t69mM-unsplash.jpg"
+image: "/img/png/spreadsheet.png"
 characteristics: "Visualizaciones avanzadas, reportes personalizados, conexión con múltiples fuentes de datos."
 tags: ["datos", "análisis", "dashboard", "reportes", "Looker Studio"]
 serviceType: "data"
