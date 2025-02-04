@@ -6,7 +6,7 @@ maintenance: 100
 image: "/img/svg/webapp.svg"
 characteristics: "Accesos protegidos, escalabilidad, funcionalidades avanzadas."
 tags: ["web", "app", "protegida", "escalable"]
-serviceType: "app_web"
+serviceType: "web"
 complexityLevel: "alta"
 created: 2025-01-08T04:03:20.881Z
 updated: 2025-01-08T04:03:20.881Z

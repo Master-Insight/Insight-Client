@@ -6,7 +6,7 @@ maintenance: 50
 image: "/img/svg/webpagedinamic.svg"
 characteristics: "Integraciones con APIs externas, interacciones dinámicas, diseño personalizado."
 tags: ["web", "dinámica", "interactiva"]
-serviceType: "web_dynamic"
+serviceType: "web"
 complexityLevel: "media"
 created: 2025-01-08T04:03:11.186Z
 updated: 2025-01-08T04:03:11.186Z

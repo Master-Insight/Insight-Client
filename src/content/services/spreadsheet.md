@@ -6,7 +6,7 @@ maintenance: 20
 image: "/img/png/spreadsheet.png"
 characteristics: "Automatización de tareas, fórmulas avanzadas, macros, dashboards."
 tags: ["datos", "excel", "sheets", "planillas", "automatización"]
-serviceType: "spreadsheet"
+serviceType: "data"
 complexityLevel: "media"
 created: 2025-01-08T04:03:20.881Z
 updated: 2025-01-08T04:03:20.881Z
