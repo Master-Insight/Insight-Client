@@ -5,7 +5,7 @@ price: 100
 maintenance: 20
 image: "/img/png/spreadsheet.png"
 characteristics: "Automatización de tareas, fórmulas avanzadas, macros, dashboards."
-tags: ["excel", "sheets", "planillas", "automatización"]
+tags: ["datos", "excel", "sheets", "planillas", "automatización"]
 serviceType: "spreadsheet"
 complexityLevel: "media"
 created: 2025-01-08T04:03:20.881Z
