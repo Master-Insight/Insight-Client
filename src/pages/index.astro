@@ -1,15 +1,12 @@
 ---
-import List from "../ui/sections/List.Colums.astro";
-import CardServices from "../components/services/Card.Vertical.astro";
-import CardSamples from "../components/samples/Card.Vertical.astro";
 import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
+import SliderCard from "../ui/Slider/SliderCard";
+import CardServices from "../components/services/CardVerticalService.jsx";
+import CardSamples from "../components/samples/CardVerticalSamples.jsx";
 
 // Obtener servicios activos de la colección
 const services = await getCollection("services", (entry) => entry.data.active);
-// console.log(services);
-
-// Mapear servicios para pasarlos al componente
 const activeServices = services.map((service) => ({
   title: service.data.title,
   description: service.data.description,
@@ -19,12 +16,9 @@ const activeServices = services.map((service) => ({
   tags: service.data.tags,
   slug: service.slug,
 }));
-// console.log(activeServices);
 
 // Obtener samples de la colección
 const samples = await getCollection("samples");
-
-// Mapear samples para pasarlos al componente
 const sampleData = samples.map((sample) => ({
   title: sample.data.title,
   description: sample.data.description,
@@ -39,7 +33,7 @@ const sampleData = samples.map((sample) => ({
 <Layout title="Astro Insight!">
   <!-- Hero inicial -->
   <div
-    class="w-full bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white text-center py-16 rounded-3xl flex items-center flex-col relative overflow-hidden"
+    class="w-full bg-gradient-to-r from-secondary via-primary to-secondary text-white text-center py-16 rounded-3xl flex items-center flex-col relative overflow-hidden"
   >
     <!-- Efecto Parallax -->
     <div
@@ -49,10 +43,10 @@ const sampleData = samples.map((sample) => ({
     </div>
 
     <div class="w-2/3 flex flex-col max-w-2xl mx-auto z-10">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4 animate-fadeIn">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 animate-fadeIn font-title">
         Bienvenido a Insight
       </h1>
-      <p class="mb-6 text-lg">
+      <p class="mb-6 text-lg font-subtitle">
         Transformamos ideas en soluciones digitales. Únete a nosotros o descubre
         cómo podemos llevar tu negocio al siguiente nivel.
       </p>
@@ -63,22 +57,17 @@ const sampleData = samples.map((sample) => ({
         >
           Descubre nuestros servicios
         </a>
-        <!-- TODO SE ESCONDE BOTON -->
-        <!-- <a
-          href="/it"
-          class="bg-secondary text-white font-bold py-3 px-6 rounded shadow hover:shadow-lg transform hover:scale-105 transition-all"
-        >
-          Únete como Desarrollador IT
-        </a> -->
       </div>
     </div>
   </div>
 
   <!-- Segunda Sección -->
   <section id="home" class="text-center py-16">
-    <h2 class="text-4xl font-bold mb-6">Por qué elegir Insight</h2>
+    <h2 class="text-4xl font-bold mb-6 font-title text-primary">
+      Por qué elegir Insight
+    </h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-      <p class="text-lg px-4">
+      <p class="text-lg px-4 font-subtitle">
         Somos un equipo de expertos en tecnología dedicados a crear soluciones
         que impulsen tu negocio. Y como nos tomamos muy en serio tu necesidad y
         tu tiempo, queremos hacer las soluciones más simples y efectivas para
@@ -87,20 +76,26 @@ const sampleData = samples.map((sample) => ({
       <img
         src="/img/hero/ben-kolde-bs2Ba7t69mM-unsplash.jpg"
         alt="Innovación Insight"
-        class="mx-auto rounded-lg shadow-lg transform hover:scale-105 transition-transform object-cover object-bottom h-80 w-full max-w-lg"
+        class="mx-auto rounded-lg shadow-custom transform hover:scale-105 transition-transform object-cover object-bottom h-80 w-full max-w-lg"
       />
     </div>
   </section>
 
   <!-- Sección Servicios -->
-  <section id="services" class="bg-gray-100 py-16">
-    <h2 class="text-4xl font-bold text-center mb-8">Nuestros Servicios</h2>
-    <List cards={activeServices} CardComponent={CardServices} />
+  <section id="services" class="w-full bg-gray-100 py-16">
+    <SliderCard
+      title="Nuestros Servicios"
+      collection={activeServices}
+      CardComponent={CardServices}
+    />
   </section>
 
   <!-- Sección Samples -->
-  <section id="samples" class="bg-gray-200 py-16">
-    <h2 class="text-4xl font-bold text-center mb-8">Nuestros Trabajos</h2>
-    <List cards={sampleData} CardComponent={CardSamples} />
+  <section id="samples" class="w-full bg-gray-200 py-16">
+    <SliderCard
+      title="Nuestros Trabajos"
+      collection={sampleData}
+      CardComponent={CardSamples}
+    />
   </section>
 </Layout>
