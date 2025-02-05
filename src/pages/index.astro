@@ -2,8 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import SliderCard from "../ui/Slider/SliderCard";
-import CardServices from "../components/services/CardVerticalService.jsx";
-import CardSamples from "../components/samples/CardVerticalSamples.jsx";
+
+export const prerender = true;
 
 // Obtener servicios activos de la colección
 const services = await getCollection("services", (entry) => entry.data.active);
@@ -84,18 +84,20 @@ const sampleData = samples.map((sample) => ({
   <!-- Sección Servicios -->
   <section id="services" class="w-full bg-gray-100 py-16">
     <SliderCard
+      client:load
       title="Nuestros Servicios"
       collection={activeServices}
-      CardComponent={CardServices}
+      CardComponent="CardServices"
     />
   </section>
 
   <!-- Sección Samples -->
   <section id="samples" class="w-full bg-gray-200 py-16">
     <SliderCard
+      client:load
       title="Nuestros Trabajos"
       collection={sampleData}
-      CardComponent={CardSamples}
+      CardComponent="CardSamples"
     />
   </section>
 </Layout>
