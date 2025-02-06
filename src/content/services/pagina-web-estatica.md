@@ -24,8 +24,8 @@ Una **página web estática** es una solución ideal para proyectos pequeños, p
 - **Optimización SEO básica**: Incluye metaetiquetas, títulos y descripciones optimizadas para mejorar la visibilidad en motores de búsqueda.
 - **Fácil de mantener**: Al ser estática, no requiere bases de datos ni actualizaciones frecuentes.
 - **Entrega rápida**: Desarrollo ágil y entrega en un plazo máximo de **7 días hábiles**.
-- <span style="color: red; font-weight: 700;">**Dominio no incluido**: El cliente debe proporcionar su propio dominio, es decir "www.tudominio.com" (esta opción es para proteger a nuestro cliente) -> En Argentina [aquí](https://nic.ar/).</span>
-- <span style="color: red; font-weight: 700;">**Hosting no incluido**: El cliente puede optar por nuestro servicio de Hosting ($10 USD mensuales) o debe proporcionar su propio hosting.</span>
+- **Dominio no incluido**: El cliente debe proporcionar su propio dominio, es decir "www.tudominio.com" (esta opción es para proteger a nuestro cliente) -> En Argentina [aquí](https://nic.ar/).
+- **Hosting no incluido**: El cliente puede optar por nuestro servicio de Hosting ($10 USD mensuales) o debe proporcionar su propio hosting.
 
 ---
 
@@ -36,7 +36,7 @@ Una **página web estática** es una solución ideal para proyectos pequeños, p
 - **Diseño personalizado**: Basado en un tema o plantilla proporcionada por el cliente <span style="color: red; font-weight: 700;">o seleccionada de nuestra biblioteca.</span>
 - **Tecnologías utilizadas**:
   - HTML5, CSS3 y JavaScript básico.
-  - Frameworks como [Astro](https://astro.build/) y [Tailwind CSS](https://tailwindcss.com/) para diseño responsivo.
+  - Frameworks como [Astro](https://astro.build/) y [Tailwind CSS](https://tailwindcss.com/).
   - Sin bases de datos ni backend.
 
 ---
@@ -66,7 +66,6 @@ Este servicio tiene las siguientes limitaciones:
 ## 🚨 **Condiciones adicionales**
 - **Pago anticipado**: Se requiere el 50% del pago por adelantado para iniciar el proyecto.
 - **Propiedad del código**: El cliente recibe la propiedad completa del código fuente una vez finalizado el pago.
-- **Hosting y dominio**: El cliente es responsable de contratar y configurar su propio hosting y dominio.
 
 ---
 

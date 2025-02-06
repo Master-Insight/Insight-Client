@@ -25,20 +25,19 @@ Una **página web dinámica** es una solución avanzada para proyectos que requi
 - **Diseño personalizado**: Diseño adaptado a las necesidades específicas del proyecto.
 - **Optimización SEO avanzada**: Mejores prácticas para mejorar el posicionamiento en motores de búsqueda.
 - **Entrega por fases**: Se entrega una **versión mínima funcional** al principio, con la posibilidad de agregar funcionalidades adicionales según la complejidad.
-- <span style="color: red; font-weight: 700;">**Dominio no incluido**: El cliente debe proporcionar su propio dominio, es decir "www.tudominio.com" (esta opción es para proteger a nuestro cliente) -> En Argentina [aquí](https://nic.ar/).</span>
-- <span style="color: red; font-weight: 700;">**Hosting no incluido**: El cliente puede optar por nuestro servicio de Hosting ($15 USD mensuales) o debe proporcionar su propio hosting.</span>
+- **Dominio no incluido**: El cliente debe proporcionar su propio dominio, es decir "www.tudominio.com" (esta opción es para proteger a nuestro cliente) -> En Argentina [aquí](https://nic.ar/).
+- **Hosting no incluido**: El cliente puede optar por nuestro servicio de Hosting ($15 USD mensuales) o debe proporcionar su propio hosting.
 
 ---
 
 ## 🛠️ **Especificaciones técnicas**
 - **Número de páginas**: Hasta **10 páginas** (por ejemplo: Inicio, Nosotros, Servicios, Blog, Contacto, Galería, etc.).
 - **Formularios avanzados**: Formularios con validación y envío de datos a APIs o correos electrónicos.
-- **Integraciones con APIs**: Conexión con servicios externos como Google Maps, redes sociales, pasarelas de pago, etc.
+- **Integraciones con APIs**: Conexión con servicios externos de baja complejidad como Google Maps, redes sociales, etc.
 - **Interacciones dinámicas**: Contenido que se actualiza dinámicamente sin recargar la página (por ejemplo, filtros, búsquedas, carruseles interactivos).
 - **Tecnologías utilizadas**:
   - HTML5, CSS3 y JavaScript avanzado.
-  - Frameworks como [React](https://reactjs.org/) o [Vue.js](https://vuejs.org/) para interactividad.
-  - Herramientas como [Astro](https://astro.build/) para optimización y rendimiento.
+  - Frameworks como [React](https://reactjs.org/) o [Astro](https://astro.build/) para interactividad.
   - Sin bases de datos ni backend complejo (esto se ofrece en un servicio aparte).
 
 ---
@@ -68,7 +67,6 @@ Este servicio tiene las siguientes limitaciones:
 ## 🚨 **Condiciones adicionales**
 - **Pago anticipado**: Se requiere el 50% del pago por adelantado para iniciar el proyecto.
 - **Propiedad del código**: El cliente recibe la propiedad completa del código fuente una vez finalizado el pago.
-- **Hosting y dominio**: El cliente es responsable de contratar y configurar su propio hosting y dominio.
 
 ---
 
