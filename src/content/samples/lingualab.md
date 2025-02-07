@@ -2,6 +2,8 @@
 order: 2
 title: "LinguaLab"
 description: "LinguaLab es una plataforma web colaborativa desarrollada en conjunto con FooTalent Group. Su objetivo es optimizar la enseñanza de idiomas, centralizando recursos y facilitando la gestión de clases virtuales. Con un diseño intuitivo y herramientas especializadas, la plataforma mejora la eficiencia de los docentes en la creación y administración de contenido educativo."
+service: "app-web"
+tags: ["web"]
 staff:
   - "gustavo-sirtori"
   - "henryck-guaramato"
