@@ -1,6 +1,7 @@
 ---
-const aProps = Astro.props;
-const { item, slug, page } = aProps;
+import { getCollection } from "astro:content";
+
+const { item, slug, page } = Astro.props;
 const {
   title,
   characteristics,
@@ -12,11 +13,22 @@ const {
   staff,
   deploy,
 } = item;
+
+const staffSlugs = staff;
+const staffCollection = await getCollection("staff");
+const filteredStaff = staffCollection.filter((staff) =>
+  staffSlugs.includes(staff.slug),
+);
+
+const defaultPhoto = {
+  boy: "/default/default-boy.jpg",
+  girl: "/default/default-girl.jpg",
+};
 ---
 
 <div
   class="sample-card w-full md:w-[45%] lg:w-[30%] p-6 bg-white rounded-3xl shadow-lg flex flex-col gap-4 hover:shadow-xl transition-shadow"
-  data-category={aProps["data-category"]}
+  data-category={service}
 >
   <!-- Imagen del sample -->
   <img
@@ -32,9 +44,7 @@ const {
       <h3 class="font-bold text-xl text-primary mb-2">{title}</h3>
 
       <!-- Descripción -->
-      <p class="text-gray-700 mb-4 description-clamp text-justify">
-        {description}
-      </p>
+      <p class="text-gray-700 mb-4 description-clamp">{description}</p>
 
       <!-- Características -->
       <ul class="text-sm text-gray-600 mb-4 list-disc pl-5">
@@ -62,9 +72,34 @@ const {
       </div>
 
       <!-- Staff -->
-      <div class="text-sm text-gray-600 mt-4">
-        <strong>Equipo:</strong>
-        {staff?.join(", ") || "N/A"}
+      <div class="staff-container mt-4">
+        {
+          filteredStaff?.length > 0 ? (
+            filteredStaff.map((member) => (
+              <div key={member.data.fullName} class="staff-member">
+                <img
+                  src={member.data.photo || "/default/default-boy.jpg"}
+                  alt={member.data.fullName}
+                  class="staff-photo"
+                />
+                <div>
+                  <p class="staff-name">{member.data.fullName}</p>
+                  {member.data.linkedin && (
+                    <a
+                      href={`https://linkedin.com/in/${member.data.linkedin}`}
+                      target="_blank"
+                      class="staff-linkedin"
+                    >
+                      LinkedIn
+                    </a>
+                  )}
+                </div>
+              </div>
+            ))
+          ) : (
+            <p class="text-sm text-gray-600">Equipo no disponible.</p>
+          )
+        }
       </div>
     </div>
 
@@ -97,5 +132,40 @@ const {
     -webkit-line-clamp: 7;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+
+  .staff-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .staff-member {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f8f8f8;
+    padding: 8px;
+    border-radius: 8px;
+  }
+
+  .staff-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .staff-name {
+    font-size: 0.875rem;
+    font-weight: bold;
+  }
+
+  .staff-linkedin {
+    font-size: 0.75rem;
+    color: #0077b5;
+    text-decoration: none;
   }
 </style>
