@@ -22,24 +22,22 @@ Una **página web dinámica con base de datos en Google Sheets** es una solució
 ## 🌟 **Características principales**
 - **Integración con Google Sheets**: Utiliza Google Sheets como base de datos para almacenar y recuperar datos.
 - **Interacciones dinámicas**: Contenido que se actualiza dinámicamente sin recargar la página.
-- **CMS básico**: Permite editar contenido directamente en Google Sheets (solo agregar al final).
 - **Optimización SEO avanzada**: Mejores prácticas para mejorar el posicionamiento en motores de búsqueda.
 - **Entrega por fases**: Se entrega una **versión mínima funcional** al principio, con la posibilidad de agregar funcionalidades adicionales según la complejidad.
-- <span style="color: red; font-weight: 700;">**Dominio no incluido**: El cliente debe proporcionar su propio dominio, es decir "www.tudominio.com" (esta opción es para proteger a nuestro cliente) -> En Argentina [aquí](https://nic.ar/).</span>
-- <span style="color: red; font-weight: 700;">**Hosting no incluido**: El cliente puede optar por nuestro servicio de Hosting ($15 USD mensuales) o debe proporcionar su propio hosting.</span>
+- **Dominio no incluido**: El cliente debe proporcionar su propio dominio, es decir "www.tudominio.com" (esta opción es para proteger a nuestro cliente) -> En Argentina [aquí](https://nic.ar/).
+- **Hosting no incluido**: El cliente puede optar por nuestro servicio de Hosting ($15 USD mensuales) o debe proporcionar su propio hosting.
 
 ---
 
 ## 🛠️ **Especificaciones técnicas**
 - **Número de páginas**: Hasta **10 páginas** (por ejemplo: Inicio, Nosotros, Servicios, Blog, Contacto, Galería, etc.).
 - **Formularios avanzados**: Formularios con validación y envío de datos a Google Sheets.
-- **Integraciones con APIs**: Conexión con servicios externos como Google Maps, redes sociales, etc.
+- **Integraciones con APIs**: Conexión con servicios externos de baja complejidad como Google Maps, redes sociales, etc.
 - **Interacciones dinámicas**: Contenido que se actualiza dinámicamente sin recargar la página (por ejemplo, filtros, búsquedas, carruseles interactivos).
 - **Tecnologías utilizadas**:
   - HTML5, CSS3 y JavaScript avanzado.
-  - Frameworks como [React](https://reactjs.org/) o [Vue.js](https://vuejs.org/) para interactividad.
+  - Frameworks como [React](https://reactjs.org/) o [Astro](https://astro.build/) para interactividad.
   - Integración con [Google Sheets API](https://developers.google.com/sheets/api) para manejo de datos.
-  - Herramientas como [Astro](https://astro.build/) para optimización y rendimiento.
 
 ---
 
@@ -69,7 +67,6 @@ Este servicio tiene las siguientes limitaciones:
 ## 🚨 **Condiciones adicionales**
 - **Pago anticipado**: Se requiere el 50% del pago por adelantado para iniciar el proyecto.
 - **Propiedad del código**: El cliente recibe la propiedad completa del código fuente una vez finalizado el pago.
-- **Hosting y dominio**: El cliente es responsable de contratar y configurar su propio hosting y dominio.
 
 ---
 
@@ -78,6 +75,7 @@ Este servicio tiene las siguientes limitaciones:
 - Portfolios interactivos con galerías y animaciones.
 - Sitios web con integraciones de APIs (Google Maps, redes sociales, etc.).
 - Landing pages avanzadas con interacciones dinámicas.
+- **Solución ideal para clientes que necesiten actualizar la información constantemente o para aquellos que quieran mostrar datos/cálculos desde una base de datos ya establecida en Sheets.**
 
 ---
 
