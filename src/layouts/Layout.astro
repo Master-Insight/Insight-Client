@@ -4,6 +4,7 @@ import config from "../../config/layout";
 import Footer from "./components/Footer.astro";
 import FrameAbs from "./components/FrameAbs.astro";
 import NavBar from "./components/NavBar.astro";
+import WhatsappButton from "../ui/whatsppButton.astro";
 
 const logoUrl = company.images.logo;
 const navLinks = config.navbar.default;
@@ -50,6 +51,8 @@ const {
       <slot />
     </FrameAbs>
     <Footer />
+
+    <WhatsappButton />
   </body>
 </html>
 
