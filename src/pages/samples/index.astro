@@ -1,11 +1,19 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import CardService from "../../components/samples/Card.Horizontal.astro";
+import CardSample from "../../components/samples/Card.Horizontal.astro";
 import { getCollection } from "astro:content";
 
-// Carga los servicios desde Astro Content
+// Carga los samples desde Astro Content
 const samples = await getCollection("samples");
-samples.sort((a, b) => a.data.order - b.data.order);
+const sortedSamples = samples.sort((a, b) => a.data.order - b.data.order);
+
+// Separar samples por categoría
+const webSamples = sortedSamples.filter((sample) =>
+  sample.data.tags?.includes("web"),
+);
+const dataSamples = sortedSamples.filter((sample) =>
+  sample.data.tags?.includes("data"),
+);
 ---
 
 <Layout
@@ -21,26 +29,74 @@ samples.sort((a, b) => a.data.order - b.data.order);
       </p>
     </div>
 
-    <!-- Lista de trabajos -->
-    <section class="w-full flex mt-4 flex-col md:flex-row">
-      <div
-        class="w-full justify-center lg:w-4/5 p-4 gap-2 flex flex-col mx-auto"
+    <!-- Filtros por categoría -->
+    <div class="flex justify-center gap-4 mb-8">
+      <button
+        class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors"
+        data-filter="all"
       >
-        {
-          samples.length === 0 ? (
-            <p>No hay ejemplos disponibles.</p>
-          ) : (
-            samples.map((samples) => (
-              <CardService
-                key={samples.id}
-                item={samples.data}
-                slug={samples.slug}
-                page="samples"
-              />
-            ))
-          )
-        }
-      </div>
+        Todos
+      </button>
+      <button
+        class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors"
+        data-filter="web"
+      >
+        Desarrollo Web
+      </button>
+      <button
+        class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors"
+        data-filter="data"
+      >
+        Data y Planillas
+      </button>
+    </div>
+
+    <!-- Lista de samples -->
+    <section class="flex flex-wrap gap-6 mx-auto justify-center">
+      {
+        samples.length === 0 ? (
+          <p class="text-gray-600">No hay ejemplos disponibles.</p>
+        ) : (
+          samples.map((sample) => (
+            <CardSample
+              key={sample.id}
+              item={sample.data}
+              slug={sample.slug}
+              page="samples"
+              data-category={sample.data.tags?.[0] || ""}
+            />
+          ))
+        )
+      }
     </section>
   </div>
+
+  <!-- Script para filtrar samples -->
+  <script>
+    document.querySelectorAll("[data-filter]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const filter = button.getAttribute("data-filter");
+        const cards = document.querySelectorAll(".sample-card");
+
+        cards.forEach((card) => {
+          if (
+            filter === "all" ||
+            card.getAttribute("data-category") === filter
+          ) {
+            card.style.display = "";
+          } else {
+            card.style.display = "none";
+          }
+        });
+
+        // Cambiar estilos de los botones
+        document.querySelectorAll("[data-filter]").forEach((btn) => {
+          btn.classList.remove("bg-primary", "text-white");
+          btn.classList.add("bg-gray-200", "text-gray-700");
+        });
+        button.classList.remove("bg-gray-200", "text-gray-700");
+        button.classList.add("bg-primary", "text-white");
+      });
+    });
+  </script>
 </Layout>

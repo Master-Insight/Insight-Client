@@ -8,6 +8,8 @@ const samplesCollection = defineCollection({
     order: z.number(),
     title: z.string(), // Título del sample
     description: z.string(), // Descripción del sample
+    service: z.string(),
+    tags: z.array(z.string()),
     staff: z.array(z.string()), // IDs de usuarios relacionados
     media: z.array(z.string().url()).optional(), // URLs de medios relacionados
     deploy: z.string().url().optional(), // URL de despliegue (opcional)
