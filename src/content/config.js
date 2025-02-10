@@ -14,6 +14,7 @@ const samplesCollection = defineCollection({
     media: z.array(z.string().url()).optional(), // URLs de medios relacionados
     deploy: z.string().url().optional(), // URL de despliegue (opcional)
     images: z.array(z.string()).optional(),
+    active: z.boolean(),
   }),
 });
 
