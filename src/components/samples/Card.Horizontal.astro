@@ -94,7 +94,7 @@ const defaultPhoto = {
                   class="staff-photo"
                 />
                 <div>
-                  <p class="staff-name">{member.data.fullName}</p>
+                  <a href=`/staff/${member.slug}` class="staff-name block">{member.data.fullName}</a>
                   {member.data.linkedin && (
                     <a
                       href={`https://linkedin.com/in/${member.data.linkedin}`}
