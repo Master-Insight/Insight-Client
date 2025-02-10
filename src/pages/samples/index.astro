@@ -3,8 +3,8 @@ import Layout from "../../layouts/Layout.astro";
 import CardSample from "../../components/samples/Card.Horizontal.astro";
 import { getCollection } from "astro:content";
 
-// Carga los samples desde Astro Content
-const samples = await getCollection("samples");
+// Carga los samples desde Content
+const samples = await getCollection("samples", (entry) => entry.data.active);
 const sortedSamples = samples.sort((a, b) => a.data.order - b.data.order);
 
 // Separar samples por categoría
