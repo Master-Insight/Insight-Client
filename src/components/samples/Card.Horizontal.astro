@@ -32,11 +32,16 @@ const defaultPhoto = {
   data-category={service}
 >
   <!-- Imagen del sample -->
-  <img
-    src={image || images[0]}
-    alt={`Imagen de ${title}`}
-    class="h-40 w-full object-cover rounded-lg"
-  />
+  <a
+  href={`/${page}/${slug}`}
+  class="h-60 w-full"
+  >
+    <img
+      src={image || images[0]}
+      alt={`Imagen de ${title}`}
+      class="object-contain rounded-lg"
+    />
+  </a>
 
   <!-- Información del sample -->
   <div class="flex flex-col justify-between flex-1">
