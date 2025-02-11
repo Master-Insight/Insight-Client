@@ -1,32 +1,51 @@
 ---
 order: 99
 title: "Picking Newsport"
-description: "Pre Evolución a un sistema de la gestión de control de almacenes y seguimiento de las ventas online desde el momento en que entra el pedido, se solicita la mercadería a los diferentes locales, se recibe y luego se despacha."
+description: "Pre-evolución a un sistema de gestión de control de almacenes y seguimiento de ventas online. Desde que entra el pedido, se solicita la mercadería a los diferentes locales, se recibe y luego se despacha."
 service: "spreadsheet"
 tags: ["datos"]
 staff:
   - "gustavo-sirtori"
 images: [
-  "/samples/Picking 01.png",
-  "/samples/Picking 02.png",
-  "/samples/Picking 03.png",
+  "/samples/Picking_01.png",
+  "/samples/Picking_02.png",
+  "/samples/Picking_03.png"
 ]
 active: false
 ---
 
-# 📃🎁 Picking 🚛🚚
-Sistema de Control de Almacenes de ventas online. Esta es una serio de al menos 30 planilla interconectadas entre si para brindar soporte a las ventas web de la empresa.
+# 📦 Picking Newsport 🚛
 
-Como muchos sistemas actuales, las ideas originales se plasman primero en un "excel" y, posteriormente cuando ya no da màs. se pasan a un sistema formal ya con las ideas y conceptos pulidos
+**Picking Newsport** es un sistema de control de almacenes y gestión de ventas online, desarrollado para optimizar la logística de pedidos en un entorno de múltiples sucursales. Esta solución consta de más de 30 hojas de cálculo interconectadas que brindan soporte a la operativa diaria.
 
-Como sucedio en todo el mundo, la ventas online ocupaban poco valor en las empresas hasta que leugo la pandemia cambio todo y las ventas web pasaron a ser una realdiad mas de todos los puntos de ventas minoristas.
+## 📈 **Evolución del sistema**
 
-A este grupo de empresas le sucedio los mismo. De un dia para otro las ventas online crecieron tanto que tuvieron que adaptarse y a un interesado propuso una mejora en un excel para reemplazar una tarea que se hacia por email, asi nacio el "picking"
+Inicialmente, las ventas online tenían un impacto menor en la empresa. Sin embargo, la pandemia transformó la dinámica del mercado, aumentando exponencialmente las transacciones digitales. Ante esta necesidad, se implementó un sistema basado en Excel para optimizar procesos que antes se realizaban manualmente por correo electrónico. Así nació *Picking*, una solución que permitió una gestión más eficiente.
 
-Funcion principal:
-* El sistema ERP, al recibir una venta genera una lista de mercaderia a pedir a las diferentes sucursales.
-* En el excel, se pegan estos "pedidos" y se distribuyen automaticamente a cada local, es decir el local ve la mercaderia que debe enviar a la central.
-* la central recibe el pedido, evalua y arma el packete para luego enviarlo registrando el envio
-* adicionalmente luego se agregan las planilla de control de devolucions, inversas (packetes que vienen en camino), gestiones de post venta, gestiones de cambio y gestiones de control de fraude
+## ⚙️ **Funcionamiento principal**
 
-Tomar en cuenta: que toda este gestion se realiza con 20 a 25 locales aproximadamente, lo que aumenta la complejidad
+1️⃣ **Recepción de pedidos:** El sistema ERP genera automáticamente una lista de productos a solicitar a las diferentes sucursales.
+
+2️⃣ **Distribución automática:** Los pedidos se pegan en el sistema, que los redistribuye a cada local, mostrando a cada tienda la mercadería que debe enviar.
+
+3️⃣ **Recepción y armado:** La central recibe los envíos, revisa los pedidos y organiza los paquetes para su despacho.
+
+4️⃣ **Registro y seguimiento:** Se documentan los envíos y se monitorea su estado.
+
+## 🔄 **Módulos adicionales**
+
+A medida que el sistema evolucionó, se incorporaron nuevas funcionalidades para gestionar distintos aspectos del proceso logístico:
+
+- **Control de devoluciones** 📦↩️
+- **Gestión de paquetes en tránsito** 🚚
+- **Post-venta y cambios** 🔄
+- **Control de fraude** 🔍
+
+## 🏢 **Alcance**
+
+Actualmente, *Picking* coordina la gestión de entre **20 a 25 sucursales**, lo que aumenta significativamente la complejidad del proceso. A pesar de ser una solución basada en hojas de cálculo, ha demostrado ser una herramienta robusta y eficiente para la empresa.
+
+---
+
+Este sistema ha permitido optimizar la logística de pedidos en la empresa, demostrando cómo herramientas accesibles pueden convertirse en soluciones clave para la transformación digital. 🚀
+
