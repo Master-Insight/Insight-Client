@@ -11,7 +11,7 @@ images: [
   "/samples/Picking02.png",
   "/samples/Picking03.png"
 ]
-active: false
+active: true
 ---
 
 # 📦 Picking Newsport 🚛
