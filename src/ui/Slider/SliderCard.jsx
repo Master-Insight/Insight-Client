@@ -22,16 +22,9 @@ const SliderCard = ({ title, collection, CardComponent }) => {
     slidesToScroll: 1,
   });
 
-
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
   const [showArrows, setShowArrows] = useState(false);
-
-  console.log("CardComponent recibido:", CardComponent);
-  useEffect(() => {
-    if (!emblaApi) return;
-    console.log("Embla inicializado", emblaApi);
-  }, [emblaApi]);
 
   useEffect(() => {
     if (!emblaApi) return;

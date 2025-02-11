@@ -31,11 +31,11 @@ const Slider = ({ images = [] }) => {
       <div className="overflow-hidden rounded-lg shadow-lg" ref={emblaRef}>
         <div className="flex">
           {images.map((img, index) => (
-            <div className="flex-none w-full cursor-pointer" key={index} onClick={() => toggleZoom(img)}>
+            <div className="flex-none w-full max-h-96 cursor-pointer" key={index} onClick={() => toggleZoom(img)}>
               <img
                 src={img}
                 alt={`Slide ${index}`}
-                className="w-full h-auto object-cover transition-transform duration-300 hover:scale-105 rounded-lg"
+                className="w-full max-h-96 object-contain transition-transform duration-300 hover:scale-105 rounded-lg"
               />
             </div>
           ))}

@@ -4,12 +4,10 @@ import CardService from "../../components/services/Card.Horizontal.astro";
 import { getCollection } from "astro:content";
 
 // Carga los servicios desde Astro Content
-const preservices = await getCollection("services");
+// const preservices = await getCollection("services");
 
 // Filtrar servicios activos
-const services = await getCollection("services").then((data) =>
-  data.filter((service) => service.data.active),
-);
+const services = await getCollection("services", (entry) => entry.data.active);
 const sortedServices = services.sort((a, b) => a.data.price - b.data.price);
 
 // Separar servicios por categoría

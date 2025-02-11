@@ -7,81 +7,80 @@ roleIT: ["Fullstack Developer", "Data Analyst"]
 gender: "boy"
 ---
 
-# Hi there! I'm Gustavo 👋
+# ¡Hola! Soy Gustavo 👋
 
-<h3 align="center"> Developer | Data Analyst | Excel Specialist </h3>
+<h3 align="center"> Desarrollador | Analista de Datos | Especialista en Excel </h3>
 
-I currently work as an administrative assistant and data analyst at [Newsport](https://www.newsport.com.ar). With extensive experience in developing applications and analyzing data, I specialize in using Excel for process optimization and automation. My goal is to leverage technology to create efficient solutions and derive actionable insights from data.
-
----
-
-### What am I up to now?
-
-- 📊 **Working at Newsport:** Analyzing data to improve decision-making processes and optimize operational workflows.
-- 📚 **Learning Tanstack Libraries:** Exploring the [Tanstack](https://tanstack.com/) suite to enhance user experiences in web applications.
-- 🐍 **Focusing on Python:** Expanding my Python skills, particularly in data analysis and software development, to deepen my expertise in these areas.
+Actualmente trabajo como analista de datos en [Newsport](https://www.newsport.com.ar). Con amplia experiencia en el desarrollo de aplicaciones y análisis de datos, me especializo en el uso de Excel para la optimización y automatización de procesos. Mi objetivo es aprovechar la tecnología para crear soluciones eficientes y obtener información valiosa a partir de los datos.
 
 ---
 
-### Skills
+### ¿En qué estoy trabajando ahora?
 
-- **Programming Languages:** JavaScript, Python, Go
-- **Data Analysis Tools:** Google Sheets, Excel, Power BI, Tableau, MySQL
-- **Data Science Tools:** Project Jupyter, Python, Google Colab, Pandas, Numpy, Matplotlib, Seaborn 
+- 📊 **Trabajando en Newsport:** Analizando datos para mejorar los procesos de toma de decisiones y optimizar los flujos de trabajo operativos.
+- 🐍 **Enfocándome en Python:** Ampliando mis habilidades en Python, particularmente en análisis de datos y desarrollo de software, para profundizar mi experiencia en estas áreas.
+
+---
+
+### Habilidades
+
+- **Lenguajes de Programación:** JavaScript, Python, Go
+- **Herramientas de Análisis de Datos:** Google Sheets, Excel, Power BI, Tableau, MySQL
+- **Herramientas de Ciencia de Datos:** Project Jupyter, Python, Google Colab, Pandas, Numpy, Matplotlib, Seaborn 
 - **Frameworks:** React, Node.js, FastAPI
-- **Libraries:** Tanstack (Route, Table, Form, Query), Tailwind CSS, Vite
-- **Databases:** MongoDB, SQL
-- **Tools:** Notion, GitHub, VS Code
+- **Librerías:** Tanstack (Route, Table, Form, Query), Tailwind CSS, Vite
+- **Bases de Datos:** MongoDB, SQL
+- **Herramientas:** Notion, GitHub, VS Code
 
 ---
 
-### How to reach me
+### Cómo contactarme
 
-- 📫 Email: **gustavo.sirtori@gmail.com**
+- 📫 Correo: **gustavo.sirtori@gmail.com**
 - 🌐 LinkedIn: [Gustavo Andrés Sirtori](https://www.linkedin.com/in/gustavoandressirtori/)
 
 ---
 
-<h3 align="left">Connect with me:</h3>
+<h3 align="left">Conéctate conmigo:</h3>
 <p align="left">
   <a href="https://www.linkedin.com/in/gustavoandressirtori/" target="_blank">
-    <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="LinkedIn Profile" height="30" width="40" />
+    <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="Perfil de LinkedIn" height="30" width="40" />
   </a>
 </p>
 
 ---
 
-<h3 align="left">Languages and Tools</h3>
+<h3 align="left">Lenguajes y Herramientas</h3>
 
 <p align="center">
-    <img src="https://skillicons.dev/icons?i=go" alt="Go programming language" />
+    <img src="https://skillicons.dev/icons?i=go" alt="Lenguaje de programación Go" />
   &nbsp;&nbsp;&nbsp;&nbsp; <!-- Espacio horizontal -->
-  <img src="https://skillicons.dev/icons?i=python,fastapi" alt="Python and FastAPI" />
+  <img src="https://skillicons.dev/icons?i=python,fastapi" alt="Python y FastAPI" />
   &nbsp;&nbsp;&nbsp;&nbsp; <!-- Espacio horizontal -->
-  <img src="https://skillicons.dev/icons?i=js,react,vite,nodejs,express" alt="JavaScript, React, Vite, Node.js, and Express" />
+  <img src="https://skillicons.dev/icons?i=js,react,vite,nodejs,express" alt="JavaScript, React, Vite, Node.js y Express" />
   &nbsp;&nbsp;&nbsp;&nbsp; <!-- Espacio horizontal -->
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=sass,tailwind,bootstrap" alt="Sass, Tailwind, and Bootstrap for styling" />
+    <img src="https://skillicons.dev/icons?i=sass,tailwind,bootstrap" alt="Sass, Tailwind y Bootstrap para estilización" />
   </a>
 </p>
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=html,css" alt="HTML and CSS" />
+  <img src="https://skillicons.dev/icons?i=html,css" alt="HTML y CSS" />
   &nbsp;&nbsp;&nbsp;&nbsp; <!-- Espacio horizontal -->
-  <img src="https://skillicons.dev/icons?i=md" alt="Markdown for documentation" />
+  <img src="https://skillicons.dev/icons?i=md" alt="Markdown para documentación" />
   &nbsp;&nbsp;&nbsp;&nbsp; <!-- Espacio horizontal -->
-  <img src="https://skillicons.dev/icons?i=linkedin,notion" alt="LinkedIn and Notion for networking and productivity" />
+  <img src="https://skillicons.dev/icons?i=linkedin,notion" alt="LinkedIn y Notion para redes y productividad" />
   &nbsp;&nbsp;&nbsp;&nbsp; <!-- Espacio horizontal -->
-  <img src="https://skillicons.dev/icons?i=postman,github,vscode" alt="Postman, GitHub, and VSCode for development tools" />
+  <img src="https://skillicons.dev/icons?i=postman,github,vscode" alt="Postman, GitHub y VSCode para herramientas de desarrollo" />
   &nbsp;&nbsp;&nbsp;&nbsp; <!-- Espacio horizontal -->
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=mysql,postgres,mongodb" alt="MySQL, PostgreSQL, and MongoDB for databases" />
+    <img src="https://skillicons.dev/icons?i=mysql,postgres,mongodb" alt="MySQL, PostgreSQL y MongoDB para bases de datos" />
   </a>
 </p>
 
 ---
 
-<h3 align="left">Data Analytics / Science Tools:</h3>
+<h3 align="left">Herramientas de Análisis de Datos / Ciencia de Datos:</h3>
 <p align="center">
   <img src="https://img.icons8.com/?size=100&id=30461&format=png&color=000000" alt="Google Sheets" width="40" height="40"/>
   <img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019--v1.png" alt="Excel" width="40" height="40"/>

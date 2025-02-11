@@ -17,6 +17,7 @@ images: [
    "/samples/lingualab6.png",
    "/samples/lingualab7.png",
    ]
+active: true
 ---
 
 # 🚀 ¡Bienvenidos a *LinguaLab*! 
