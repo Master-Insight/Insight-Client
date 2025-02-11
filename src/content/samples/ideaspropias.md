@@ -1,5 +1,5 @@
 ---
-order: 98
+order: 3
 title: "Ideas Propias"
 description: "Ideas Propias es una página web estática diseñada para impulsar el desarrollo de una agencia dedicada a apoyar emprendedores. Su propósito es fomentar la colaboración, brindar soporte y promover el crecimiento conjunto. La plataforma sirve como un punto de encuentro para emprendedores, ofreciendo recursos, herramientas y un espacio para compartir ideas y proyectos innovadores."
 service: "pagina-web-estatica"
