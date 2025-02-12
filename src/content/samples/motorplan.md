@@ -13,6 +13,7 @@ images: [
   "/samples/motorplan2.png",
   "/samples/motorplan3.png"
 ]
+active: true
 ---
 
 # 🚀 ¡Bienvenidos a *MotorPlan*!

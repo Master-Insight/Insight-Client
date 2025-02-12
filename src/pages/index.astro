@@ -18,7 +18,7 @@ const activeServices = services.map((service) => ({
 }));
 
 // Obtener samples de la colección
-const samples = await getCollection("samples");
+const samples = await getCollection("samples", (entry) => entry.data.active);
 const sampleData = samples.map((sample) => ({
   title: sample.data.title,
   description: sample.data.description,
