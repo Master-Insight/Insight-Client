@@ -16,23 +16,24 @@ active: true
 
 Soluciones en **Excel y Google Sheets** para optimizar la gestión de pedidos y la distribución de mercadería en empresas con múltiples sucursales.
 
-Si bien no somos expertos en logística, comprendemos cómo automatizar procesos basándonos en tareas repetitivas y requerimientos específicos de cada negocio.
+Muchas veces, los sistemas de logística tienen limitaciones para gestionar tareas específicas o realizar controles detallados. A través de herramientas diseñadas a medida, es posible mejorar la eficiencia operativa y obtener un mayor control sobre los procesos.
 
-## 🚛 **Ejemplos**
-Desarrollo de soluciones para la gestión de logística y stock:
-- **Sistema Picking** *(este caso en particular lo pueden ver en el enlace)*: gestión y seguimiento completo de la mercadería de ventas online.
-- **Comparaciones de envíos con proveedor**: verificación de que los montos cobrados correspondan con los envíos realizados.
-- **Revisión y seguimiento de envíos**: detección de puntos de control para identificar demoras, problemas o situaciones anormales que requieran acción inmediata.
-- **Gestiones menores complementarias a sistemas más robustos**:
+## 🚛 **Algunas Soluciones Implementadas**
+Desarrollo de herramientas para el control de stock y seguimiento de envíos:
+- **Comparación de envíos con proveedores** para verificar que los montos cobrados coincidan con lo recibido.  
+- **Revisión y seguimiento de envíos** con puntos de control para detectar demoras o incidencias.  
+- **Gestión de Picking** *(caso detallado en el enlace)*, permitiendo el seguimiento completo de la mercadería en ventas online.  
+- **Complementos para sistemas más robustos**, como:
   - Herramientas de ubicación de stock.
-  - Transformación de documentos generados.
-  - Ajuste de formatos de impresión para etiquetas.
+  - Transformación y adecuación de documentos generados.
+  - Ajustes de impresión para etiquetas.  
 
-En resumen, ofrecemos soluciones particulares orientadas a la logística, adaptadas a cada necesidad. Podemos mejorar sistemas ya diseñados, supliendo fallas o proporcionando soluciones inmediatas a problemas detectados. Esto permite probar e implementar mejoras correctamente sin que la urgencia obligue a tomar decisiones apresuradas.
+Estas soluciones permiten mejorar los sistemas existentes, cubrir necesidades específicas y ofrecer respuestas rápidas a problemas detectados. Así, es posible optimizar procesos sin comprometer la operatividad del negocio.
 
-📷 *Ejemplos de interfaz:*  
-![Picking](./samples/Picking00.png)  
+<div align="center" style="max-width: 800px; margin: auto;">
+  <img src="/samples/conciliacionweb01.png" alt="Gestión Logística" style="border-radius: 12px; width: 100%; max-width: 50%; display: block; margin: auto;">
+</div>
 
-🔗 **Casos de éxito:** [Newsport](https://www.newsport.com.ar/)  
+🔗 **Casos de éxito:** Desarrollo e implementación de estas soluciones en empresas del sector retail, incluyendo experiencias en [Newsport](https://www.newsport.com.ar/).  
 
-📞 **¡Mejoramos tu gestión logística! Contáctame para una solución personalizada.**
+📞 **¡Mejoremos tu gestión logística! Contáctame para una solución personalizada.**
