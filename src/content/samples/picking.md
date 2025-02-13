@@ -2,8 +2,9 @@
 order: 99
 title: "Picking"
 description: "Pre-evolución de un sistema de gestión de control de almacenes y seguimiento de ventas online. Desde que ingresa el pedido, se solicita la mercadería a los diferentes locales, se recibe y luego se despacha."
+tags: ["datos", "Excel", "Google Sheets", "logística"]
 service: "spreadsheet"
-tags: ["datos"]
+serviceType: "data"
 staff:
   - "gustavo-sirtori"
 images: [
@@ -12,7 +13,7 @@ images: [
   "/samples/Picking02.png",
   "/samples/Picking03.png"
 ]
-active: true
+active: false
 ---
 
 # 📦 Picking Newsport 🚛
