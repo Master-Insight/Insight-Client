@@ -6,7 +6,7 @@ const CardVerticalService = ({ item }) => {
   return (
     <div className="w-72 mx-auto">
       <a href={`/services/${slug}`}>
-        <div className="bg-white rounded-lg shadow-md p-6 flex flex-col gap-4 hover:shadow-lg transform hover:scale-105 transition-all">
+        <div className="bg-white rounded-lg shadow-md p-6 flex flex-col justify-evenly hover:shadow-lg transform hover:scale-105 transition-all min-h-[466px]">
           {/* Imagen del servicio */}
           <img
             src={image}
