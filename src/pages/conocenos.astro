@@ -6,50 +6,115 @@ import Layout from "../layouts/Layout.astro";
   <div class="container max-w-screen-lg mx-auto">
     <!-- Sección About Us -->
     <section id="about" class="bg-gray-100 rounded-3xl py-16">
-      <div class="max-w-5xl mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-8">¿Quiénes Somos?</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="text-4xl font-extrabold text-center mb-10 text-primary">
+          🚀 ¿Quiénes Somos?
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <!-- Columna de texto -->
           <div class="flex flex-col justify-center">
-            <h3 class="text-xl font-bold mb-4 text-primary">Nuestra Esencia</h3>
-            <p class="mb-4">
-              Somos una asociación exclusiva de profesionales que comparten una
-              visión de compromiso, integridad y colaboración. Nos destacamos
-              por nuestra calidad, claridad en la comunicación y profundo
-              respeto por el trabajo en equipo.
+            <h3 class="text-2xl font-semibold mb-4 text-primary">
+              Nuestra Esencia
+            </h3>
+            <p class="mb-5 text-lg leading-relaxed text-gray-700">
+              No somos una agencia más. Somos un equipo de profesionales
+              apasionados por los datos, la tecnología y la innovación.
+              Trabajamos con <strong
+                >compromiso, transparencia y eficiencia</strong
+              > para ofrecer soluciones prácticas y efectivas que realmente marquen
+              la diferencia.
             </p>
-            <h3 class="text-xl font-bold mb-4 text-primary">
+            <h3 class="text-2xl font-semibold mb-4 text-primary">
               Nuestra Diferenciación
             </h3>
-            <p>
-              Nos diferenciamos al superar las expectativas de nuestros clientes
-              mediante transparencia y soluciones basadas en datos. Solo
-              aceptamos a los mejores, asegurando que cada miembro de nuestro
-              equipo sea confiable y comprometido con la excelencia.
+            <p class="mb-5 text-lg leading-relaxed text-gray-700">
+              No nos conformamos con cumplir, buscamos superar expectativas. En
+              <strong>Insight</strong>, creamos soluciones a medida, utilizando
+              datos e información clave para optimizar cada paso del proceso.
+            </p>
+            <p class="mb-5 text-lg leading-relaxed text-gray-700">
+              No hacemos páginas por hacer. <strong
+                >Construimos estrategias digitales adaptadas a necesidades
+                reales</strong
+              >, pensando en cada detalle para que tu negocio crezca y se
+              fortalezca en un mercado competitivo.
             </p>
           </div>
           <!-- Imagen -->
-          <div>
+          <div class="relative">
             <img
               src="/img/hero/riccardo-annandale-7e2pe9wjL9M-unsplash.jpg"
               alt="Equipo Insight"
-              class="rounded-3xl shadow-lg mx-auto w-full"
+              class="rounded-3xl shadow-2xl mx-auto w-full"
             />
+            <!-- <div
+              class="absolute top-0 left-0 bg-primary text-white px-4 py-2 rounded-bl-3xl rounded-tr-3xl"
+            >
+              💡 Transformamos ideas en realidades
+            </div> -->
           </div>
         </div>
+
         <!-- Sección adicional -->
-        <div class="mt-8 text-center">
-          <h3 class="text-xl font-bold mb-4 text-primary">Nuestra Verdad</h3>
-          <p class="max-w-3xl mx-auto mb-4">
-            Creemos en la profesionalización basada en datos, fomentando un
-            entorno de crecimiento personal y colectivo. Nuestro objetivo es ser
-            íntegros y confiables, cumpliendo promesas alcanzables sin
-            comprometer la calidad.
+        <div class="mt-16 text-center">
+          <hr class="border-t-4 border-primary w-24 mx-auto mb-6" />
+          <h3 class="text-2xl font-semibold mb-4 text-primary">
+            Nuestra Verdad
+          </h3>
+          <p
+            class="max-w-3xl mx-auto mb-5 text-lg leading-relaxed text-gray-700"
+          >
+            Creemos en la <strong>profesionalización basada en datos</strong>,
+            promoviendo un crecimiento tanto personal como empresarial. La clave
+            de nuestro trabajo es la honestidad, la comunicación clara y un
+            enfoque 100% orientado a resultados.
           </p>
-          <p class="max-w-3xl mx-auto">
-            En Insight, luchamos contra sistemas que no satisfacen necesidades
-            reales y promovemos la transparencia como clave del éxito colectivo.
+          <p
+            class="max-w-3xl mx-auto mb-12 text-lg leading-relaxed text-gray-700"
+          >
+            No hacemos magia, pero sí trabajamos con una premisa fundamental: <strong
+              >transparencia total y compromiso real</strong
+            >. No vendemos ilusiones, vendemos soluciones.
           </p>
+
+          <hr class="border-t-4 border-primary w-24 mx-auto mb-6" />
+
+          <h3 class="text-2xl font-semibold mb-6 text-primary">
+            ✨ Lo que nos hace únicos
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div
+              class="bg-white p-6 rounded-2xl shadow-lg transition duration-300 hover:scale-105"
+            >
+              <h4 class="text-xl font-bold text-primary mb-3">⏱️ Rapidez</h4>
+              <p class="text-lg text-gray-700">
+                Valoramos tu tiempo. Te mostramos avances constantemente y
+                optimizamos cada paso para que recibas resultados sin demoras.
+              </p>
+            </div>
+            <div
+              class="bg-white p-6 rounded-2xl shadow-lg transition duration-300 hover:scale-105"
+            >
+              <h4 class="text-xl font-bold text-primary mb-3">
+                🔄 Feedback Continuo
+              </h4>
+              <p class="text-lg text-gray-700">
+                No trabajamos a puertas cerradas. Te mantenemos al tanto de todo
+                el proceso y escuchamos tus ideas y cambios en cada etapa.
+              </p>
+            </div>
+            <div
+              class="bg-white p-6 rounded-2xl shadow-lg transition duration-300 hover:scale-105"
+            >
+              <h4 class="text-xl font-bold text-primary mb-3">
+                🎯 Soluciones Reales
+              </h4>
+              <p class="text-lg text-gray-700">
+                No hacemos webs porque sí. Diseñamos soluciones estratégicas
+                alineadas a tus necesidades para generar impacto real.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

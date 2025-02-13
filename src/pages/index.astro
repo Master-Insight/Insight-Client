@@ -7,7 +7,8 @@ export const prerender = true;
 
 // Obtener servicios activos de la colección
 const services = await getCollection("services", (entry) => entry.data.active);
-const activeServices = services.map((service) => ({
+const sortedServices = services.sort((a, b) => a.data.price - b.data.price);
+const activeServices = sortedServices.map((service) => ({
   title: service.data.title,
   description: service.data.description,
   price: service.data.price,
@@ -19,7 +20,8 @@ const activeServices = services.map((service) => ({
 
 // Obtener samples de la colección
 const samples = await getCollection("samples", (entry) => entry.data.active);
-const sampleData = samples.map((sample) => ({
+const sortedSamples = samples.sort((a, b) => a.data.order - b.data.order);
+const sampleData = sortedSamples.map((sample) => ({
   title: sample.data.title,
   description: sample.data.description,
   users: sample.data.users,
