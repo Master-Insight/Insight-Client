@@ -7,7 +7,7 @@ const CardVerticalSamples = ({ item }) => {
   return (
     <div className="w-72 mx-auto">
       <a href={`/samples/${slug}`}>
-        <div className="bg-white rounded-lg shadow-md p-6 flex flex-col gap-4 hover:shadow-lg transform hover:scale-105 transition-all">
+        <div className="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between gap-4 hover:shadow-lg transform hover:scale-105 transition-all min-h-[400px]">
           {/* Imagen del sample */}
           {images && images.length > 0 && (
             <img
@@ -31,7 +31,7 @@ const CardVerticalSamples = ({ item }) => {
               </p>
             )}
             {deploy && (
-              <p>
+              <p className='-mb-12'>
                 <strong>Despliegue:</strong>{' '}
                 <a
                   href={deploy}

@@ -57,12 +57,12 @@ const SliderCard = ({ title, collection, CardComponent }) => {
   return (
     <div className="embla w-full relative overflow-hidden">
       {/* Título */}
-      <h2 className="text-4xl font-bold text-center mb-8 font-title text-primary-DEFAULT">
+      <h2 className="text-4xl font-bold text-center mb-3 font-title text-primary-DEFAULT">
         {title}
       </h2>
 
       {/* Carrusel */}
-      <div className="embla__viewport overflow-hidden" ref={emblaRef}>
+      <div className="embla__viewport overflow-hidden py-6" ref={emblaRef}>
         <div className="embla__container flex justify-evenly">
           {collection.map((item, index) => (
             <div

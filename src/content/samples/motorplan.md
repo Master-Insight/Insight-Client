@@ -1,7 +1,7 @@
 ---
 order: 1
 title: "MotorPlan"
-description: "MotorPlan es una aplicación web dinámica diseñada para resaltar la marca y permitir a los usuarios visualizar adjudicaciones de manera intuitiva y eficiente. Esta plataforma combina diseño moderno con funcionalidades prácticas, garantizando una experiencia de usuario fluida y atractiva."
+description: "Aplicación web dinámica diseñada para resaltar la marca y permitir a los usuarios visualizar adjudicaciones de manera intuitiva y eficiente. Esta plataforma combina diseño moderno con funcionalidades prácticas, garantizando una experiencia de usuario fluida y atractiva."
 service: "pagina-web-dinamica-sheets"
 serviceType: "web"
 tags: ["web"]
