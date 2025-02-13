@@ -4,6 +4,7 @@ title: "Control de Precios y Ventas"
 description: "Seguimiento de precios, actualizaciones masivas y comparaciones de ventas."
 tags: ["datos", "Excel", "Google Sheets", "precios", "ventas"]
 service: "spreadsheet"
+serviceType: "data"
 staff:
   - "gustavo-sirtori"
 images: [

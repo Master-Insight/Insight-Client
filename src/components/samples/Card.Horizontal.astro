@@ -13,6 +13,7 @@ const {
   service,
   staff,
   deploy,
+  serviceType,
 } = item;
 
 const staffSlugs = staff;
@@ -29,7 +30,7 @@ const defaultPhoto = {
 
 <div
   class="sample-card w-full md:w-[45%] lg:w-[30%] p-6 bg-white rounded-3xl shadow-lg flex flex-col gap-4 hover:shadow-xl transition-shadow"
-  data-category={service}
+  data-category={serviceType}
 >
   <!-- Imagen del sample -->
   <a

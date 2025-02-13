@@ -3,6 +3,7 @@ order: 99
 title: "Picking"
 description: "Pre-evolución de un sistema de gestión de control de almacenes y seguimiento de ventas online. Desde que ingresa el pedido, se solicita la mercadería a los diferentes locales, se recibe y luego se despacha."
 service: "spreadsheet"
+serviceType: "web"
 tags: ["datos"]
 staff:
   - "gustavo-sirtori"

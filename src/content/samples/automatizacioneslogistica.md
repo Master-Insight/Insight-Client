@@ -4,6 +4,7 @@ title: "Logística"
 description: "Optimización del proceso de distribución y control de almacenes."
 tags: ["datos", "Excel", "Google Sheets", "logística"]
 service: "spreadsheet"
+serviceType: "data"
 staff:
   - "gustavo-sirtori"
 images: [

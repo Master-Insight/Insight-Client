@@ -4,6 +4,7 @@ title: "Herramientas Contables"
 description: "Planillas de control de medios de cobro de gestiones Web"
 tags: ["datos", "Excel", "Google Sheets"]
 service: "spreadsheet"
+serviceType: "data"
 staff:
   - "gustavo-sirtori"
 images:
