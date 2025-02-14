@@ -5,7 +5,7 @@ import Layout from "../layouts/Layout.astro";
 const telefono = company.info.whatsapp;
 // activar email desde vercel
 // const email = company.info.email // base.for.insight@gmail.com
-const email = "124ad11f77fb1a9411ab49d0844a2803";
+const email = "124ad11f77fb1a9411ab49d0844a2803"; // codigo enviado por FormSubmit
 ---
 
 <Layout title="Contacto">
@@ -20,6 +20,7 @@ const email = "124ad11f77fb1a9411ab49d0844a2803";
             method="POST"
             class="space-y-4"
           >
+            <input type="hidden" name="_method" value="POST" />
             <input type="hidden" name="_next" value="/graciasportucontacto" />
             <input type="hidden" name="_captcha" value="false" />
 
