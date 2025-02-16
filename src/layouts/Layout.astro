@@ -12,8 +12,8 @@ const {
   title = "Insight | Soluciones digitales para emprendedores",
   description = "Descubre herramientas y soluciones digitales para emprendedores en Argentina. Impulsa tu negocio con nuestros servicios tecnológicos.",
   keywords = "emprendedores, Argentina, negocios digitales, transformación digital, desarrollo web, marketing digital, startups",
-  image = "/img/preview-image.webp",
-  url = "https://www.insightdevs.com.ar/",
+  image = company.info.preview,
+  url = company.info.url,
 } = Astro.props;
 ---
 
@@ -40,13 +40,19 @@ const {
     />
 
     <link rel="manifest" href="/favicon/site.webmanifest" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
+    />
     <meta name="generator" content={Astro.generator} />
 
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
     <meta name="author" content="Insight" />
+    <meta name="copyright" content="Insight" />
+    <meta name="geo.region" content="AR" />
+    <meta name="geo.placename" content="Argentina" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -61,6 +67,26 @@ const {
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={image} />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={url} />
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Insight",
+        "description": "Transformamos ideas en soluciones digitales para emprendedores argentinos.",
+        "url": "https://www.insightdevs.com.ar/",
+        "telephone": "+54 3541 613185",
+        "logo": "https://www.insightdevs.com.ar/img/logo.webp",
+        "sameAs": ["https://www.linkedin.com/company/insightdevs"]
+      }
+    </script>
+
+    <!-- Preload de Recursos Críticos -->
+    <link rel="preload" href={image} as="image" />
   </head>
   <body>
     <NavBar logoUrl={logoUrl} navLinks={navLinks} />
