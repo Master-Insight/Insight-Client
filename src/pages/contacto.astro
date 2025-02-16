@@ -8,7 +8,10 @@ const emailC = company.info.email; // base.for.insight@gmail.com
 const email = "124ad11f77fb1a9411ab49d0844a2803"; // codigo enviado por FormSubmit
 ---
 
-<Layout title="Contacto | Insight - Soluciones Digitales">
+<Layout
+  title="Contacto | Insight - Soluciones Digitales"
+  description="Contáctanos en Insight para soluciones digitales personalizadas. Estamos aquí para responder tus preguntas y ayudarte a impulsar tu negocio en Argentina."
+>
   <section class="bg-primary-darker w-full py-16">
     <div class="mx-auto max-w-screen-xl px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
@@ -21,6 +24,7 @@ const email = "124ad11f77fb1a9411ab49d0844a2803"; // codigo enviado por FormSubm
             action="https://formsubmit.co/124ad11f77fb1a9411ab49d0844a2803"
             method="POST"
             class="space-y-4"
+            aria-label="Formulario de contacto"
           >
             <input
               type="hidden"
@@ -32,14 +36,18 @@ const email = "124ad11f77fb1a9411ab49d0844a2803"; // codigo enviado por FormSubm
             <div>
               <label
                 for="nombre"
-                class="block text-lg font-medium text-gray-700">Nombre*</label
+                class="block text-lg font-medium text-gray-700"
+                id="nombre-label"
               >
+                Nombre*
+              </label>
               <input
                 type="text"
                 id="nombre"
                 name="nombre"
                 required
                 class="mt-2 w-full bg-gray-100 rounded-lg border-gray-200 p-3"
+                aria-labelledby="nombre-label"
               />
             </div>
 
@@ -47,28 +55,35 @@ const email = "124ad11f77fb1a9411ab49d0844a2803"; // codigo enviado por FormSubm
               <div>
                 <label
                   for="email"
-                  class="block text-lg font-medium text-gray-700">Email*</label
+                  class="block text-lg font-medium text-gray-700"
+                  id="email-label"
                 >
+                  Email*
+                </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
                   required
                   class="mt-2 w-full bg-gray-100 rounded-lg border-gray-200 p-3"
+                  aria-labelledby="email-label"
                 />
               </div>
               <div>
                 <label
                   for="telefono"
                   class="block text-lg font-medium text-gray-700"
-                  >Teléfono*</label
+                  id="telefono-label"
                 >
+                  Teléfono*
+                </label>
                 <input
                   type="tel"
                   id="telefono"
                   name="telefono"
                   required
                   class="mt-2 w-full bg-gray-100 rounded-lg border-gray-200 p-3"
+                  aria-labelledby="telefono-label"
                 />
               </div>
             </div>
@@ -76,35 +91,43 @@ const email = "124ad11f77fb1a9411ab49d0844a2803"; // codigo enviado por FormSubm
             <div>
               <label
                 for="asunto"
-                class="block text-lg font-medium text-gray-700">Asunto*</label
+                class="block text-lg font-medium text-gray-700"
+                id="asunto-label"
               >
+                Asunto*
+              </label>
               <input
                 type="text"
                 id="asunto"
                 name="asunto"
                 required
                 class="mt-2 w-full bg-gray-100 rounded-lg border-gray-200 p-3"
+                aria-labelledby="asunto-label"
               />
             </div>
 
             <div>
               <label
                 for="mensaje"
-                class="block text-lg font-medium text-gray-700">Mensaje*</label
+                class="block text-lg font-medium text-gray-700"
+                id="mensaje-label"
               >
+                Mensaje*
+              </label>
               <textarea
                 id="mensaje"
                 name="mensaje"
                 required
                 rows="6"
                 class="mt-2 w-full bg-gray-100 rounded-lg border-gray-200 p-3"
-              ></textarea>
+                aria-labelledby="mensaje-label"></textarea>
             </div>
 
             <div class="mt-4">
               <button
                 type="submit"
                 class="w-full sm:w-auto px-6 py-3 bg-black text-white font-semibold rounded-lg hover:bg-gray-800 transition"
+                aria-live="polite"
               >
                 Enviar Mensaje
               </button>
@@ -114,10 +137,15 @@ const email = "124ad11f77fb1a9411ab49d0844a2803"; // codigo enviado por FormSubm
 
         <!-- Información de contacto -->
         <div class="lg:col-span-2 text-white">
-          <h1 class="text-4xl font-extrabold mb-6">Contáctanos 📩</h1>
+          <h1 class="text-4xl font-extrabold mb-6">
+            Contáctanos 📩 | Soluciones Digitales en Argentina
+          </h1>
           <p class="text-lg mb-6 leading-relaxed">
             ¿Tienes un proyecto en mente o alguna consulta? Escríbenos y te
-            responderemos lo más pronto posible.
+            responderemos lo más pronto posible. <a
+              href="/servicios"
+              class="text-white hover:underline">Descubre nuestros servicios</a
+            >.
           </p>
           <div class="mt-4">
             <p class="text-lg">📞 Teléfono / WhatsApp:</p>
