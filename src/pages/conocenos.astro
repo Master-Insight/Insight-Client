@@ -2,13 +2,16 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Conócenos | Insight - Soluciones Digitales">
+<Layout
+  title="Conócenos | Insight - Soluciones Digitales"
+  description="Descubre quiénes somos en Insight. Somos un equipo apasionado por la tecnología y la innovación, dedicado a crear soluciones digitales que impulsen tu negocio en Argentina."
+>
   <div class="container max-w-screen-lg mx-auto">
     <!-- Sección About Us -->
     <section id="about" class="bg-gray-100 rounded-3xl py-16">
       <div class="max-w-5xl mx-auto px-6">
         <h1 class="text-4xl font-extrabold text-center mb-10 text-primary">
-          🚀 Conócenos
+          🚀 Conócenos | Soluciones Digitales en Argentina
         </h1>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <!-- Columna de texto -->
@@ -37,15 +40,21 @@ import Layout from "../layouts/Layout.astro";
               No hacemos páginas por hacer. <strong>
                 Construimos estrategias digitales adaptadas a necesidades reales
               </strong>, pensando en cada detalle para que tu negocio crezca y
-              se fortalezca en un mercado competitivo.
+              se fortalezca en un mercado competitivo. <a
+                href="/services"
+                class="text-primary hover:underline"
+                aria-label="Descubre nuestros servicios"
+                >Descubre nuestros servicios</a
+              >.
             </p>
           </div>
           <!-- Imagen -->
           <div class="relative">
             <img
-              src="/img/hero/riccardo-annandale-7e2pe9wjL9M-unsplash.jpg"
-              alt="Equipo Insight trabajando en soluciones digitales"
+              src="/img/hero/riccardo-annandale-7e2pe9wjL9M-unsplash.webp"
+              alt="Equipo de Insight trabajando en soluciones digitales para emprendedores"
               class="rounded-3xl shadow-2xl mx-auto w-full"
+              loading="lazy"
             />
           </div>
         </div>
@@ -80,18 +89,30 @@ import Layout from "../layouts/Layout.astro";
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div
-              class="bg-white p-6 rounded-2xl shadow-lg transition duration-300 hover:scale-105"
+              class="bg-white p-6 rounded-2xl shadow-lg transition duration-300 hover:scale-105 will-change-transform"
+              role="region"
+              aria-labelledby="rapidez-heading"
             >
-              <h3 class="text-xl font-bold text-primary mb-3">⏱️ Rapidez</h3>
+              <h3
+                id="rapidez-heading"
+                class="text-xl font-bold text-primary mb-3"
+              >
+                ⏱️ Rapidez
+              </h3>
               <p class="text-lg text-gray-700">
                 Valoramos tu tiempo. Te mostramos avances constantemente y
                 optimizamos cada paso para que recibas resultados sin demoras.
               </p>
             </div>
             <div
-              class="bg-white p-6 rounded-2xl shadow-lg transition duration-300 hover:scale-105"
+              class="bg-white p-6 rounded-2xl shadow-lg transition duration-300 hover:scale-105 will-change-transform"
+              role="region"
+              aria-labelledby="feedback-heading"
             >
-              <h3 class="text-xl font-bold text-primary mb-3">
+              <h3
+                id="feedback-heading"
+                class="text-xl font-bold text-primary mb-3"
+              >
                 🔄 Feedback Continuo
               </h3>
               <p class="text-lg text-gray-700">
@@ -100,9 +121,14 @@ import Layout from "../layouts/Layout.astro";
               </p>
             </div>
             <div
-              class="bg-white p-6 rounded-2xl shadow-lg transition duration-300 hover:scale-105"
+              class="bg-white p-6 rounded-2xl shadow-lg transition duration-300 hover:scale-105 will-change-transform"
+              role="region"
+              aria-labelledby="soluciones-heading"
             >
-              <h3 class="text-xl font-bold text-primary mb-3">
+              <h3
+                id="soluciones-heading"
+                class="text-xl font-bold text-primary mb-3"
+              >
                 🎯 Soluciones Estratégicas
               </h3>
               <p class="text-lg text-gray-700">
@@ -111,6 +137,17 @@ import Layout from "../layouts/Layout.astro";
               </p>
             </div>
           </div>
+        </div>
+
+        <!-- Call-to-Action -->
+        <div class="text-center mt-16">
+          <a
+            href="/contacto"
+            class="bg-primary text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all will-change-transform"
+            aria-label="Contáctanos para más información"
+          >
+            ✉️ Contáctanos
+          </a>
         </div>
       </div>
     </section>
