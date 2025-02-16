@@ -10,7 +10,7 @@ function toggleMenu() {
 }
 ---
 
-<nav class="bg-white shadow-md w-full">
+<nav aria-label="Navegación principal" class="bg-white shadow-md w-full">
   <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
     <div class="relative flex items-center justify-between h-16">
       <!-- Mobile menu button -->
@@ -32,8 +32,7 @@ function toggleMenu() {
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-                aria-hidden="true"
-              >
+                aria-hidden="true">
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -48,8 +47,7 @@ function toggleMenu() {
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-                aria-hidden="true"
-              >
+                aria-hidden="true">
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -67,7 +65,7 @@ function toggleMenu() {
         class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start"
       >
         <a href="/" class="flex-shrink-0">
-          <img src={logoUrl[0]} alt="Logo" class="w-auto h-12" />
+          <img src={logoUrl[0]} alt="Logo de Insight" class="w-auto h-12" />
         </a>
         <!-- Desktop Menu -->
         <NavMenu layout="desktop" navLinks={navLinks} />
