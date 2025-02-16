@@ -9,9 +9,11 @@ import WhatsappButton from "../ui/whatsppButton.astro";
 const logoUrl = company.images.logo;
 const navLinks = config.navbar.default;
 const {
-  title,
-  description = "Plataforma diseñada para emprendedores argentinos que buscan herramientas y recursos para potenciar sus proyectos.",
-  keywords = "emprendedores, Argentina, negocios, recursos, herramientas, marketing, startup",
+  title = "Insight | Soluciones digitales para emprendedores",
+  description = "Descubre herramientas y soluciones digitales para emprendedores en Argentina. Impulsa tu negocio con nuestros servicios tecnológicos.",
+  keywords = "emprendedores, Argentina, negocios digitales, transformación digital, desarrollo web, marketing digital, startups",
+  image = "/img/preview-image.webp",
+  url = "https://www.insightdevs.com.ar/",
 } = Astro.props;
 ---
 
@@ -36,13 +38,29 @@ const {
       sizes="16x16"
       href="/favicon/favicon-16x16.png"
     />
+
     <link rel="manifest" href="/favicon/site.webmanifest" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
+
+    <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
-    <meta name="author" content="Tu Empresa" />
-    <title>{title}</title>
+    <meta name="author" content="Insight" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={url} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
   </head>
   <body>
     <NavBar logoUrl={logoUrl} navLinks={navLinks} />
