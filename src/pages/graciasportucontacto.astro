@@ -1,28 +1,52 @@
 ---
 import company from "../../config/company";
 import Layout from "../layouts/Layout.astro";
-const logoUrl = company.images.logo?.[0] ?? "/default-logo.png";
+
+const logoUrl = company.images.logo?.[0];
 ---
 
-<Layout title="Gracias por tu mensaje">
+<Layout
+  title="Gracias por tu mensaje | Insight - Soluciones Digitales"
+  description="Gracias por contactarnos en Insight. Pronto uno de nuestros asesores se comunicará contigo para ayudarte con tus necesidades digitales."
+>
   <section
     class="bg-primary-darker w-full min-h-[70vh] flex justify-center items-center"
   >
     <div
       class="p-8 bg-white rounded-3xl flex flex-col items-center shadow-lg border border-gray-200"
     >
-      <p class="font-bold text-gray-900 text-lg">
+      <h1 class="text-2xl font-bold text-gray-900 mb-4">
+        Gracias por tu mensaje
+      </h1>
+      <p class="font-bold text-gray-900 text-lg" aria-live="polite">
         Muchas gracias por tu contacto.
       </p>
       <p class="text-gray-700">
-        Pronto uno de nuestros asesores se comunicará contigo
+        Pronto uno de nuestros asesores se comunicará contigo. Serás redirigido
+        al inicio en 5 segundos.
       </p>
-      <a href="/" class="mt-4 flex flex-col items-center">
-        <img src={logoUrl} alt="Logo" class="w-auto h-20 mb-2" />
+      <a
+        href="/"
+        class="mt-4 flex flex-col items-center"
+        aria-label="Volver al inicio de Insight"
+      >
+        <img
+          src={logoUrl}
+          alt="Logo de Insight"
+          class="w-auto h-20 mb-2"
+          loading="lazy"
+        />
         <p class="italic text-blue-600 hover:underline">
           Haz clic aquí para volver al inicio
         </p>
       </a>
     </div>
   </section>
+
+  <!-- Redirección automática -->
+  <script>
+    setTimeout(() => {
+      window.location.href = "/";
+    }, 5000); // Redirige después de 5 segundos
+  </script>
 </Layout>
