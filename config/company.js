@@ -51,7 +51,10 @@ const company = {
   ],
   images: {
     logo: [
-      "/logos/Insight_hor.png"
+      "/logos/Insight_hor.webp",
+      "/logos/Insight_hor_blanco.webp",
+      "/logos/Insight.webp",
+      "/logos/Insight_blanco.webp",
     ],
   }
 }
