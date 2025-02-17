@@ -4,9 +4,6 @@ import CardService from "../../components/services/Card.Horizontal.astro";
 import { getCollection } from "astro:content";
 
 // Carga los servicios desde Astro Content
-// const preservices = await getCollection("services");
-
-// Filtrar servicios activos
 const services = await getCollection("services", (entry) => entry.data.active);
 const sortedServices = services.sort((a, b) => a.data.price - b.data.price);
 
@@ -19,12 +16,22 @@ const dataServices = sortedServices.filter((service) =>
 );
 ---
 
-<Layout title="Servicios" description="Explora nuestras opciones">
+<Layout
+  title="Servicios | Insight - Soluciones Digitales"
+  description="Explora nuestros servicios de desarrollo web y soluciones de datos en Insight. Ofrecemos soluciones personalizadas para emprendedores en Argentina."
+>
   <div class="container mx-auto px-4 py-8">
     <!-- Título de la página -->
     <div class="text-center mb-8">
-      <h2 class="text-3xl font-semibold">Nuestros Servicios</h2>
-      <p class="text-gray-600 mt-2">Explora nuestras opciones</p>
+      <h2 class="text-3xl font-semibold">
+        Nuestros Servicios de Desarrollo Web y Soluciones de Datos
+      </h2>
+      <p class="text-gray-600 mt-2">
+        Explora nuestras opciones. <a
+          href="/conocenos"
+          class="text-primary hover:underline">Conoce más sobre nosotros</a
+        >.
+      </p>
     </div>
 
     <!-- Filtros por categoría -->
@@ -32,18 +39,21 @@ const dataServices = sortedServices.filter((service) =>
       <button
         class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors"
         data-filter="all"
+        aria-label="Mostrar todos los servicios"
       >
         Todos
       </button>
       <button
         class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors"
         data-filter="web"
+        aria-label="Filtrar por Desarrollo Web"
       >
         Desarrollo Web
       </button>
       <button
         class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors"
         data-filter="data"
+        aria-label="Filtrar por Data y Planillas"
       >
         Data y Planillas
       </button>
@@ -61,11 +71,20 @@ const dataServices = sortedServices.filter((service) =>
               item={service.data}
               slug={service.slug}
               page="services"
+              class="service-card"
+              data-category={
+                service.data.tags?.includes("web") ? "web" : "data"
+              }
             />
           ))
         )
       }
     </section>
+
+    <!-- Feedback visual -->
+    <div id="loading" class="hidden text-center py-4">
+      <span class="animate-spin">🌀</span> Filtrando servicios...
+    </div>
   </div>
 
   <!-- Script para filtrar servicios -->
@@ -74,25 +93,32 @@ const dataServices = sortedServices.filter((service) =>
       button.addEventListener("click", () => {
         const filter = button.getAttribute("data-filter");
         const cards = document.querySelectorAll(".service-card");
+        const loading = document.getElementById("loading");
 
-        cards.forEach((card) => {
-          if (
-            filter === "all" ||
-            card.getAttribute("data-category") === filter
-          ) {
-            card.style.display = "";
-          } else {
-            card.style.display = "none";
-          }
-        });
+        loading.style.display = "block"; // Mostrar spinner
 
-        // Cambiar estilos de los botones
-        document.querySelectorAll("[data-filter]").forEach((btn) => {
-          btn.classList.remove("bg-primary", "text-white");
-          btn.classList.add("bg-gray-200", "text-gray-700");
-        });
-        button.classList.remove("bg-gray-200", "text-gray-700");
-        button.classList.add("bg-primary", "text-white");
+        setTimeout(() => {
+          cards.forEach((card) => {
+            if (
+              filter === "all" ||
+              card.getAttribute("data-category") === filter
+            ) {
+              card.style.display = "";
+            } else {
+              card.style.display = "none";
+            }
+          });
+
+          // Cambiar estilos de los botones
+          document.querySelectorAll("[data-filter]").forEach((btn) => {
+            btn.classList.remove("bg-primary", "text-white");
+            btn.classList.add("bg-gray-200", "text-gray-700");
+          });
+          button.classList.remove("bg-gray-200", "text-gray-700");
+          button.classList.add("bg-primary", "text-white");
+
+          loading.style.display = "none"; // Ocultar spinner
+        }, 300); // Simular un retraso de 300ms
       });
     });
   </script>

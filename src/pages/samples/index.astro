@@ -17,15 +17,20 @@ const dataSamples = sortedSamples.filter((sample) =>
 ---
 
 <Layout
-  title="Nuestros Trabajos"
-  description="Explora nuestros trabajos y proyectos realizados."
+  title="Nuestros Trabajos | Insight - Soluciones Digitales"
+  description="Explora nuestros trabajos y proyectos realizados en Insight. Descubre cómo hemos ayudado a emprendedores en Argentina con soluciones digitales personalizadas."
 >
   <div class="container mx-auto px-4 py-8">
     <!-- Título de la página -->
     <div class="text-center mb-8">
-      <h2 class="text-3xl font-semibold">Nuestros Trabajos</h2>
+      <h2 class="text-3xl font-semibold">
+        Nuestros Trabajos | Proyectos de Desarrollo Web y Soluciones de Datos
+      </h2>
       <p class="text-gray-600 mt-2">
-        Descubre algunos de nuestros proyectos más destacados.
+        Descubre algunos de nuestros proyectos más destacados. <a
+          href="/servicios"
+          class="text-primary hover:underline">Explora nuestros servicios</a
+        >.
       </p>
     </div>
 
@@ -34,18 +39,21 @@ const dataSamples = sortedSamples.filter((sample) =>
       <button
         class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors"
         data-filter="all"
+        aria-label="Mostrar todos los proyectos"
       >
         Todos
       </button>
       <button
         class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors"
         data-filter="web"
+        aria-label="Filtrar por Desarrollo Web"
       >
         Desarrollo Web
       </button>
       <button
         class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors"
         data-filter="data"
+        aria-label="Filtrar por Data y Planillas"
       >
         Data y Planillas
       </button>
@@ -63,12 +71,18 @@ const dataSamples = sortedSamples.filter((sample) =>
               item={sample.data}
               slug={sample.slug}
               page="samples"
+              class="sample-card"
               data-category={sample.data.tags?.[0] || ""}
             />
           ))
         )
       }
     </section>
+
+    <!-- Feedback visual -->
+    <div id="loading" class="hidden text-center py-4">
+      <span class="animate-spin">🌀</span> Filtrando proyectos...
+    </div>
   </div>
 
   <!-- Script para filtrar samples -->
@@ -77,25 +91,32 @@ const dataSamples = sortedSamples.filter((sample) =>
       button.addEventListener("click", () => {
         const filter = button.getAttribute("data-filter");
         const cards = document.querySelectorAll(".sample-card");
+        const loading = document.getElementById("loading");
 
-        cards.forEach((card) => {
-          if (
-            filter === "all" ||
-            card.getAttribute("data-category") === filter
-          ) {
-            card.style.display = "";
-          } else {
-            card.style.display = "none";
-          }
-        });
+        loading.style.display = "block"; // Mostrar spinner
 
-        // Cambiar estilos de los botones
-        document.querySelectorAll("[data-filter]").forEach((btn) => {
-          btn.classList.remove("bg-primary", "text-white");
-          btn.classList.add("bg-gray-200", "text-gray-700");
-        });
-        button.classList.remove("bg-gray-200", "text-gray-700");
-        button.classList.add("bg-primary", "text-white");
+        setTimeout(() => {
+          cards.forEach((card) => {
+            if (
+              filter === "all" ||
+              card.getAttribute("data-category") === filter
+            ) {
+              card.style.display = "";
+            } else {
+              card.style.display = "none";
+            }
+          });
+
+          // Cambiar estilos de los botones
+          document.querySelectorAll("[data-filter]").forEach((btn) => {
+            btn.classList.remove("bg-primary", "text-white");
+            btn.classList.add("bg-gray-200", "text-gray-700");
+          });
+          button.classList.remove("bg-gray-200", "text-gray-700");
+          button.classList.add("bg-primary", "text-white");
+
+          loading.style.display = "none"; // Ocultar spinner
+        }, 300); // Simular un retraso de 300ms
       });
     });
   </script>

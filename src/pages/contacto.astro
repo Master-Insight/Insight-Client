@@ -4,21 +4,27 @@ import Layout from "../layouts/Layout.astro";
 
 const telefono = company.info.whatsapp;
 // activar email desde vercel
-// const email = company.info.email // base.for.insight@gmail.com
+const emailC = company.info.email; // base.for.insight@gmail.com
 const email = "124ad11f77fb1a9411ab49d0844a2803"; // codigo enviado por FormSubmit
 ---
 
-<Layout title="Contacto">
-  <!-- Section Form -->
-  <section class="bg-primary-darker w-full">
-    <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
+<Layout
+  title="Contacto | Insight - Soluciones Digitales"
+  description="Contáctanos en Insight para soluciones digitales personalizadas. Estamos aquí para responder tus preguntas y ayudarte a impulsar tu negocio en Argentina."
+>
+  <section class="bg-primary-darker w-full py-16">
+    <div class="mx-auto max-w-screen-xl px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
         <!-- Formulario -->
-        <div class="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
+        <div class="lg:col-span-3 bg-white p-8 rounded-2xl shadow-lg">
+          <h2 class="text-2xl font-bold text-primary mb-6">
+            Déjanos tu mensaje
+          </h2>
           <form
             action="https://formsubmit.co/124ad11f77fb1a9411ab49d0844a2803"
             method="POST"
             class="space-y-4"
+            aria-label="Formulario de contacto"
           >
             <input
               type="hidden"
@@ -28,93 +34,126 @@ const email = "124ad11f77fb1a9411ab49d0844a2803"; // codigo enviado por FormSubm
             <input type="hidden" name="_captcha" value="false" />
 
             <div>
-              <label for="nombre" class="text-lg font-medium text-gray-700"
-                >Nombre*</label
+              <label
+                for="nombre"
+                class="block text-lg font-medium text-gray-700"
+                id="nombre-label"
               >
+                Nombre*
+              </label>
               <input
-                class="mt-2 w-full bg-gray-100 rounded-lg border-gray-200 p-3"
                 type="text"
                 id="nombre"
                 name="nombre"
                 required
+                class="mt-2 w-full bg-gray-100 rounded-lg border-gray-200 p-3"
+                aria-labelledby="nombre-label"
               />
             </div>
 
-            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label for="email" class="text-lg font-medium text-gray-700"
-                  >Email*</label
+                <label
+                  for="email"
+                  class="block text-lg font-medium text-gray-700"
+                  id="email-label"
                 >
+                  Email*
+                </label>
                 <input
-                  class="mt-2 w-full bg-gray-100 rounded-lg border-gray-200 p-3"
                   type="email"
                   id="email"
                   name="email"
                   required
+                  class="mt-2 w-full bg-gray-100 rounded-lg border-gray-200 p-3"
+                  aria-labelledby="email-label"
                 />
               </div>
               <div>
-                <label for="telefono" class="text-lg font-medium text-gray-700"
-                  >Teléfono*</label
+                <label
+                  for="telefono"
+                  class="block text-lg font-medium text-gray-700"
+                  id="telefono-label"
                 >
+                  Teléfono*
+                </label>
                 <input
-                  class="mt-2 w-full bg-gray-100 rounded-lg border-gray-200 p-3"
                   type="tel"
                   id="telefono"
                   name="telefono"
                   required
+                  class="mt-2 w-full bg-gray-100 rounded-lg border-gray-200 p-3"
+                  aria-labelledby="telefono-label"
                 />
               </div>
             </div>
 
             <div>
-              <label for="asunto" class="text-lg font-medium text-gray-700"
-                >Asunto*</label
+              <label
+                for="asunto"
+                class="block text-lg font-medium text-gray-700"
+                id="asunto-label"
               >
+                Asunto*
+              </label>
               <input
-                class="mt-2 w-full bg-gray-100 rounded-lg border-gray-200 p-3"
                 type="text"
                 id="asunto"
                 name="asunto"
                 required
+                class="mt-2 w-full bg-gray-100 rounded-lg border-gray-200 p-3"
+                aria-labelledby="asunto-label"
               />
             </div>
 
             <div>
-              <label for="mensaje" class="text-lg font-medium text-gray-700"
-                >Mensaje*</label
+              <label
+                for="mensaje"
+                class="block text-lg font-medium text-gray-700"
+                id="mensaje-label"
               >
+                Mensaje*
+              </label>
               <textarea
-                class="mt-2 w-full bg-gray-100 rounded-lg border-gray-200 p-3"
-                rows="6"
                 id="mensaje"
                 name="mensaje"
-                required></textarea>
+                required
+                rows="6"
+                class="mt-2 w-full bg-gray-100 rounded-lg border-gray-200 p-3"
+                aria-labelledby="mensaje-label"></textarea>
             </div>
 
             <div class="mt-4">
               <button
                 type="submit"
-                class="inline-block w-full rounded-lg bg-black px-5 py-3 font-medium text-white sm:w-auto"
+                class="w-full sm:w-auto px-6 py-3 bg-black text-white font-semibold rounded-lg hover:bg-gray-800 transition"
+                aria-live="polite"
               >
-                Enviar
+                Enviar Mensaje
               </button>
             </div>
           </form>
         </div>
 
         <!-- Información de contacto -->
-        <div class="lg:col-span-2 lg:py-12 p-8">
-          <p class="max-w-xl text-3xl font-bold text-white">
-            ¡Escríbenos! Estamos para ayudarte.
+        <div class="lg:col-span-2 text-white">
+          <h1 class="text-4xl font-extrabold mb-6">
+            Contáctanos 📩 | Soluciones Digitales en Argentina
+          </h1>
+          <p class="text-lg mb-6 leading-relaxed">
+            ¿Tienes un proyecto en mente o alguna consulta? Escríbenos y te
+            responderemos lo más pronto posible. <a
+              href="/servicios"
+              class="text-white hover:underline">Descubre nuestros servicios</a
+            >.
           </p>
-          <div class="mt-8 text-lg text-primary-lighter">
-            <p>También puedes llamarnos al</p>
-            <p class="font-bold">{telefono}</p>
+          <div class="mt-4">
+            <p class="text-lg">📞 Teléfono / WhatsApp:</p>
+            <p class="text-2xl font-semibold">{telefono}</p>
           </div>
-          <div class="mt-8 text-lg text-primary-lighter">
-            <p class="mt-2 not-italic">O enviarnos un WhatsApp al</p>
-            <p class="font-bold">{telefono}</p>
+          <div class="mt-4">
+            <p class="text-lg">✉️ Email:</p>
+            <p class="text-2xl font-semibold">{emailC}</p>
           </div>
         </div>
       </div>

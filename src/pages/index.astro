@@ -32,7 +32,7 @@ const sampleData = sortedSamples.map((sample) => ({
 }));
 ---
 
-<Layout title="Astro Insight!">
+<Layout title="Insight | Soluciones digitales para emprendedores">
   <!-- Hero inicial -->
   <div
     class="w-full bg-gradient-to-r from-secondary via-primary to-secondary text-white text-center py-16 rounded-3xl flex items-center flex-col relative overflow-hidden"
@@ -49,13 +49,14 @@ const sampleData = sortedSamples.map((sample) => ({
         Bienvenido a Insight
       </h1>
       <p class="mb-6 text-lg font-subtitle">
-        Transformamos ideas en soluciones digitales. Únete a nosotros o descubre
-        cómo podemos llevar tu negocio al siguiente nivel.
+        Descubre herramientas y soluciones digitales para emprendedores en
+        Argentina. Impulsa tu negocio con nuestros servicios tecnológicos.
       </p>
       <div class="flex justify-center gap-4">
         <a
           href="/services"
-          class="bg-white text-primary font-bold py-3 px-6 rounded shadow hover:shadow-lg transform hover:scale-105 transition-all"
+          class="bg-white text-primary font-bold py-3 px-6 rounded shadow hover:shadow-lg transform hover:scale-105 transition-all will-change-transform"
+          aria-label="Descubre nuestros servicios"
         >
           Descubre nuestros servicios
         </a>
@@ -71,14 +72,15 @@ const sampleData = sortedSamples.map((sample) => ({
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
       <p class="text-lg px-4 font-subtitle">
         Somos un equipo de expertos en tecnología dedicados a crear soluciones
-        que impulsen tu negocio. Y como nos tomamos muy en serio tu necesidad y
-        tu tiempo, queremos hacer las soluciones más simples y efectivas para
-        superar tus expectativas.
+        digitales que impulsen tu negocio. Diseñamos herramientas efectivas y
+        simples para potenciar tu crecimiento.
       </p>
       <img
-        src="/img/hero/ben-kolde-bs2Ba7t69mM-unsplash.jpg"
-        alt="Innovación Insight"
+        src="/img/hero/ben-kolde-bs2Ba7t69mM-unsplash.webp"
+        alt="Innovación en soluciones digitales"
+        aria-label="Imagen de innovación en soluciones digitales"
         class="mx-auto rounded-lg shadow-custom transform hover:scale-105 transition-transform object-cover object-bottom h-80 w-full max-w-lg"
+        loading="lazy"
       />
     </div>
   </section>
@@ -97,7 +99,7 @@ const sampleData = sortedSamples.map((sample) => ({
   <section id="samples" class="w-full bg-gray-200 py-16">
     <SliderCard
       client:load
-      title="Nuestros Trabajos"
+      title="Casos de Éxito"
       collection={sampleData}
       CardComponent="CardSamples"
     />

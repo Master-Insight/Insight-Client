@@ -14,7 +14,12 @@ const year = new Date().getFullYear();
       <!-- Logo -->
       <div>
         <div class="flex justify-center sm:justify-start">
-          <img src={images.logo[0]} alt="Logo Insight" class="w-1/3" />
+          <img
+            src={images.logo[0]}
+            alt="Logo Insight"
+            class="w-1/2 sm:w-1/3"
+            loading="lazy"
+          />
         </div>
         <p
           class="mt-6 max-w-md text-center leading-relaxed text-gray-500 sm:max-w-xs sm:text-left"
@@ -30,6 +35,7 @@ const year = new Date().getFullYear();
                 name={name}
                 icon={icon}
                 showLabel={false}
+                aria-label={`Visitar ${name}`}
               />
             ))
           }
@@ -43,14 +49,20 @@ const year = new Date().getFullYear();
           <p class="text-lg font-medium text-gray-900">Sectores</p>
           <ul class="mt-8 space-y-4 text-sm">
             <li>
-              <a class="text-gray-700 hover:text-gray-700/75" href="/samples"
-                >Portafolio</a
+              <a
+                class="text-gray-700 hover:text-gray-700/75 transition duration-300"
+                href="/samples"
               >
+                Portafolio
+              </a>
             </li>
             <li>
-              <a class="text-gray-700 hover:text-gray-700/75" href="/services"
-                >Servicios</a
+              <a
+                class="text-gray-700 hover:text-gray-700/75 transition duration-300"
+                href="/services"
               >
+                Servicios
+              </a>
             </li>
             <!-- <li>
               <a class="text-gray-700 hover:text-gray-700/75" href="/team"
@@ -59,42 +71,44 @@ const year = new Date().getFullYear();
             </li> -->
             <li>
               <a
-                class="text-gray-700 hover:text-gray-700/75"
-                href="/services/mantenimiento">Opciones de mantenimiento</a
+                class="text-gray-700 hover:text-gray-700/75 transition duration-300"
+                href="/conocenos"
               >
+                Conócenos
+              </a>
             </li>
             <li>
-              <a class="text-gray-700 hover:text-gray-700/75" href="/conocenos"
-                >Conócenos</a
+              <a
+                class="text-gray-700 hover:text-gray-700/75 transition duration-300"
+                href="/contacto"
               >
-            </li>
-            <li>
-              <a class="text-gray-700 hover:text-gray-700/75" href="/contacto"
-                >Escríbenos</a
-              >
+                Escríbenos
+              </a>
             </li>
           </ul>
         </div>
 
         <!-- Contacto -->
         <div class="text-center sm:text-left">
-          <p class="text-lg font-medium text-gray-900">Contacto</p>
+          <h2 class="text-lg font-medium text-gray-900">Contacto</h2>
           <ul class="mt-8 space-y-4 text-sm">
             <li>
               <a
-                class="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
                 href={`mailto:${info.email}`}
+                class="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
+                aria-label="Enviar correo electrónico a Insight"
               >
-                <Email />
+                <Email aria-label="Icono de correo electrónico" />
                 <span class="flex-1 text-gray-700">{info.email}</span>
               </a>
             </li>
             <li>
               <a
-                class="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
                 href={`https://wa.me/${info.whatsapp}`}
+                class="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
+                aria-label="Llamar a Insight por WhatsApp"
               >
-                <Phone />
+                <Phone aria-label="Icono de teléfono" />
                 <span class="flex-1 text-gray-700">{info.whatsapp}</span>
               </a>
             </li>
@@ -108,6 +122,7 @@ const year = new Date().getFullYear();
       <div class="text-center sm:flex sm:justify-between sm:text-left">
         <p class="text-sm text-gray-500">
           <span class="block sm:inline">Todos los derechos reservados.</span>
+          <!-- <a href="/politica-de-privacidad" class="hover:text-gray-700">Política de Privacidad</a> -->
         </p>
         <p class="mt-4 text-sm text-gray-500 sm:order-first sm:mt-0">
           &copy; {year}

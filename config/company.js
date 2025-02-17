@@ -15,6 +15,8 @@ const company = {
     address: "dirección",
     whatsapp: "+54-3541-613185",
     email: "base.for.insight@gmail.com",
+    url: "https://www.insightdevs.com.ar/",
+    preview: "/img/preview-image.webp",
   },
   // Información para usar en las redes sociales (no whatsapp, si e-mail)
   social: [
@@ -45,13 +47,16 @@ const company = {
     },
     {
       name: "LinkedIn",
-      href: "https://www.linkedin.com/company/insight-desarrolladores/",
+      href: "https://www.linkedin.com/company/insightdevs",
       icon: LinkedIn,
     },
   ],
   images: {
     logo: [
-      "/logos/Insight_hor.png"
+      "/logos/Insight_hor.webp",
+      "/logos/Insight_hor_blanco.webp",
+      "/logos/Insight.webp",
+      "/logos/Insight_blanco.webp",
     ],
   }
 }
