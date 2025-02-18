@@ -37,7 +37,7 @@ const company = {
     },
     {
       name: "Instagram",
-      href: "https://www.instagram.com/",
+      href: "https://www.instagram.com/insight_developers",
       icon: Instagram,
     },
     {
