@@ -11,7 +11,7 @@ const company = {
   // Información de la empresa
   info: {
     name: "Insight",
-    description: "Agencia de desarrollos tecnologicos",
+    description: "Agencia de desarrollos tecnologicos. Trabajamos con emprendedores argentinos para potenciar sus negocios.",
     address: "dirección",
     whatsapp: "+54-3541-613185",
     email: "base.for.insight@gmail.com",
