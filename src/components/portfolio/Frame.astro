@@ -1,0 +1,20 @@
+---
+const props = Astro.props;
+---
+
+<div {...props} class="portfolio">
+  <slot />
+</div>
+
+<style>
+  .portfolio {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      "Courier New",
+      Courier,
+      monospace;
+    letter-spacing: 0.025rem;
+  }
+</style>
