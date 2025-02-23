@@ -1,10 +1,10 @@
 ---
-import company from "../../config/company";
-import config from "../../config/layout";
-import Footer from "./components/Footer.astro";
-import FrameAbs from "./components/FrameAbs.astro";
-import NavBar from "./components/NavBar.astro";
-import WhatsappButton from "../ui/whatsppButton.astro";
+import company from "@config/company";
+import config from "@config/layout";
+import Footer from "@/layouts/components/Footer.astro";
+import FrameAbs from "@/layouts/components/FrameAbs.astro";
+import NavBar from "@/layouts/components/NavBar.astro";
+import WhatsappButton from "@/ui/whatsppButton.astro";
 
 const logoUrl = company.images.logo;
 const navLinks = config.navbar.default;
@@ -83,8 +83,8 @@ const {
         "logo": "https://www.insightdevs.com.ar/img/logo.webp",
         "sameAs": [
           "https://www.linkedin.com/company/insightdevs",
-          "https://www.instagram.com/insight_developers",
-          ]
+          "https://www.instagram.com/insight_developers"
+        ]
       }
     </script>
 
@@ -103,7 +103,7 @@ const {
   </body>
 </html>
 
-<style>
+<style is:global>
   html,
   body {
     margin: 0;
@@ -115,46 +115,28 @@ const {
     flex-direction: column;
     justify-content: space-between;
     font-family: "Roboto", system-ui, sans-serif;
-    background-color: #f8f9fa;
-    color: #212529;
-  }
-
-  main {
-    flex: 1;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem;
-    box-sizing: border-box;
   }
 
   a {
     text-decoration: none;
-    color: #007bff;
-    transition: color 0.3s;
   }
 
-  a:hover {
-    color: #0056b3;
-  }
+  /* Asegurar que el pie de página impreso quede al final */
+  @media print {
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-  nav {
-    background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    width: 100%;
-  }
+    main {
+      flex-grow: 1;
+    }
 
-  footer {
-    background-color: #343a40;
-    color: #ffffff;
-    text-align: center;
-    padding: 1rem 0;
-    width: 100%;
-  }
-
-  footer a {
-    color: #ffffff;
-    font-weight: bold;
+    footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
   }
 </style>
