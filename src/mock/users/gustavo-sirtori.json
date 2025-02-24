@@ -5,9 +5,12 @@
   "basics": {
     "name": "Sírtori Gustavo Andrés",
     "label": "Analista de Datos, Desarrollador Full Stack, Experto en Excel",
-    "image": "/me.webp",
+    "image": "https://media.licdn.com/dms/image/v2/D4D03AQGKh0zsvYa0Vw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1731195387848?e=1746057600&v=beta&t=n_7TIc0X-jxkpyrPuvIeWEM3-dHXgSj8sfflixVj8-s",
     "email": "gustavo.sirtori@gmail.com",
-    "phone": "+54 688888888",
+    "phone": {
+      "display": true,
+      "number": "+54 3541 613185"
+    },
     "url": "https://insightdevs.com.ar/",
     "summary": "Analista de Datos, Desarrollador Full Stack, Experto en Excel y Freelance. Con un deseo constante de superación y crecimiento personal, tengo un gran gusto por los desafíos y la formación. Me oriento a dar resultados y soluciones flexibles y efectivas, sin embargo, “destaco mi capacidad de poder aplicar ideas”",
     "location": {
@@ -32,88 +35,144 @@
   },
   "work": [
     {
+      "display": true,
       "name": "insightdevs",
       "position": "Dueño",
       "url": "https://insightdevs.com.ar/",
       "startDate": "2025-01-01",
       "endDate": null,
-      "summary": "Aqui poner descripción",
-      "highlights": [
-        "Started the company"
-      ]
+      "summary": "En proceso de creacion de una marca Devs que replantea la forma de trabajar tradicional, adaptandose a necesidades modernos",
+      "highlights": []
     },
     {
+      "display": true,
       "name": "newsport",
-      "position": "Data Analytic",
+      "position": "Administrativo Web y Data Analytic",
       "url": "https://www.newsport.com.ar/",
       "startDate": "2020-09-01",
       "endDate": null,
-      "summary": "Aqui poner descripción",
+      "summary": "Generador de Reportes Looker / Power Bi. Auditor / conciliador de Ventas Web y soporte para el control de Fraude. Asistente en toda el área administrativa web, gestiones y reclamos. Diseñador y referente en lo relacionado al manejo de datos, sobre todo en tablas y fórmulas simples o avanzadas.",
       "highlights": [
-        "Logros"
+        "Co-Desarrollor del sistema de control y seguimiento de las ventas desde el momento en que entra el pedido, se solicita la mercadería a los diferentes locales, se recibe y luego se envía."
       ]
+    },
+    {
+      "display": false,
+      "name": "Trabajos Freelance",
+      "position": "Trabajos Freelance",
+      "url": "",
+      "startDate": "2020-01-01",
+      "endDate": null,
+      "summary": "Desarrollo personalizado de: Planillas de Excel y Google Sheets para cada necesidad (nivel Senior), Diseño gráfico sencillo, Tableros de Comandoy Paginas Web",
+      "highlights": []
+    },
+    {
+      "display": false,
+      "name": "Video Drome S.A.",
+      "position": "Administrativo contable",
+      "url": "https://www.casinosmacgroup.bet.ar/",
+      "startDate": "2017-09-01",
+      "endDate": "2020-08-31",
+      "summary": "Carga de datos en sistema contable (factura, impuestos y otros gastos), Liquidación de IVA e IIBB, Conciliaciones y Seguimiento de Ctas. Mi fuerte es el excelente manejo de Excel aplicado a las tareas contables generando informes rápidos, confiables y precisos. Mejorando sistemas de cargas y manejo de la información de ventas e impositiva.",
+      "highlights": []
+    },
+    {
+      "display": false,
+      "name": "GENEVA",
+      "position": "Vendedor Ambulante",
+      "url": "",
+      "location": "Santa Fe, Santa Fe, Argentina",
+      "startDate": "2004-03-01",
+      "endDate": "2004-10-31",
+      "summary": "Vendedor Ambulante de productos varios (perfumes, shampoos, entre otros).",
+      "highlights": []
     }
   ],
   "education": [
     {
-      "institution": "Universitat Oberta de Catalunya",
-      "url": "https://www.uoc.edu/portal/es/index.html",
-      "area": "Ingeniero de Software",
+      "display": true,
+      "name": "Data Science I: Fundamentos para la Ciencia de Datos",
+      "institution": "Coderhouse",
+      "url": "https://www.coderhouse.com/ar/",
+      "area": "Data",
       "studyType": "Bachelor",
-      "startDate": "2003-01-01",
-      "endDate": "2009-01-01",
-      "score": "4.0",
-      "courses": [
-        "DB1101 - Basic SQL"
-      ]
-    }
-  ],
-  "certificates": [
+      "startDate": "2024-09-01",
+      "endDate": "2024-11-14",
+      "score": "",
+      "courses": []
+    },
     {
-      "name": "Certificate",
-      "date": "2021-11-07",
-      "issuer": "Company",
-      "url": "https://certificate.com"
-    }
-  ],
-  "publications": [
+      "display": true,
+      "name": "Desarrollador Full Stack",
+      "institution": "Coderhouse",
+      "url": "https://www.coderhouse.com/ar/",
+      "area": "Programación",
+      "studyType": "Bachelor",
+      "startDate": "2023-03-01",
+      "endDate": "2024-05-16",
+      "score": "",
+      "courses": ["Desarrollo Web", "JavaScript", "React JS", "Backend Node JS"]
+    },
     {
-      "name": "Publication",
-      "publisher": "Company",
-      "releaseDate": "2014-10-01",
-      "url": "https://publication.com",
-      "summary": "Description…"
+      "display": true,
+      "name": "Data Analytic",
+      "institution": "Digital House",
+      "url": "https://www.digitalhouse.com/ar",
+      "area": "Data",
+      "studyType": "Bachelor",
+      "startDate": "2022-05-04",
+      "endDate": "2023-02-21",
+      "score": "",
+      "courses": ["MySQL", "Power BI", "Tableau", "ETL"]
+    },
+    {
+      "display": true,
+      "name": "Diplomatura en Gestión de la Calidad ISO 9001.2015",
+      "institution": "Centro de e-Learning UTN FRBA",
+      "url": "https://sceu.frba.utn.edu.ar/e-learning/",
+      "area": "Admnistración y Gestión de empresas",
+      "studyType": "Bachelor",
+      "startDate": "2020-05-04",
+      "endDate": "2020-07-28",
+      "score": "",
+      "courses": []
+    },
+    {
+      "display": true,
+      "name": "Introduccion a ISO 9001:2015",
+      "institution": "Universidad Tecnológica Nacional",
+      "url": "https://www.frba.utn.edu.ar/",
+      "area": "Admnistración y Gestión de empresas",
+      "studyType": "Bachelor",
+      "startDate": "2019-05-28",
+      "endDate": "2019-07-09",
+      "score": "",
+      "courses": []
     }
   ],
+  "certificates": [],
+  "publications": [],
   "skills": [
     {
+      "display": true,
       "name": "HTML",
       "level": "Master",
-      "keywords": [
-        "Desarrollo Web",
-        "Frontend"
-      ]
+      "keywords": ["Desarrollo Web", "Frontend"]
     },
     {
+      "display": true,
       "name": "CSS",
       "level": "Master",
-      "keywords": [
-        "Desarrollo Web",
-        "Frontend",
-        "Diseño Responsive"
-      ]
+      "keywords": ["Desarrollo Web", "Frontend", "Diseño Responsive"]
     },
     {
+      "display": true,
       "name": "JavaScript",
       "level": "Master",
-      "keywords": [
-        "Desarrollo Web",
-        "Frontend",
-        "Backend",
-        "Fullstack"
-      ]
+      "keywords": ["Desarrollo Web", "Frontend", "Backend", "Fullstack"]
     },
     {
+      "display": true,
       "name": "Tailwind",
       "level": "Avanzado",
       "keywords": [
@@ -124,6 +183,7 @@
       ]
     },
     {
+      "display": true,
       "name": "TypeScript",
       "level": "Avanzado",
       "keywords": [
@@ -134,16 +194,30 @@
       ]
     },
     {
+      "display": true,
+      "name": "React",
+      "level": "Avanzado",
+      "keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
+    },
+    {
+      "display": true,
       "name": "Node",
       "level": "Avanzado",
+      "keywords": ["Desarrollo Web", "Backend", "JavaScript", "Servidor"]
+    },
+    {
+      "display": true,
+      "name": "MongoDB",
+      "level": "Intermedio",
       "keywords": [
-        "Desarrollo Web",
-        "Backend",
-        "JavaScript",
-        "Servidor"
+        "Bases de Datos",
+        "NoSQL",
+        "Almacenamiento de Datos",
+        "Backend"
       ]
     },
     {
+      "display": true,
       "name": "MySQL",
       "level": "Avanzado",
       "keywords": [
@@ -154,15 +228,13 @@
       ]
     },
     {
+      "display": true,
       "name": "Git",
       "level": "Avanzado",
-      "keywords": [
-        "Control de Versiones",
-        "Colaboración",
-        "Código Fuente"
-      ]
+      "keywords": ["Control de Versiones", "Colaboración", "Código Fuente"]
     },
     {
+      "display": true,
       "name": "GitHub",
       "level": "Avanzado",
       "keywords": [
@@ -173,24 +245,89 @@
       ]
     },
     {
-      "name": "Next.js",
+      "display": true,
+      "name": "Excel",
       "level": "Avanzado",
       "keywords": [
-        "Desarrollo Web",
-        "Frontend",
-        "React Framework",
-        "SSR",
-        "Static Generation"
+        "Análisis de Datos",
+        "Automatización",
+        "Hojas de Cálculo",
+        "Business Intelligence"
       ]
     },
     {
-      "name": "React",
+      "display": true,
+      "name": "Access",
+      "level": "Intermedio",
+      "keywords": ["Bases de Datos", "Gestión de Datos", "Microsoft Office"]
+    },
+    {
+      "display": true,
+      "name": "Tableau",
+      "level": "Intermedio",
+      "keywords": [
+        "Data Analytics",
+        "Visualización de Datos",
+        "Business Intelligence"
+      ]
+    },
+    {
+      "display": true,
+      "name": "Looker",
+      "level": "Intermedio",
+      "keywords": [
+        "Data Analytics",
+        "Visualización de Datos",
+        "Business Intelligence"
+      ]
+    },
+    {
+      "display": true,
+      "name": "Power BI",
+      "level": "Intermedio",
+      "keywords": [
+        "Data Analytics",
+        "Visualización de Datos",
+        "Business Intelligence"
+      ]
+    },
+    {
+      "display": true,
+      "name": "Python",
       "level": "Avanzado",
       "keywords": [
-        "Desarrollo Web",
-        "Frontend",
-        "JavaScript Library",
-        "UI"
+        "Data Science",
+        "Machine Learning",
+        "Automatización",
+        "Backend"
+      ]
+    },
+    {
+      "display": true,
+      "name": "Jupyter",
+      "level": "Avanzado",
+      "keywords": ["Data Science", "Análisis de Datos", "Notebooks", "Python"]
+    },
+    {
+      "display": true,
+      "name": "Pandas",
+      "level": "Avanzado",
+      "keywords": [
+        "Data Science",
+        "Manipulación de Datos",
+        "Análisis de Datos",
+        "Python"
+      ]
+    },
+    {
+      "display": true,
+      "name": "NumPy",
+      "level": "Avanzado",
+      "keywords": [
+        "Data Science",
+        "Cálculos Numéricos",
+        "Análisis de Datos",
+        "Python"
       ]
     }
   ],
@@ -201,34 +338,54 @@
     },
     {
       "language": "English",
-      "fluency": "Advanced"
+      "fluency": "Basic"
     }
   ],
-  "interests": [
-    {
-      "name": "Wildlife",
-      "keywords": [
-        "Ferrets",
-        "Unicorns"
-      ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Jane Doe",
-      "reference": "Reference…"
-    }
-  ],
+  "interests": [],
+  "references": [],
   "projects": [
     {
-      "name": "mars.codes",
+      "name": "Insight",
+      "display": true,
       "isActive": true,
-      "description": "description",
+      "description": "Plataforma web integral diseñada para ofrecer servicios de desarrollo de software, consultoría tecnológica y soluciones digitales personalizadas. Insight es el producto principal de la empresa, enfocado en brindar una experiencia moderna y eficiente a los usuarios.",
       "highlights": [
-        "Elige tu propia aventura",
+        "Astro, React, Tailwind",
+        "Optimizada para SEO",
         "En desarrollo"
       ],
-      "url": ""
+      "url": "https://www.insightdevs.com.ar/",
+      "github": "https://github.com/Master-Insight/Insight-Client"
+    },
+    {
+      "name": "Motorplan",
+      "display": true,
+      "isActive": true,
+      "description": "Aplicación web dinámica de una empresa de capitalización y ahorro, diseñada para resaltar la marca y permitir a los usuarios visualizar adjudicaciones de manera intuitiva y eficiente.",
+      "highlights": ["Astro, React, Tailwind", "En desarrollo"],
+      "url": "https://motorplan-web.vercel.app/",
+      "github": "https://github.com/Master-Insight/motorplan-web"
+    },
+    {
+      "name": "Lingualab",
+      "display": true,
+      "isActive": true,
+      "description": "Aplicación web diseñada para profesores de idiomas. Desarrollada como parte de una simulación de FooTalent, junto a un grupo de diseñadores y desarrolladores",
+      "highlights": [
+        "Rol: Coordinador dev",
+        "React, Tailwind, Node, Express y MongoDB"
+      ],
+      "url": "https://lingualab.vercel.app/",
+      "github": "https://github.com/FooTalent/Lingualab"
+    },
+    {
+      "name": "IdeasPropias",
+      "display": true,
+      "isActive": true,
+      "description": "Colaboré para el desarrollo de una landing page en Astro de una consultora de negocios.",
+      "highlights": ["Web estática en Astro", "Javascript, Tailwind"],
+      "url": "https://page-ideaspropias.vercel.app/",
+      "github": "https://github.com/Master-Insight/page-ideaspropias"
     }
   ]
 }
