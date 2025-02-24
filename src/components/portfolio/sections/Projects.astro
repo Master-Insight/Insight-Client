@@ -11,7 +11,16 @@ const projects = data || [];
     data && (
       <ul>
         {projects.map(
-          ({ url, description, highlights, name, isActive, github }) => {
+          ({
+            url,
+            description,
+            highlights,
+            name,
+            isActive,
+            github,
+            display,
+          }) => {
+            if (display == false) return null;
             return (
               <li>
                 <article class="flex flex-col border border-gray-100 rounded-lg gap-4 p-4 h-full">

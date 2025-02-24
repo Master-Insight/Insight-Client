@@ -9,7 +9,9 @@ const education = data || [];
   {
     data && (
       <ul class="flex flex-col gap-8">
-        {education.map(({ institution, startDate, endDate, area }) => {
+        {education.map(({ institution, startDate, endDate, area, display }) => {
+          if (display == false) return null;
+
           const startYear = new Date(startDate).getFullYear();
           const endYear =
             endDate != null ? new Date(endDate).getFullYear() : "Actual";

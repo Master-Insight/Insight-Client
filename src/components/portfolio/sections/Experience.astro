@@ -18,10 +18,13 @@ const work = data || [];
             summary,
             highlights,
             url,
+            display,
           }) => {
             const startYear = new Date(startDate).getFullYear();
             const endYear =
               endDate != null ? new Date(endDate).getFullYear() : "Actual";
+
+            if (display == false) return null;
 
             return (
               <li>

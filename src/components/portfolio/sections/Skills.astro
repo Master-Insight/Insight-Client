@@ -59,7 +59,9 @@ const SKILLS_ICONS = {
   {
     skills.length > 0 ? (
       <ul>
-        {skills.map(({ name }) => {
+        {skills.map(({ name, display }) => {
+          if (display == false) return null;
+
           // Normaliza el nombre para que coincida con las claves en SKILLS_ICONS
           let iconName;
           iconName = name === "Next.js" ? "Next" : name;
