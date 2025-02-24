@@ -1,7 +1,15 @@
 ---
-import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
-import Backbutton from "../../ui/backbutton.astro";
+import LayoutCV from "@/components/portfolio/Layout_cv.astro";
+import Backbutton from "@/ui/backbutton.astro";
+
+import About from "@/components/portfolio/sections/About.astro";
+import Education from "@/components/portfolio/sections/Education.astro";
+import Experience from "@/components/portfolio/sections/Experience.astro";
+import Hero from "@/components/portfolio/sections/Hero.astro";
+// import KeyboardManager from "@/components/KeyboardManager.astro";
+import Projects from "@/components/portfolio/sections/Projects.astro";
+import Skills from "@/components/portfolio/sections/Skills.astro";
 
 export const prerender = true;
 
@@ -32,47 +40,12 @@ const { fullName } = data;
 const userInfo = userData ? userData.default : null;
 ---
 
-<Layout title={fullName}>
-  <div class="p-4">
-    <Backbutton />
-
-    <div
-      class="flex flex-col md:flex-row md:justify-center items-start gap-8 mt-6"
-    >
-      <!-- Información del Staff -->
-      <div class="w-full md:w-1/3 flex flex-col gap-4">
-        <!-- Nombre -->
-        <h1
-          class="text-5xl font-bold text-primary mb-4 text-center md:text-left"
-        >
-          {fullName}
-        </h1>
-
-        <!-- Mostrar datos adicionales del JSON si existen -->
-        {
-          userInfo && (
-            <div class="p-4 bg-gray-100 rounded-lg shadow">
-              <h2 class="text-xl font-semibold">Información adicional</h2>
-              <p>Email: {userInfo.email}</p>
-              <p>Teléfono: {userInfo.phone}</p>
-            </div>
-          )
-        }
-      </div>
-    </div>
-  </div>
-</Layout>
-
-<style>
-  img.rounded-full {
-    border: 4px solid #f3f3f3;
-    transition:
-      transform 0.3s ease-in-out,
-      box-shadow 0.3s ease;
-  }
-
-  img.rounded-full:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  }
-</style>
+<LayoutCV title={fullName}>
+  <Backbutton />
+  <Hero data={userInfo.basics || {}} />
+  <About data={userInfo.basics || {}} />
+  <Experience data={userInfo.work || []} />
+  <Education data={userInfo.education || []} />
+  <Projects data={userInfo.projects || []} />
+  <Skills data={userInfo.skills || []} />
+</LayoutCV>

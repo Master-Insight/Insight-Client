@@ -1,0 +1,190 @@
+---
+import company from "@config/company";
+import config from "@config/layout";
+import Footer from "@/layouts/components/Footer.astro";
+import Frame from "./Frame.astro";
+import NavBar from "@/layouts/components/NavBar.astro";
+import WhatsappButton from "@/ui/whatsppButton.astro";
+
+const logoUrl = company.images.logo;
+const navLinks = config.navbar.default;
+const {
+  title = "Insight | Soluciones digitales para emprendedores",
+  description = "Descubre herramientas y soluciones digitales para emprendedores en Argentina. Impulsa tu negocio con nuestros servicios tecnológicos.",
+  keywords = "emprendedores, Argentina, negocios digitales, transformación digital, desarrollo web, marketing digital, startups",
+  image = company.info.preview,
+  url = company.info.url,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
+    />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content="Insight" />
+    <meta name="copyright" content="Insight" />
+    <meta name="geo.region" content="AR" />
+    <meta name="geo.placename" content="Argentina" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={url} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={url} />
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Insight",
+        "description": "Transformamos ideas en soluciones digitales para emprendedores argentinos.",
+        "url": "https://www.insightdevs.com.ar/",
+        "telephone": "+54 3541 613185",
+        "logo": "https://www.insightdevs.com.ar/img/logo.webp",
+        "sameAs": [
+          "https://www.linkedin.com/company/insightdevs",
+          "https://www.instagram.com/insight_developers"
+        ]
+      }
+    </script>
+
+    <!-- Preload de Recursos Críticos -->
+    <link rel="preload" href={image} as="image" />
+  </head>
+  <body>
+    <NavBar logoUrl={logoUrl} navLinks={navLinks} />
+    <!-- el Main esta dentro de FrameAbs -->
+    <Frame>
+      <slot />
+    </Frame>
+    <Footer />
+
+    <WhatsappButton />
+  </body>
+</html>
+
+<style is:global>
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "Roboto", system-ui, sans-serif;
+  }
+
+  main {
+    padding: 4rem;
+    margin: auto;
+    width: 100%;
+
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      "Courier New",
+      Courier,
+      monospace;
+    background: white;
+    letter-spacing: 0.025rem;
+  }
+
+  main h1,
+  main h2,
+  main h3,
+  main h4 {
+    margin: 0;
+    font-family:
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell,
+      "Open Sans",
+      "Helvetica Neue",
+      sans-serif;
+  }
+
+  main p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+    text-wrap: pretty;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  @media (width <= 700px) {
+    main {
+      padding: 2rem;
+    }
+  }
+
+  /* Asegurar que el pie de página impreso quede al final */
+  @media print {
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex-grow: 1;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+  }
+</style>

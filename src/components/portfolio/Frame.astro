@@ -1,13 +1,9 @@
----
-const props = Astro.props;
----
-
-<div {...props} class="portfolio">
+<main class="w-full mt-2 p-4 bg-white flex flex-col items-center">
   <slot />
-</div>
+</main>
 
 <style>
-  .portfolio {
+  main {
     font-family:
       Menlo,
       Monaco,
@@ -15,6 +11,27 @@ const props = Astro.props;
       "Courier New",
       Courier,
       monospace;
+    background: white;
     letter-spacing: 0.025rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+    text-wrap: pretty;
+  }
+
+  @media print {
+    astro-dev-toolbar {
+      display: none !important;
+    }
+
+    article {
+      break-inside: avoid;
+    }
   }
 </style>
