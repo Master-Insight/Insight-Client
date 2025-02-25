@@ -8,7 +8,7 @@
     "image": "https://media.licdn.com/dms/image/v2/D4D03AQGKh0zsvYa0Vw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1731195387848?e=1746057600&v=beta&t=n_7TIc0X-jxkpyrPuvIeWEM3-dHXgSj8sfflixVj8-s",
     "email": "gustavo.sirtori@gmail.com",
     "phone": {
-      "display": true,
+      "display": false,
       "number": "+54 3541 613185"
     },
     "url": "https://insightdevs.com.ar/",
@@ -346,6 +346,7 @@
   "projects": [
     {
       "name": "Insight",
+      "area": "FrontEnd",
       "display": true,
       "isActive": true,
       "description": "Plataforma web integral diseñada para ofrecer servicios de desarrollo de software, consultoría tecnológica y soluciones digitales personalizadas. Insight es el producto principal de la empresa, enfocado en brindar una experiencia moderna y eficiente a los usuarios.",
@@ -359,6 +360,7 @@
     },
     {
       "name": "Motorplan",
+      "area": "FrontEnd",
       "display": true,
       "isActive": true,
       "description": "Aplicación web dinámica de una empresa de capitalización y ahorro, diseñada para resaltar la marca y permitir a los usuarios visualizar adjudicaciones de manera intuitiva y eficiente.",
@@ -368,6 +370,7 @@
     },
     {
       "name": "Lingualab",
+      "area": "Full Stack",
       "display": true,
       "isActive": true,
       "description": "Aplicación web diseñada para profesores de idiomas. Desarrollada como parte de una simulación de FooTalent, junto a un grupo de diseñadores y desarrolladores",
@@ -380,6 +383,17 @@
     },
     {
       "name": "IdeasPropias",
+      "area": "FrontEnd",
+      "display": true,
+      "isActive": true,
+      "description": "Colaboré para el desarrollo de una landing page en Astro de una consultora de negocios.",
+      "highlights": ["Web estática en Astro", "Javascript, Tailwind"],
+      "url": "https://page-ideaspropias.vercel.app/",
+      "github": "https://github.com/Master-Insight/page-ideaspropias"
+    },
+    {
+      "name": "Analsis Comercial - Relaciones Vta - Compra - Newsport",
+      "area": "Data",
       "display": true,
       "isActive": true,
       "description": "Colaboré para el desarrollo de una landing page en Astro de una consultora de negocios.",
