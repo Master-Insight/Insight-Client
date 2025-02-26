@@ -62,13 +62,11 @@ const SKILLS_ICONS = {
         {skills.map(({ name, display }) => {
           if (display == false) return null;
 
-          // Normaliza el nombre para que coincida con las claves en SKILLS_ICONS
           let iconName;
           iconName = name === "Next.js" ? "Next" : name;
           iconName = iconName === "Power BI" ? "PowerBi" : iconName;
           const Icon = SKILLS_ICONS[iconName];
 
-          // Si no hay un ícono correspondiente, no renderizar el elemento
           if (!Icon) {
             console.warn(`No se encontró un ícono para la habilidad: ${name}`);
             return null;
@@ -104,5 +102,21 @@ const SKILLS_ICONS = {
     font-weight: 500;
     gap: 4px;
     padding: 0.2rem 0.6rem;
+  }
+
+  @media print {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      break-inside: avoid;
+    }
+
+    li {
+      display: flex;
+      background: transparent;
+      color: black !important;
+      break-inside: avoid;
+    }
   }
 </style>
