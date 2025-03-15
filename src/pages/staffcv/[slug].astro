@@ -41,7 +41,9 @@ const userInfo = userData ? userData.default : null;
 ---
 
 <LayoutCV title={fullName}>
-  <Backbutton />
+  <Backbutton
+    className="my-4 px-4 py-2 rounded-xl bg-primary hover:bg-primary-dark text-white print:hidden"
+  />
   <Hero data={userInfo.basics || {}} />
   <About data={userInfo.basics || {}} />
   <Experience data={userInfo.work || []} />

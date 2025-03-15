@@ -171,19 +171,33 @@ const {
 
   /* Asegurar que el pie de página impreso quede al final */
   @media print {
+    @page {
+      size: A4;
+      margin: 10mm 15mm; /* Márgenes personalizados */
+    }
+
+    nav {
+      display: none;
+    }
+
     body {
-      min-height: 100vh;
       display: flex;
       flex-direction: column;
+      margin: 0;
+      padding: 0;
     }
 
     main {
       flex-grow: 1;
+      padding: 0;
+      margin: 0;
     }
 
     footer {
-      position: absolute;
+      position: static;
+      /* position: absolute; */
       bottom: 0;
+      height: 3cm;
       width: 100%;
     }
   }
