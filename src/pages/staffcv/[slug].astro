@@ -24,6 +24,9 @@ export async function getStaticPaths() {
         userData = await import(`@/mock/users/${staff.slug}.json`);
       } catch (error) {
         console.warn(`No se encontró JSON para ${staff.slug}`);
+        console.warn(`Ruta intentada: @/mock/users/${staff.slug}.json`);
+        console.warn(`Error completo:`, error);
+        userData = { default: {} }; // Proveer un objeto vacío
       }
 
       return {
@@ -37,17 +40,17 @@ export async function getStaticPaths() {
 const { staff, userData } = Astro.props;
 const { data, slug } = staff;
 const { fullName } = data;
-const userInfo = userData ? userData.default : null;
+const userInfo = userData?.default || {};
 ---
 
 <LayoutCV title={fullName}>
   <Backbutton
     className="my-4 px-4 py-2 rounded-xl bg-primary hover:bg-primary-dark text-white print:hidden"
   />
-  <Hero data={userInfo.basics || {}} />
-  <About data={userInfo.basics || {}} />
-  <Experience data={userInfo.work || []} />
-  <Education data={userInfo.education || []} />
-  <Projects data={userInfo.projects || []} />
-  <Skills data={userInfo.skills || []} />
+  <Hero data={userInfo?.basics ?? {}} />
+  <About data={userInfo?.basics ?? {}} />
+  <Experience data={userInfo?.work ?? []} />
+  <Education data={userInfo?.education ?? []} />
+  <Projects data={userInfo?.projects ?? []} />
+  <Skills data={userInfo?.skills ?? []} />
 </LayoutCV>
