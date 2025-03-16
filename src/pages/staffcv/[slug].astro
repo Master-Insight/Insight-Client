@@ -1,0 +1,56 @@
+---
+import { getCollection } from "astro:content";
+import LayoutCV from "@/components/portfolio/Layout_cv.astro";
+import Backbutton from "@/ui/backbutton.astro";
+
+import About from "@/components/portfolio/sections/About.astro";
+import Education from "@/components/portfolio/sections/Education.astro";
+import Experience from "@/components/portfolio/sections/Experience.astro";
+import Hero from "@/components/portfolio/sections/Hero.astro";
+// import KeyboardManager from "@/components/KeyboardManager.astro";
+import Projects from "@/components/portfolio/sections/Projects.astro";
+import Skills from "@/components/portfolio/sections/Skills.astro";
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const STAFF = await getCollection("staff");
+
+  return Promise.all(
+    STAFF.map(async (staff) => {
+      // Intentar importar el JSON correspondiente al usuario
+      let userData = null;
+      try {
+        userData = await import(`../../mock/users/${staff.slug}.json`);
+      } catch (error) {
+        console.warn(`No se encontró JSON para ${staff.slug}`);
+        console.warn(`Ruta intentada: @/mock/users/${staff.slug}.json`);
+        console.warn(`Error completo:`, error);
+        userData = { default: {} }; // Proveer un objeto vacío
+      }
+
+      return {
+        params: { slug: staff.slug },
+        props: { staff, userData },
+      };
+    }),
+  );
+}
+
+const { staff, userData } = Astro.props;
+const { data, slug } = staff;
+const { fullName } = data;
+const userInfo = userData?.default || {};
+---
+
+<LayoutCV title={fullName}>
+  <Backbutton
+    className="my-4 px-4 py-2 rounded-xl bg-primary hover:bg-primary-dark text-white print:hidden"
+  />
+  <Hero data={userInfo?.basics ?? {}} />
+  <About data={userInfo?.basics ?? {}} />
+  <Experience data={userInfo?.work ?? []} />
+  <Education data={userInfo?.education ?? []} />
+  <Projects data={userInfo?.projects ?? []} />
+  <Skills data={userInfo?.skills ?? []} />
+</LayoutCV>

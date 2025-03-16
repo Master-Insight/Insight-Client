@@ -3,12 +3,13 @@ import company from "../../../config/company.js";
 import SocialLinkLI from "../../components/SocialLinkLI.astro";
 import Email from "../../components/icons/Email.ico.astro";
 import Phone from "../../components/icons/Phone.ico.astro";
+import WorldMap from "../../components/icons/WorldMap.astro";
 const { images, info, social } = company;
 const year = new Date().getFullYear();
 ---
 
 <footer class="bg-gray-100 w-full">
-  <div class="mx-auto px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24">
+  <div class="mx-auto px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24 print:hidden">
     <!-- Upper -->
     <div class="flex flex-col gap-8 md:flex-row md:justify-between">
       <!-- Logo -->
@@ -24,8 +25,7 @@ const year = new Date().getFullYear();
         <p
           class="mt-6 max-w-md text-center leading-relaxed text-gray-500 sm:max-w-xs sm:text-left"
         >
-          {info.description}. Trabajamos con emprendedores argentinos para
-          potenciar sus negocios.
+          {info.description}
         </p>
         <ul class="mt-8 flex justify-center gap-6 sm:justify-start md:gap-8">
           {
@@ -129,6 +129,31 @@ const year = new Date().getFullYear();
           {info.name}
         </p>
       </div>
+    </div>
+  </div>
+
+  <!-- Pie de página solo para impresión -->
+  <div
+    class="hidden print:flex print:justify-between print:items-center print:text-xs print:text-gray-700 print:border-t print:pt-2 print:mt-4"
+  >
+    <!-- Logo e información -->
+    <div class="print:flex print:flex-col print:items-start">
+      <img src={company.images.logo[0]} alt="Logo" class="w-16 mb-1" />
+    </div>
+
+    <!-- Contacto -->
+    <div class="print:text-right">
+      <p class="flex items-center gap-1">
+        <Email aria-label="Correo electrónico" class="size-3" />
+        {company.info.email}
+        <span>|</span>
+        <Phone aria-label="Teléfono" class="size-3" />
+        {company.info.whatsapp}
+      </p>
+      <p class="flex items-center gap-1">
+        <WorldMap aria-label="Sitio web" class="size-3" />
+        {company.info.url}
+      </p>
     </div>
   </div>
 </footer>

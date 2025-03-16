@@ -52,3 +52,9 @@ Si querés mejorar la gestión de tu empresa con herramientas personalizadas y e
 ---  
 
 ✨ **En Insight no hacemos promesas vacías. Creamos estrategias que funcionan.** 🚀  
+
+---
+
+## Menciones
+
+Maquetado minimalista del Staff basado en <a href="https://github.com/BartoszJarocki/cv">Bartosz Jarocki</a> y en <a href="https://github.dev/midudev/minimalist-portfolio-json">MiduDev</a>
