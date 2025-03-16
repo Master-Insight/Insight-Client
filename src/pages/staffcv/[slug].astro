@@ -21,7 +21,7 @@ export async function getStaticPaths() {
       // Intentar importar el JSON correspondiente al usuario
       let userData = null;
       try {
-        userData = await import(`@/mock/users/${staff.slug}.json`);
+        userData = await import(`../../mock/users/${staff.slug}.json`);
       } catch (error) {
         console.warn(`No se encontró JSON para ${staff.slug}`);
         console.warn(`Ruta intentada: @/mock/users/${staff.slug}.json`);
