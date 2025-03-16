@@ -1,0 +1,98 @@
+---
+import Section from "../Section.astro";
+
+import Mail from "@ico/Email.ico.astro";
+import Phone from "@ico/Phone.ico.astro";
+import Instagram from "@ico/Instagram.ico.astro";
+import LinkedIn from "@ico/LinkedIn.ico.astro";
+import GitHub from "@ico/skill/GitHub.astro";
+import Twitter from "@ico/Twitter.ico.astro";
+import WorldMap from "@ico/WorldMap.astro";
+
+const { data } = Astro.props;
+const { name, label, image, location, profiles, phone, email } = data;
+const { city, region } = location;
+
+const SOCIAL_ICONS = {
+  Instagram,
+  GitHub,
+  LinkedIn,
+  Twitter,
+};
+
+const linkedInfo = profiles.find(({ network }) => network === "LinkedIn");
+const linkedUrl = linkedInfo?.url;
+
+const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
+---
+
+<Section>
+  <div
+    class="flex flex-col md:flex-row items-center justify-between gap-4 print:flex-row"
+  >
+    <div class="flex flex-col gap-2 md:pr-8">
+      <h1 class="text-3xl font-bold">{name}</h1>
+      <h2 class="text-gray-700 font-medium text-lg">{label}</h2>
+      <span
+        class="text-gray-600 flex items-center gap-1 text-sm tracking-tight"
+      >
+        <WorldMap />
+        {city}, {region}
+      </span>
+      <footer class="text-gray-500 text-xs flex gap-1 mt-2 print:block hidden">
+        {printInfo}
+      </footer>
+      <footer class="text-gray-500 text-xs flex gap-1 mt-2 print:hidden">
+        {
+          email && (
+            <a
+              href={`mailto:${email}`}
+              title={`Enviar un correo electrónico a ${name} al correo ${email}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gray-700 inline-flex items-center justify-center border border-gray-200 p-1 h-8 w-8 rounded-md transition-all duration-300 ease-in-out hover:bg-gray-200 hover:border-gray-300"
+            >
+              <Mail />
+            </a>
+          )
+        }
+        {
+          phone?.display && phone?.number && (
+            <a
+              href={`tel:${phone}`}
+              title={`Llamar por teléfono a ${name} al número ${phone}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gray-700 inline-flex items-center justify-center border border-gray-200 p-1 h-8 w-8 rounded-md transition-all duration-300 ease-in-out hover:bg-gray-200 hover:border-gray-300"
+            >
+              <Phone />
+            </a>
+          )
+        }
+        {
+          profiles.map(({ network, url }) => {
+            const Icon = SOCIAL_ICONS[network];
+            return (
+              <a
+                href={url}
+                title={`Visitar el perfil de ${name} en ${network}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-gray-700 inline-flex items-center justify-center border border-gray-200 p-1 h-8 w-8 rounded-md transition-all duration-300 ease-in-out hover:bg-gray-200 hover:border-gray-300"
+              >
+                <Icon />
+              </a>
+            );
+          })
+        }
+      </footer>
+    </div>
+    <figure class="flex justify-center items-center">
+      <img
+        src={image}
+        alt={name}
+        class="aspect-square object-cover w-32 rounded-lg"
+      />
+    </figure>
+  </div>
+</Section>

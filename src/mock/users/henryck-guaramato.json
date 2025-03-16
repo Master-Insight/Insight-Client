@@ -1,0 +1,209 @@
+{
+  "basics": {
+    "name": "Henryck Guaramato",
+    "label": "Full Stack Developer apasionado por la tecnología y la creación de aplicaciones web eficientes.",
+    "image": "https://avatars.githubusercontent.com/u/128949474?v=4",
+    "email": "guaramatohenryck@gmail.com",
+    "url": "https://henryck.dev",
+    "phone": {
+      "display": false,
+      "number": ""
+    },
+    "summary": "He trabajado como administrador web de e-commerce en WordPress y he desarrollado proyectos para pequeñas empresas que necesitan soluciones web personalizadas. Actualmente, realizo cursos especializados para expandir mis conocimientos en programación, manteniéndome actualizado y adaptable a cualquier entorno de trabajo.",
+    "location": {
+      "address": "",
+      "postalCode": "8900170",
+      "city": "Santiago",
+      "countryCode": "CL",
+      "region": "Chile"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "midudev",
+        "url": "https://linkedin.com/in/henryckg"
+      },
+      {
+        "network": "GitHub",
+        "username": "midudev",
+        "url": "https://github.com/henryckg"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Musicland Chile",
+      "position": "Administrador Web",
+      "url": "https://musicland.cl",
+      "startDate": "2017-08-01",
+      "endDate": "2022-11-30",
+      "summary": "Encargado del funcionamiento general de la web en WordPress, incluyendo la publicación de productos, gestión y despacho de pedidos. Realicé la migración de datos de WordPress a Bsale (plataforma de facturación y control de stock), y planifiqué campañas de mailing y redes sociales.",
+      "highlights": [""]
+    },
+    {
+      "name": "Taller de Arte Sonoro",
+      "position": "Instructor",
+      "url": null,
+      "startDate": "2016-01-01",
+      "endDate": "2017-07-01",
+      "summary": "Diseñé e impartí un curso intensivo sobre el uso básico de un programa de edición de audio. Me encargué de dar clases sobre edición y mezcla de audio, creación de música digital, grabación y edición de audio para videos, además de enseñar el uso de computadoras Mac.",
+      "highlights": [""]
+    }
+  ],
+  "education": [
+    {
+      "name": "Desarrollador Full Stack",
+      "institution": "Coderhouse",
+      "url": "https://www.coderhouse.com/ar/",
+      "area": "Programación",
+      "studyType": "Bachelor",
+      "startDate": "2023-03-01",
+      "endDate": "2024-05-16",
+      "score": "",
+      "courses": ["Desarrollo Web", "JavaScript", "React JS", "Backend Node JS"]
+    },
+    {
+      "name": "Técnico en Sonido",
+      "institution": "Taller de Arte Sonoro",
+      "url": "https://tallerdeartesonoro.com/",
+      "area": "Técnico en Sonido",
+      "studyType": "Bachelor",
+      "startDate": "2014-01-01",
+      "endDate": "2015-12-01",
+      "score": "",
+      "courses": [""]
+    }
+  ],
+  "skills": [
+    {
+      "name": "HTML",
+      "level": "Master",
+      "keywords": ["Desarrollo Web", "Frontend"]
+    },
+    {
+      "name": "CSS",
+      "level": "Master",
+      "keywords": ["Desarrollo Web", "Frontend", "Diseño Responsive"]
+    },
+    {
+      "name": "JavaScript",
+      "level": "Master",
+      "keywords": ["Desarrollo Web", "Frontend", "Backend", "Fullstack"]
+    },
+    {
+      "name": "Tailwind",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "CSS Framework",
+        "Diseño Responsive"
+      ]
+    },
+    {
+      "name": "TypeScript",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "Backend",
+        "JavaScript Superset"
+      ]
+    },
+    {
+      "name": "React",
+      "level": "Avanzado",
+      "keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
+    },
+    {
+      "name": "Astro",
+      "level": "Intermedio",
+      "keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
+    },
+    {
+      "name": "Node",
+      "level": "Avanzado",
+      "keywords": ["Desarrollo Web", "Backend", "JavaScript", "Servidor"]
+    },
+    {
+      "name": "MySQL",
+      "level": "Avanzado",
+      "keywords": [
+        "Bases de Datos",
+        "SQL",
+        "Almacenamiento de Datos",
+        "Backend"
+      ]
+    },
+    {
+      "name": "Git",
+      "level": "Avanzado",
+      "keywords": ["Control de Versiones", "Colaboración", "Código Fuente"]
+    },
+    {
+      "name": "GitHub",
+      "level": "Avanzado",
+      "keywords": [
+        "Control de Versiones",
+        "Colaboración",
+        "Código Fuente",
+        "Git"
+      ]
+    },
+    {
+      "name": "Next.js",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "React Framework",
+        "SSR",
+        "Static Generation"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Spanish",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "C1"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Motorplan",
+      "isActive": true,
+      "description": "Aplicación web dinámica de una empresa de capitalización y ahorro, diseñada para resaltar la marca y permitir a los usuarios visualizar adjudicaciones de manera intuitiva y eficiente.",
+      "highlights": ["Astro, React, Tailwind", "En desarrollo"],
+      "url": "https://motorplan-web.vercel.app/",
+      "github": "https://github.com/Master-Insight/motorplan-web"
+    },
+    {
+      "name": "Lingualab",
+      "isActive": true,
+      "description": "Aplicación web diseñada para profesores de idiomas. Desarrollada como parte de una simulación de FooTalent, junto a un grupo de diseñadores y desarrolladores",
+      "highlights": ["Rol: Backend", "React, Node, Express y MongoDB"],
+      "url": "https://lingualab.vercel.app/",
+      "github": "https://github.com/FooTalent/Lingualab"
+    },
+    {
+      "name": "IdeasPropias",
+      "isActive": true,
+      "description": "Colaboré para el desarrollo de una landing page en Astro de una consultora de negocios.",
+      "highlights": ["Web estática en Astro", "Javascript, Tailwind"],
+      "url": "https://page-ideaspropias.vercel.app/",
+      "github": "https://github.com/Master-Insight/page-ideaspropias"
+    },
+    {
+      "name": "RAM Salud Mental",
+      "isActive": true,
+      "description": "Proyecto final para una clínica de salud mental, donde los pacientes puedan agendar citas con profesionales mediante Calendly.",
+      "highlights": ["React, Tailwind", "Proyecto grupal"],
+      "url": "https://proyecto-ram.vercel.app/",
+      "github": "https://github.com/Joeshi02/Proyecto-Ram-"
+    }
+  ]
+}
