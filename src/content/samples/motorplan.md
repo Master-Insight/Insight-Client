@@ -53,14 +53,16 @@ active: true
 Puedes visitar la página en el siguiente enlace: [MotorPlan](https://www.motorplanargentina.com/").
 
 ## 📸 **Capturas de pantalla**
-![MotorPlan 1](/samples/motorplan1.png)
-![MotorPlan 2](/samples/motorplan2.jpg)
-![MotorPlan 3](/samples/motorplan3.jpg)
-![MotorPlan 4](/samples/motorplan4.jpg)
-![MotorPlan 5](/samples/motorplan5.jpg)
-![MotorPlan 6](/samples/motorplan6.ong)
-![MotorPlan 7](/samples/motorplan7.jpg)
-![MotorPlan 8](/samples/motorplan8.png)
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 my-6">
+  <img src="/samples/motorplan1.png" alt="MotorPlan 1" class="rounded-xl w-full h-auto object-cover" />
+  <img src="/samples/motorplan2.jpg" alt="MotorPlan 2" class="rounded-xl w-full h-auto object-cover" />
+  <img src="/samples/motorplan3.jpg" alt="MotorPlan 3" class="rounded-xl w-full h-auto object-cover" />
+  <img src="/samples/motorplan4.jpg" alt="MotorPlan 4" class="rounded-xl w-full h-auto object-cover" />
+  <img src="/samples/motorplan5.jpg" alt="MotorPlan 5" class="rounded-xl w-full h-auto object-cover" />
+  <img src="/samples/motorplan6.png" alt="MotorPlan 6" class="rounded-xl w-full h-auto object-cover" />
+  <img src="/samples/motorplan7.jpg" alt="MotorPlan 7" class="rounded-xl w-full h-auto object-cover" />
+  <img src="/samples/motorplan8.png" alt="MotorPlan 8" class="rounded-xl w-full h-auto object-cover" />
+</div>
 
 ---
 
