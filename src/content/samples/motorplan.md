@@ -11,8 +11,13 @@ staff:
 deploy: "https://www.motorplanargentina.com/"
 images: [
   "/samples/motorplan1.png",
-  "/samples/motorplan2.png",
-  "/samples/motorplan3.png"
+  "/samples/motorplan2.jpg",
+  "/samples/motorplan3.jpg",
+  "/samples/motorplan4.jpg",
+  "/samples/motorplan5.jpg",
+  "/samples/motorplan6.png",
+  "/samples/motorplan7.jpg",
+  "/samples/motorplan8.png",
 ]
 active: true
 ---
@@ -49,8 +54,13 @@ Puedes visitar la página en el siguiente enlace: [MotorPlan](https://www.motorp
 
 ## 📸 **Capturas de pantalla**
 ![MotorPlan 1](/samples/motorplan1.png)
-![MotorPlan 2](/samples/motorplan2.png)
-![MotorPlan 3](/samples/motorplan3.png)
+![MotorPlan 2](/samples/motorplan2.jpg)
+![MotorPlan 3](/samples/motorplan3.jpg)
+![MotorPlan 4](/samples/motorplan4.jpg)
+![MotorPlan 5](/samples/motorplan5.jpg)
+![MotorPlan 6](/samples/motorplan6.ong)
+![MotorPlan 7](/samples/motorplan7.jpg)
+![MotorPlan 8](/samples/motorplan8.png)
 
 ---
 
