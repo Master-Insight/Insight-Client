@@ -5,7 +5,9 @@ const { content } = Astro.props;
 const { Content } = await render(content);
 ---
 
-<article class="prose max-w-none mx-auto p-8 bg-slate-100 rounded-3xl">
+<article
+  class="prose max-w-none mx-auto p-8 bg-slate-100 rounded-3xl markdown-content"
+>
   <!-- # ¡Hola, mundo! Este es un **ejemplo** de Markdown. -->
   <Content />
 </article>

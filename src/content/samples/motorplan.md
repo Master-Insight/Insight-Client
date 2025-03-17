@@ -4,15 +4,20 @@ title: "MotorPlan"
 description: "Aplicación web dinámica diseñada para resaltar la marca y permitir a los usuarios visualizar adjudicaciones de manera intuitiva y eficiente. Esta plataforma combina diseño moderno con funcionalidades prácticas, garantizando una experiencia de usuario fluida y atractiva."
 service: "pagina-web-dinamica-sheets"
 serviceType: "web"
-tags: ["web"]
+tags: ["web", "googlesheets", "sheets"]
 staff:
   - "gustavo-sirtori"
   - "henryck-guaramato"
 deploy: "https://www.motorplanargentina.com/"
 images: [
   "/samples/motorplan1.png",
-  "/samples/motorplan2.png",
-  "/samples/motorplan3.png"
+  "/samples/motorplan2.jpg",
+  "/samples/motorplan3.jpg",
+  "/samples/motorplan4.jpg",
+  "/samples/motorplan5.jpg",
+  "/samples/motorplan6.png",
+  "/samples/motorplan7.jpg",
+  "/samples/motorplan8.png",
 ]
 active: true
 ---
@@ -48,9 +53,16 @@ active: true
 Puedes visitar la página en el siguiente enlace: [MotorPlan](https://www.motorplanargentina.com/").
 
 ## 📸 **Capturas de pantalla**
-![MotorPlan 1](/samples/motorplan1.png)
-![MotorPlan 2](/samples/motorplan2.png)
-![MotorPlan 3](/samples/motorplan3.png)
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 my-6">
+  <img src="/samples/motorplan1.png" alt="MotorPlan 1" class="rounded-xl w-full h-auto object-cover" />
+  <img src="/samples/motorplan2.jpg" alt="MotorPlan 2" class="rounded-xl w-full h-auto object-cover" />
+  <img src="/samples/motorplan3.jpg" alt="MotorPlan 3" class="rounded-xl w-full h-auto object-cover" />
+  <img src="/samples/motorplan4.jpg" alt="MotorPlan 4" class="rounded-xl w-full h-auto object-cover" />
+  <img src="/samples/motorplan5.jpg" alt="MotorPlan 5" class="rounded-xl w-full h-auto object-cover" />
+  <img src="/samples/motorplan6.png" alt="MotorPlan 6" class="rounded-xl w-full h-auto object-cover" />
+  <img src="/samples/motorplan7.jpg" alt="MotorPlan 7" class="rounded-xl w-full h-auto object-cover" />
+  <img src="/samples/motorplan8.png" alt="MotorPlan 8" class="rounded-xl w-full h-auto object-cover" />
+</div>
 
 ---
 
