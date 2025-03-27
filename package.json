@@ -12,6 +12,7 @@
     "@astrojs/react": "^4.2.1",
     "@astrojs/tailwind": "^6.0.0",
     "@astrojs/vercel": "^8.1.2",
+    "@supabase/supabase-js": "^2.49.3",
     "@tailwindcss/typography": "^0.5.16",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
