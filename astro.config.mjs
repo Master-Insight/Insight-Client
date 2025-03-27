@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig, envField } from 'astro/config';
 
 import tailwind from '@astrojs/tailwind';
 
@@ -12,4 +12,10 @@ export default defineConfig({
   output: "server",
   integrations: [tailwind(), react()],
   adapter: vercel(),
+  env: {
+    schema: {
+      SUPABASE_URL: envField.string({ context: "server", access: "secret" }),
+      SUPABASE_ANON_KEY: envField.string({ context: "server", access: "secret" }),
+    }
+  }
 });
