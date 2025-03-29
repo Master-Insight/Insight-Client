@@ -3,7 +3,7 @@ title: "App Web"
 description: "Desarrollo de plataformas funcionales accesibles desde la web, con accesos protegidos, escalabilidad y funcionalidades avanzadas. Ideal para proyectos que requieren una solución robusta y profesional."
 price: 1000
 maintenance: 100
-image: "/img/svg/webapp.svg"
+image: "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/services/App%20Movil%20350.jpg"
 characteristics: "Accesos protegidos, escalabilidad, funcionalidades avanzadas."
 tags: ["web", "app", "protegida", "escalable"]
 serviceType: "web"
