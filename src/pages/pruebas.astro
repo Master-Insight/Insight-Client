@@ -1,0 +1,35 @@
+---
+import { supabase } from "@/lib/supabaseClient";
+import Layout from "@/layouts/Layout.astro";
+
+const { data: staffDetails, error } = await supabase
+  .from("staff_with_details")
+  .select("*");
+
+if (error) {
+  console.error("Error al obtener los datos:", error);
+}
+
+console.log(staffDetails);
+---
+
+<Layout title="Pruebas">
+  <section class="text-center py-16 px-4">
+    <h1 class="text-4xl font-bold text-primary mb-4">Pruebas</h1>
+  </section>
+  <div>
+    {
+      staffDetails.map((staff) => (
+        <div key={staff.staff_id}>
+          <h2>{staff.fullName}</h2>
+          <p>LinkedIn: {staff.linkedin}</p>
+          <p>Roles: {staff.roles.map((role) => role.role_name).join(", ")}</p>
+          <p>
+            Idiomas:{" "}
+            {staff.languages.map((lang) => lang.language_name).join(", ")}
+          </p>
+        </div>
+      ))
+    }
+  </div>
+</Layout>
