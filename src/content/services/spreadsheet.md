@@ -3,7 +3,7 @@ title: "Desarrollo y Mantenimiento de Planillas"
 description: "Creación, optimización y mantenimiento de planillas en Excel y Google Sheets para automatizar tareas, análisis de datos y reportes personalizados."
 price: 100
 maintenance: 20
-image: "/img/png/spreadsheet.png"
+image: "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/services/Planillas%20350.jpg"
 characteristics: "Automatización de tareas, fórmulas avanzadas, macros, dashboards."
 tags: ["datos", "excel", "sheets", "planillas", "automatización"]
 serviceType: "data"
