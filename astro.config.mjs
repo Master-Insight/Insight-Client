@@ -12,4 +12,10 @@ export default defineConfig({
   output: "server",
   integrations: [tailwind(), react()],
   adapter: vercel(),
+  env: {
+    schema: {
+      GMAIL_USER_APP: envField.string({ context: "server", access: "secret" }),
+      GMAIL_PASS_APP: envField.string({ context: "server", access: "secret" }),
+    }
+  }
 });
