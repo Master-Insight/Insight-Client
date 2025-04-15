@@ -8,7 +8,7 @@ const password = EMAIL_PASS_APP_2;
 // Api: POST : Enviar email
 export const POST: APIRoute = async ({ request }) => {
   const body = await request.json();
-  const { name, emailto, message } = body;
+  const { name, email, message } = body;
 
   // const transporter = nodemailer.createTransport({
   //   service: 'gmail', //host: smt.gmail.com
@@ -30,8 +30,8 @@ export const POST: APIRoute = async ({ request }) => {
 
   try {
     const mailOptions = {
-      from: '"InsightDev" <contacto@insightdevs.com.ar>',
-      to: emailto,
+      from: email,
+      to: 'tuemail@tudominio.com',
       subject: `Nuevo mensaje de ${name}`,
       text: message,
     }
