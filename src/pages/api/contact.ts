@@ -34,12 +34,28 @@ export const POST: APIRoute = async ({ request }) => {
   //   },
   // });
 
+  // Precaucion adicional contra codigo malicioso
+  const sanitize = (str: string) => str.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  const cleanMessage = sanitize(message);
+
+  const textToSend = `
+    <div style="font-family: sans-serif; color: #333; padding: 20px;">
+      <h2>📬 Nuevo mensaje de contacto</h2>
+      <p><strong>Nombre:</strong> ${name}</p>
+      <p><strong>Email:</strong> ${emailto}</p>
+      <p><strong>Mensaje:</strong><br />${cleanMessage.replace(/\n/g, "<br />")}</p>
+      <hr />
+      <small>Este mensaje fue enviado desde el formulario de contacto de <a href="https://insightdevs.com.ar">insightdevs.com.ar</a></small>
+    </div>
+  `
+
   try {
     const mailOptions = {
       from: `"InsightDev" <EMAIL_USER_APP_1>`,
       to: "gustavo.sirtori@gmail.com",
-      subject: `Nuevo mensaje de ${name}`,
-      text: message,
+      subject: `📩 Nueva consulta de ${name}`,
+      replyTo: emailto,
+      text: textToSend,
     }
 
     await transporter.sendMail(mailOptions);
