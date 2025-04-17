@@ -128,3 +128,6 @@ export const POST: APIRoute = async ({ request }) => {
     );
   }
 };
+
+// Codigo para obtener certificado DONWEB
+// openssl s_client -connect c...ferozo.com:465 -showcerts | openssl x509 -outform PEM > donweb-cert.pem
