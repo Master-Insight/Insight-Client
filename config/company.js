@@ -14,7 +14,7 @@ const company = {
     description: "Agencia de desarrollos tecnologicos. Trabajamos con emprendedores argentinos para potenciar sus negocios.",
     address: "dirección",
     whatsapp: "+54-3541-613185",
-    email: "base.for.insight@gmail.com",
+    email: "contacto@insightdevs.com.ar",
     url: "https://www.insightdevs.com.ar/",
     preview: "/img/preview-image.webp",
   },
@@ -22,7 +22,7 @@ const company = {
   social: [
     {
       name: "Email",
-      href: "mailto:base.for.insight@gmail.com",
+      href: "mailto:contacto@insightdevs.com.ar",
       icon: Email,
     },
     {
