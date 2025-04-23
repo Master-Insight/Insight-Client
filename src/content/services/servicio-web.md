@@ -3,7 +3,7 @@ title: "Servicio Web"
 description: "Servicios especificos que no necesitas visualización, como por ejemplo una conexión de datos."
 price: 1000
 maintenance: 100
-image: "/img/hero/ben-kolde-bs2Ba7t69mM-unsplash.jpg"
+image: "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/services/Servicio%20Web%20350.jpg"
 characteristics: "Aplicación nativa con soporte Android/iOS."
 tags: ["web", "móvil", "app", "nativa"]
 serviceType: "web"
