@@ -16,7 +16,7 @@ const company = {
     whatsapp: "+54-3541-613185",
     email: "contacto@insightdevs.com.ar",
     url: "https://www.insightdevs.com.ar/",
-    preview: "/img/preview-image.webp",
+    preview: "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/Page/preview-image.webp",
   },
   // Información para usar en las redes sociales (no whatsapp, si e-mail)
   social: [
