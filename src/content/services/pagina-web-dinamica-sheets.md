@@ -3,7 +3,7 @@ title: "Página Web Dinámica con Base de Datos en Sheets"
 description: "Solución con funcionalidades avanzadas que utiliza Google Sheets como base de datos para interacciones simples y recepción de consultas. Ideal para proyectos que requieren una solución económica y fácil de mantener."
 price: 700
 maintenance: 70
-image: "/img/svg/webpagesheets.svg"
+image: "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/services/Pagina%20Web%20Dinamica%20con%20Base%20de%20Datos%20en%20Sheets%20350.jpg"
 characteristics: "Integración con Google Sheets, interacciones dinámicas."
 tags: ["web", "dinámica", "sheets"]
 serviceType: "web"

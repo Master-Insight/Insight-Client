@@ -3,7 +3,7 @@ title: "Página Web Dinámica"
 description: "Solución con funcionalidades avanzadas, ideal para proyectos que requieren interacciones dinámicas, integraciones con APIs externas y una experiencia de usuario más interactiva."
 price: 500
 maintenance: 50
-image: "/img/svg/webpagedinamic.svg"
+image: "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/services/Pagina%20Web%20Dinamica%20350.jpg"
 characteristics: "Integraciones con APIs externas, interacciones dinámicas, diseño personalizado."
 tags: ["web", "dinámica", "interactiva"]
 serviceType: "web"
