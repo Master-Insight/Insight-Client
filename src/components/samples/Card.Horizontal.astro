@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import Deploy from "../icons/Deploy.ico.astro";
+import company from "@config/company";
 
 const { item, slug, page } = Astro.props;
 const {
@@ -22,9 +23,10 @@ const filteredStaff = staffCollection.filter((staff) =>
   staffSlugs.includes(staff.slug),
 );
 
+const { boy, girl} = company.images.default
 const defaultPhoto = {
-  boy: "/default/default-boy.jpg",
-  girl: "/default/default-girl.jpg",
+  boy: boy,
+  girl: girl,
 };
 ---
 
@@ -95,7 +97,7 @@ const defaultPhoto = {
             filteredStaff.map((member) => (
               <div key={member.data.fullName} class="staff-member">
                 <img
-                  src={member.data.photo || "/default/default-boy.jpg"}
+                  src={member.data.photo || boy}
                   alt={member.data.fullName}
                   class="staff-photo"
                 />

@@ -58,6 +58,10 @@ const company = {
       "/logos/Insight.webp",
       "/logos/Insight_blanco.webp",
     ],
+    default: {
+      boy: "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/default/default-boy.jpg",
+      girl: "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/default/default-girl.jpg",
+    }
   }
 }
 
