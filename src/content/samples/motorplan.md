@@ -10,14 +10,14 @@ staff:
   - "henryck-guaramato"
 deploy: "https://www.motorplanargentina.com/"
 images: [
-  "/samples/motorplan1.png",
-  "/samples/motorplan2.jpg",
-  "/samples/motorplan3.jpg",
-  "/samples/motorplan4.jpg",
-  "/samples/motorplan5.jpg",
-  "/samples/motorplan6.png",
-  "/samples/motorplan7.jpg",
-  "/samples/motorplan8.png",
+  "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/samples/motorplan/motorplan1.png",
+  "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/samples/motorplan/motorplan2.jpg",
+  "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/samples/motorplan/motorplan3.jpg",
+  "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/samples/motorplan/motorplan4.jpg",
+  "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/samples/motorplan/motorplan5.jpg",
+  "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/samples/motorplan/motorplan6.png",
+  "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/samples/motorplan/motorplan7.jpg",
+  "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/samples/motorplan/motorplan8.png",
 ]
 active: true
 ---

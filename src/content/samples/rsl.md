@@ -9,11 +9,11 @@ staff:
   - "gustavo-sirtori"
 deploy: "https://www.sorteosrsl.com.ar/"
 images: [
-  "/samples/rsl1.png",
-  "/samples/rsl2.jpg",
-  "/samples/rsl3.png",
-  "/samples/rsl4.jpg",
-  "/samples/rsl5.jpg",
+  "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/samples/rallySprintLatam/rsl1.png",
+  "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/samples/rallySprintLatam/rsl2.jpg",
+  "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/samples/rallySprintLatam/rsl3.png",
+  "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/samples/rallySprintLatam/rsl4.jpg",
+  "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/samples/rallySprintLatam/rsl5.jpg",
 ]
 active: true
 ---

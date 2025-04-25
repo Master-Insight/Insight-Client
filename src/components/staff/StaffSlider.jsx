@@ -1,6 +1,7 @@
 import useEmblaCarousel from "embla-carousel-react";
 import { useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import company from "@config/company";
 
 const StaffSlider = ({ staff = [] }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ align: "start" });
@@ -48,7 +49,7 @@ const StaffSlider = ({ staff = [] }) => {
               className="flex flex-col items-center w-32 p-2"
             >
               <img
-                src={member.data.photo || "/default/default-boy.jpg"}
+                src={member.data.photo || company.images.default.boy}
                 alt={`Foto de ${member.data.fullName}`}
                 className="w-24 h-24 object-cover rounded-full shadow-lg"
               />
