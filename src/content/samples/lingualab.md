@@ -10,13 +10,13 @@ staff:
   - "henryck-guaramato"
 deploy: "https://lingualab.vercel.app/landing"
 images: [
-  "/samples/lingualab1.png",
-   "/samples/lingualab2.png",
-   "/samples/lingualab3.png",
-   "/samples/lingualab4.png",
-   "/samples/lingualab5.png",
-   "/samples/lingualab6.png",
-   "/samples/lingualab7.png",
+    "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/samples/lingualab/lingualab1.png",
+    "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/samples/lingualab/lingualab2.png",
+    "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/samples/lingualab/lingualab3.png",
+    "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/samples/lingualab/lingualab4.png",
+    "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/samples/lingualab/lingualab5.png",
+    "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/samples/lingualab/lingualab6.png",
+    "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/samples/lingualab/lingualab7.png",
    ]
 active: true
 ---

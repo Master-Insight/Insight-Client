@@ -9,7 +9,6 @@ staff:
   - "gustavo-sirtori"
 images: [
   "/samples/Picking00.png",
-  "/samples/Picking01.png",
   "/samples/Picking02.png",
   "/samples/Picking03.png"
 ]

@@ -8,7 +8,7 @@ serviceType: "data"
 staff:
   - "gustavo-sirtori"
 images: [
-  "/samples/Sales01.png",
+  "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/samples/sales/Sales01.png",
 ]
 active: true
 ---

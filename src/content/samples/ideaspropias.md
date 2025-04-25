@@ -10,10 +10,10 @@ staff:
   - "henryck-guaramato"
 deploy: "https://page-ideaspropias.vercel.app/"
 images: [
-  "/samples/IdeasPropias1.png",
-  "/samples/IdeasPropias2.png",
-  "/samples/IdeasPropias3.png",
-  "/samples/IdeasPropias4.png"
+  "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/samples/IdeasPropias/IdeasPropias1.png",
+  "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/samples/IdeasPropias/IdeasPropias2.jpg",
+  "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/samples/IdeasPropias/IdeasPropias3.jpg",
+  "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/samples/IdeasPropias/IdeasPropias4.jpg",
 ]
 active: true
 ---

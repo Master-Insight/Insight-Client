@@ -3,7 +3,7 @@ title: "Página Web Estática"
 description: "Desarrollo de una página web estática básica, ideal para proyectos pequeños, portfolios personales o sitios informativos. Perfecta para quienes buscan una presencia en línea sencilla y eficiente."
 price: 200
 maintenance: 30
-image: "/img/svg/webpagestatic.svg"
+image: "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/services/Pagina%20Web%20Estatica%20350.jpg"
 characteristics: "Diseño responsivo, fácil de mantener, optimizada para SEO básico."
 tags: ["web", "estática", "simple", "landing page"]
 serviceType: "web"

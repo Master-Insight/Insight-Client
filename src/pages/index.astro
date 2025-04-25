@@ -1,7 +1,7 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "@/layouts/Layout.astro";
 import { getCollection } from "astro:content";
-import SliderCard from "../ui/Slider/SliderCard";
+import SliderCard from "@/ui/Slider/SliderCard";
 
 export const prerender = true;
 
@@ -76,7 +76,7 @@ const sampleData = sortedSamples.map((sample) => ({
         simples para potenciar tu crecimiento.
       </p>
       <img
-        src="/img/hero/ben-kolde-bs2Ba7t69mM-unsplash.webp"
+        src="https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/Page/I%20design.webp"
         alt="Innovación en soluciones digitales"
         aria-label="Imagen de innovación en soluciones digitales"
         class="mx-auto rounded-lg shadow-custom transform hover:scale-105 transition-transform object-cover object-bottom h-80 w-full max-w-lg"

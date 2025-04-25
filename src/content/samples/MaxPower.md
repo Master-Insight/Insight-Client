@@ -8,15 +8,15 @@ serviceType: "data"
 staff:
   - "gustavo-sirtori"
 images: [
-  "/samples/Ventas - MaxPower Tools (0).png",
-  "/samples/Ventas - MaxPower Tools (1).jpg",
-  "/samples/Ventas - MaxPower Tools (2).jpg",
-  "/samples/Ventas - MaxPower Tools (3).jpg",
-  "/samples/Ventas - MaxPower Tools (4).jpg",
-  "/samples/Ventas - MaxPower Tools (5).jpg",
-  "/samples/Ventas - MaxPower Tools (6).jpg",
-  "/samples/Ventas - MaxPower Tools (7).jpg",
-  "/samples/Ventas - MaxPower Tools (8).jpg",
+  "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/samples/MaxPowerTools/Ventas%20-%20MaxPower%20Tools%20(0).png",
+  "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/samples/MaxPowerTools/Ventas%20-%20MaxPower%20Tools%20(1).jpg",
+  "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/samples/MaxPowerTools/Ventas%20-%20MaxPower%20Tools%20(2).jpg",
+  "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/samples/MaxPowerTools/Ventas%20-%20MaxPower%20Tools%20(3).jpg",
+  "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/samples/MaxPowerTools/Ventas%20-%20MaxPower%20Tools%20(4).jpg",
+  "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/samples/MaxPowerTools/Ventas%20-%20MaxPower%20Tools%20(5).jpg",
+  "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/samples/MaxPowerTools/Ventas%20-%20MaxPower%20Tools%20(6).jpg",
+  "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/samples/MaxPowerTools/Ventas%20-%20MaxPower%20Tools%20(7).jpg",
+  "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/samples/MaxPowerTools/Ventas%20-%20MaxPower%20Tools%20(8).jpg",
 ]
 active: true
 ---
