@@ -42,7 +42,7 @@ Esta solución en PowerBI ofrece múltiples ventajas:
 - **Optimización de estrategias comerciales:** Identificación de oportunidades de mejora y detección temprana de desviaciones en el rendimiento.
 
 <div align="center" style="max-width: 800px; margin: auto;">
-  <img src="/samples/Ventas - MaxPower Tools (0).png" alt="Vista previa del Dashboard de Ventas y Estrategia Comercial" style="border-radius: 12px; width: 100%; max-width: 50%; display: block; margin: auto;">
+  <img src="https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/samples/MaxPowerTools/Ventas%20-%20MaxPower%20Tools%20(0).png" alt="Vista previa del Dashboard de Ventas y Estrategia Comercial" style="border-radius: 12px; width: 100%; max-width: 50%; display: block; margin: auto;">
 </div>
 
 🔗 **Proyecto y Datos:** Este dashboard se construyó empleando datos simulados de la empresa ficticia MaxPower Tools, disponibles en mi repositorio de GitHub. La calidad y variedad del mock data permiten replicar escenarios reales y demostrar el potencial de la visualización de datos.
