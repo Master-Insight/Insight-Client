@@ -11,6 +11,13 @@ if (error) {
 }
 
 console.log(staffDetails);
+
+// Fetch al archivo JSON público
+const response = await fetch(
+  "https://tjxmrdixvvjjeejbkfht.supabase.co/storage/v1/object/public/insightdev.public/staff/henryck-guaramato.json",
+);
+const staffJson = await response.json(); // Aquí tienes tu JSON
+console.log(staffJson); // Lo puedes ver en consola
 ---
 
 <Layout title="Pruebas">
