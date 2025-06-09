@@ -3,7 +3,7 @@ import { defineConfig, envField } from 'astro/config';
 
 import tailwind from '@astrojs/tailwind';
 
-import vercel from '@astrojs/vercel';
+import vercelServerless from '@astrojs/vercel/serverless';
 
 import react from '@astrojs/react';
 
@@ -11,7 +11,7 @@ import react from '@astrojs/react';
 export default defineConfig({
   output: "server",
   integrations: [tailwind(), react()],
-  adapter: vercel(),
+  adapter: vercelServerless({ /* ...puerto, analytics, imageService... */ }),
   env: {
     schema: {
       // EMAIL_USER_APP_1: envField.string({ context: "server", access: "secret" }),
