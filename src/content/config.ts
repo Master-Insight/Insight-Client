@@ -4,7 +4,6 @@ import { glob } from 'astro/loaders';
 // Esta colección luego se debe pedir a la BBDD
 
 const samplesCollection = defineCollection({
-  type: 'content',
   loader: glob({ pattern: '**/*.md', base: './src/content/samples' }),
   schema: z.object({
     order: z.number(),
@@ -23,7 +22,6 @@ const samplesCollection = defineCollection({
 
 
 const servicesCollection = defineCollection({
-  type: 'content',
   loader: glob({ pattern: '**/*.md', base: './src/content/services' }),
   schema: z.object({
     title: z.string(),
@@ -42,7 +40,6 @@ const servicesCollection = defineCollection({
 });
 
 const staffCollection = defineCollection({
-  type: 'content',
   loader: glob({ pattern: '**/*.md', base: './src/content/staff' }),
   schema: z.object({
     fullName: z.string(), // Nombre completo
