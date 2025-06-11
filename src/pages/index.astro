@@ -15,7 +15,7 @@ const activeServices = sortedServices.map((service) => ({
   maintenance: service.data.maintenance,
   image: service.data.image,
   tags: service.data.tags,
-  slug: service.slug,
+  slug: service.id,
 }));
 
 // Obtener samples de la colección
@@ -24,11 +24,11 @@ const sortedSamples = samples.sort((a, b) => a.data.order - b.data.order);
 const sampleData = sortedSamples.map((sample) => ({
   title: sample.data.title,
   description: sample.data.description,
-  users: sample.data.users,
+  users: sample.data.staff,
   media: sample.data.media,
   deploy: sample.data.deploy,
   images: sample.data.images,
-  slug: sample.slug,
+  slug: sample.id,
 }));
 ---
 
