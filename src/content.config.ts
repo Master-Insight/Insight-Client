@@ -4,7 +4,8 @@ import { glob } from 'astro/loaders';
 // Esta colección luego se debe pedir a la BBDD
 
 const samplesCollection = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/samples' }),
+  // loader: glob({ pattern: '**/*.md', base: './src/content/samples' }),
+  loader: glob({ pattern: '**/*.md', base: './src/samples' }),
   schema: z.object({
     order: z.number(),
     title: z.string(), // Título del sample
@@ -22,7 +23,7 @@ const samplesCollection = defineCollection({
 
 
 const servicesCollection = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/services' }),
+  loader: glob({ pattern: '*.md', base: './src/services' }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
@@ -40,7 +41,7 @@ const servicesCollection = defineCollection({
 });
 
 const staffCollection = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/staff' }),
+  loader: glob({ pattern: '**/*.md', base: './src/staff' }),
   schema: z.object({
     fullName: z.string(), // Nombre completo
     linkedin: z.string().optional(), // ID de LinkedIn
