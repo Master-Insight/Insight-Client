@@ -13,13 +13,13 @@ export async function getStaticPaths() {
   const SAMPLES = await getCollection("samples");
 
   return SAMPLES.map((sample) => ({
-    params: { slug: sample.slug },
+    params: { id: sample.id },
     props: { sample },
   }));
 }
 
 const { sample } = Astro.props;
-const { data, slug } = sample;
+const { data, id } = sample;
 const { title, description, media, deploy, images, staff } = data;
 ---
 

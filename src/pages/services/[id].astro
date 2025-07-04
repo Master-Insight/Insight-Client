@@ -14,13 +14,13 @@ export async function getStaticPaths() {
   // });
 
   return PRESERVICES.map((service) => ({
-    params: { slug: service.slug },
+    params: { id: service.id },
     props: { service },
   }));
 }
 
 const { service } = Astro.props;
-const { data, slug } = service;
+const { data, id } = service;
 const { title, description, image, characteristics, tags, price, maintenance } =
   data;
 ---
@@ -104,7 +104,8 @@ const { title, description, image, characteristics, tags, price, maintenance } =
                 <a
                   href="/services/mantenimiento"
                   class="text-primary hover:text-primary-dark"
-                  aria-label="Más opciones de mantenimiento">
+                  aria-label="Más opciones de mantenimiento"
+                >
                   Link
                 </a>
               </p>
@@ -119,7 +120,8 @@ const { title, description, image, characteristics, tags, price, maintenance } =
               <span
                 key={index}
                 class="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full"
-                aria-label={`Etiqueta: ${tag}`}>
+                aria-label={`Etiqueta: ${tag}`}
+              >
                 {tag}
               </span>
             ))
