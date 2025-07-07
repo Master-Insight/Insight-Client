@@ -1,5 +1,5 @@
 ---
-const { item, slug, page } = Astro.props;
+const { item, id, page } = Astro.props;
 const {
   title,
   characteristics,
@@ -70,7 +70,7 @@ const {
     <!-- Botón para más detalles -->
     <div class="mx-auto mt-10 mb-4">
       <a
-        href={`/${page}/${slug}`}
+        href={`/${page}/${id}`}
         class="w-full text-center px-6 py-3 bg-primary text-white font-semibold rounded-xl hover:bg-primary-dark transition-colors"
       >
         Ver Detalles

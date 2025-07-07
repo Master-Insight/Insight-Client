@@ -15,7 +15,7 @@ const activeServices = sortedServices.map((service) => ({
   maintenance: service.data.maintenance,
   image: service.data.image,
   tags: service.data.tags,
-  slug: service.id,
+  id: service.id,
 }));
 
 // Obtener samples de la colección
@@ -28,8 +28,9 @@ const sampleData = sortedSamples.map((sample) => ({
   media: sample.data.media,
   deploy: sample.data.deploy,
   images: sample.data.images,
-  slug: sample.id,
+  id: sample.id,
 }));
+console.log(sampleData);
 ---
 
 <Layout title="Insight | Soluciones digitales para emprendedores">

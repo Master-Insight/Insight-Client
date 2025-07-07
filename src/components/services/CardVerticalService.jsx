@@ -2,10 +2,10 @@
 import React from 'react';
 
 const CardVerticalService = ({ item }) => {
-  const { title, description, slug, price, maintenance, image, tags } = item
+  const { title, description, id, price, maintenance, image, tags } = item
   return (
     <div className="w-72 mx-auto">
-      <a href={`/services/${slug}`}>
+      <a href={`/services/${id}`}>
         <div className="bg-white rounded-lg shadow-md p-6 flex flex-col justify-evenly hover:shadow-lg transform hover:scale-105 transition-all min-h-[466px]">
           {/* Imagen del servicio */}
           <img

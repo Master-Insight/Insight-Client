@@ -2,11 +2,11 @@
 import React from 'react';
 
 const CardVerticalSamples = ({ item }) => {
-  const { title, description, users, media, deploy, images, slug } = item;
+  const { title, description, users, media, deploy, images, id } = item;
 
   return (
     <div className="w-72 mx-auto">
-      <a href={`/samples/${slug}`}>
+      <a href={`/samples/${id}`}>
         <div className="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between gap-4 hover:shadow-lg transform hover:scale-105 transition-all min-h-[400px]">
           {/* Imagen del sample */}
           {images && images.length > 0 && (
@@ -27,7 +27,7 @@ const CardVerticalSamples = ({ item }) => {
           <div className="text-gray-800 text-sm">
             {users && (
               <p>
-                <strong>Usuarios relacionados:</strong> {users.join(', ')}
+                <strong>Desarrolladores:</strong> {users.join(', ')}
               </p>
             )}
             {deploy && (

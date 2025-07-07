@@ -69,7 +69,7 @@ const dataSamples = sortedSamples.filter((sample) =>
             <CardSample
               key={sample.id}
               item={sample.data}
-              slug={sample.slug}
+              slug={sample.id}
               page="samples"
               class="sample-card"
               data-category={sample.data.tags?.[0] || ""}
