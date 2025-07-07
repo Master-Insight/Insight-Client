@@ -21,16 +21,16 @@ export async function getStaticPaths() {
       // Intentar importar el JSON correspondiente al usuario
       let userData = null;
       try {
-        userData = await import(`../../mock/users/${staff.slug}.json`);
+        userData = await import(`../../mock/users/${staff.id}.json`);
       } catch (error) {
-        console.warn(`No se encontró JSON para ${staff.slug}`);
-        console.warn(`Ruta intentada: @/mock/users/${staff.slug}.json`);
+        console.warn(`No se encontró JSON para ${staff.id}`);
+        console.warn(`Ruta intentada: @/mock/users/${staff.id}.json`);
         console.warn(`Error completo:`, error);
         userData = { default: {} }; // Proveer un objeto vacío
       }
 
       return {
-        params: { slug: staff.slug },
+        params: { id: staff.id },
         props: { staff, userData },
       };
     }),
@@ -38,7 +38,7 @@ export async function getStaticPaths() {
 }
 
 const { staff, userData } = Astro.props;
-const { data, slug } = staff;
+const { data, id } = staff;
 const { fullName } = data;
 const userInfo = userData?.default || {};
 ---
